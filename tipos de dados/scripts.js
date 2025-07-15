@@ -11,9 +11,9 @@ console.log(typeof 0)
     temos tb os tipos de dados que são Number mas que não são numeros:
 */
 
-console.log(Infinity)
+console.log(Infinity) // operação aritmetica errada
 console.log(-Infinity)
-console.log(NaN)
+console.log(NaN)// somar algo q ñ é numero com um nr ou trata algo como numero mas ñ é nr
 
 console.log(typeof Infinity) // o tipo de dado é Number porém ñ é um número
 console.log(typeof -Infinity)// o tipo de dado é Number porém ñ é um número
