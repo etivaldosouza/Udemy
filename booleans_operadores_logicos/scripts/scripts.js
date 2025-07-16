@@ -28,3 +28,12 @@ console.log( 3 == 3 && 'Matheus' == 'Matheus') // ( v and v = v)
 console.log('Felipe' == 'João' || false) // (f && f = f)
 
 console.log(!(true && true)) // (! (v and v = v -> !(v) = f))
+
+
+       /*
+
+       valores que por padrão são considerados false:
+       ----------------------------------------------
+         null , underfined, ' '(string vazia), false, 0.
+
+       */
