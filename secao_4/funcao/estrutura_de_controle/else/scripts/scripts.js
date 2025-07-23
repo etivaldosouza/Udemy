@@ -3,9 +3,11 @@
 
 => podemos executar um outro bloco de código, caso a instrução do if não seja atendida
 
+=> caso a condição if seja aceita o else ñ será executado
+
 => ou seja, se não executar o bloco if, execute o bloco else
 
-=> só pode ser utilizada com o if porém o if pode ser usado sem o else
+=> só pode ser utilizada com o if, porém o if pode ser usado sem o else
 
 */
 
