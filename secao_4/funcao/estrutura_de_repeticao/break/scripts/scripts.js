@@ -17,10 +17,6 @@ for(let i = 5; i < 20; i = i + 1){
 }
 
 
-
-
-
-
 let nome = 'Etivaldo'
 
 for(let i = 0; i < 10; i = i + 1){
@@ -45,7 +41,7 @@ for(let i = 0; i < 10; i = i + 1){
 
     i = 2 → nome = 'Etivaldo' → imprime: 2 - Etivaldo
 
-    i = 3 → entra no if, muda nome = 'João' → imprime: 3 - João * no js vc tem como alterar uma variavel no decorrer do codigo
+    i = 3 → entra no if, muda nome = 'João' → imprime: 3 - João  *(no js vc tem como alterar uma variavel no decorrer do código)
 
     i = 4 → nome ainda é 'João' → imprime: 4 - João
 
