@@ -28,3 +28,35 @@ for(let i = 10; i > 0; i = i - 1){
     }
     console.log(i) // so vai imprimir o i caso a condição dentro do loop seja atendida(ser par)
 }
+
+
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+
+
+/*
+    O que acontece aqui:
+
+    O laço vai de 1 até 5.
+
+    Quando i for 3, o continue pula o console.log(i).
+
+    Resultado no console:
+
+
+*/
+
+
+// imprimindo apenas os numeros pares
+
+for(let i = 0; i < 10; i = i + 1){
+    if(i % 2 != 0){
+        continue     // se o i  satisfazer a condição, continue faz com que nao siga para o codigo abaixo
+    }                // quando ñ satisfaz a condição, o código segue para linha de baixo
+    console.log(i)
+    
+}  
