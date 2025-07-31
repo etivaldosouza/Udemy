@@ -87,3 +87,18 @@ switch (dia) {
         console.log('Dia inválido');
         break;
 }
+
+
+let nome = 'joão'.toUpperCase()
+
+switch(nome){
+    case 'JOÃO':
+        console.log('meu nome é joão')
+        break
+    case 'PEDRO':
+        console.log('meu nome é pedro')
+        break
+    default:
+        console.log('nome inválido')
+    
+}
