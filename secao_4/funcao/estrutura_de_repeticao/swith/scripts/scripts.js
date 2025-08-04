@@ -55,7 +55,13 @@ switch (new Date().getDay()) {
         break;
 }
 
+//==================================//
+    // saber o dia da semana
+    
+let diaHj = new Date().getDay()
+console.log(diaHj)
 
+//==================================//
 
 // exemplo 2:
 
