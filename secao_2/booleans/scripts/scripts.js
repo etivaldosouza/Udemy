@@ -38,3 +38,12 @@ console.log( 5 === 4 )
 console.log('Mateus' != 'Mateus') 
 console.log(3 === '3')
 console.log(4 === 4 )
+
+
+       /*
+
+       valores que por padrão são considerados false:
+       ----------------------------------------------
+         null , underfined, ' '(string vazia), false, 0.
+
+       */
