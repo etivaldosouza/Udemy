@@ -17,5 +17,8 @@ console.log(maiorNumero)
 let arredondar = Math.round(8.2354)
 console.log(arredondar)
 
-let arredondarParaCima = Math.ceil(8.2354)
+let arredondar = Math.round(8.6354)
+console.log(arredondar)
+
+let arredondarParaCima = Math.ceil(9.2354)
 console.log(arredondarParaCima)
