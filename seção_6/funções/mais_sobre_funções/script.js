@@ -23,6 +23,8 @@ const multiplica = function (x,y){
 
 console.log(multiplica(4,2))
 
+const mult = multiplica(4,3)
+console.log(mult)
 
 //==============================================//
 
@@ -35,4 +37,60 @@ const saudacao = function(nome) {
     }
 }
 
-const qra = console.log(saudacao('Etivaldo'))
+const qra = (saudacao('Etivaldo')) // ou console.log(saudacao('etivaldo'))
+console.log(qra) 
+
+//===========================================================//
+
+function podeDirigir(idade,cnh){
+    if(idade >= 18 && cnh == true){ //*
+        console.log('pode dirigir')
+    }else {
+        console.log('ñ pode dirigir')
+    }
+}
+
+podeDirigir(30,true)
+podeDirigir(44,0) // 0 == false
+podeDirigir(19,1) // 1 == true
+
+
+// cuidado ao usar o ===(extritamente igual):
+
+
+/*
+
+    cnh === true: A CNH deve ser estritamente igual ao valor booleano true. O uso de === (igualdade estrita) é crucial aqui.
+
+    Comportamento do Código:
+
+    podeDirigir(30, true):
+
+    30 >= 18 é verdadeiro.
+
+    true === true é verdadeiro.
+
+    Ambas as condições são verdadeiras, então o código imprime "pode dirigir".
+
+    podeDirigir(44, 0):
+
+    44 >= 18 é verdadeiro.
+
+    0 === true é falso (porque 0 é um número, não o valor booleano true).
+
+    A condição falha, e o código imprime "ñ pode dirigir".
+
+    podeDirigir(19, 1):
+
+    19 >= 18 é verdadeiro.
+
+    1 === true é falso (porque 1 é um número, não o valor booleano true).
+
+    A condição falha, e o código imprime "ñ pode dirigir".
+
+
+
+
+
+
+/*
