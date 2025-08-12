@@ -14,7 +14,7 @@ function imprimirNumeros(n1,n2){
 }
 
 imprimirNumeros(10,30)
-
+imprimirNumeros(0,100)
 
 //====================================================//
 // 03 anônima: função como valor de uma variável
