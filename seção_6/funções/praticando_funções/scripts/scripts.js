@@ -38,3 +38,16 @@ const numerosAleatorios = function(){
 numerosAleatorios()
 numerosAleatorios()
 numerosAleatorios()
+
+
+//===========================================
+//  arrow function
+
+const numerosAleatorios = () => {
+    const n = Math.random() * 10
+    return Math.round(n)
+}
+
+const imprimir = numerosAleatorios()
+
+console.log(imprimir)

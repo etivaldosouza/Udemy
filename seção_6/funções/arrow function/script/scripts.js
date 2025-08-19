@@ -14,3 +14,36 @@ const parOuImpar = (n) =>  {
 }
 
 console.log(parOuImpar(3))
+console.log(parOuImpar(0))
+console.log(parOuImpar(5))
+
+//==================================================//
+
+
+let consoleTeste = () => {
+
+    console.log("olá Mundo!")
+}
+
+
+consoleTeste()
+
+
+//=================================================//
+
+let multiplica = (a,b) => {
+    return a * b
+}
+
+
+let imprimirFuncao = multiplica(10,5)
+console.log(imprimirFuncao)
+
+
+//==================================================//
+
+let soma = (x,y) => {
+    return x + y
+}
+
+console.log(soma(200,30))
