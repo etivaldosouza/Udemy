@@ -49,7 +49,6 @@ function multiplicar(x,y){ // (3,7)
 }
 
 
-
-multiplicar(3,7)
+multiplicar(3,7) // chama a função multiplicar
 
 console.log(a) // imprime a variável do escopo global
