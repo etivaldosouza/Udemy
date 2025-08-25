@@ -10,6 +10,8 @@ o if, por exemplo)
 
 */
 
+
+
 let x = 10 // variável x declarada no escopo global com valor 10
 
 if(true){ 
@@ -42,3 +44,12 @@ if( x > 5){ // bloco if é um escopo diferente do escopo global
 }
 
 console.log(x)
+
+
+/*
+
+o que a ES6 introduziu de novidade na especificação foi criar novas regiões definidoras de escopo local que antes eram exclusivas às funções. para facilitar o entendimento, podemos dizer que existem novas formas,além de funções, para se criar um escopo local.
+
+em um script, as declarações de variáveis com uso de let e const que estejam contidas entree os sinais abre e fecha chaves ({}) pertencem ao escopo de bloco. funções e loops são exemplos onde se criam tal escopo.
+
+*/
