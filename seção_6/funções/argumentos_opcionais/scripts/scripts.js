@@ -43,3 +43,13 @@ function soma(a,b){
 
 console.log(soma(1))    
 console.log(soma(2,5))  
+
+
+
+
+function nome(nome, idade = 18){ //criei valor default
+   return `olá ${nome} vc tem ${idade} anos`
+}
+
+console.log(nome('etivaldo')) // so passei apenas um argumento então vai pegar o valor default acima(idade = 18) 
+console.log(nome('etivaldo', 42)) // passado os dois argumentos
