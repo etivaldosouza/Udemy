@@ -13,7 +13,7 @@ função(externa, ou seja, aninhar funções)
 
 function funcaoExterna(){
     alert('Função Externa')
-    
+
     function funcaoInterna(){
         alert('Função Interna')
     }
@@ -33,7 +33,6 @@ function funcaoExterna(){
 => Em seguida, chama funcaoInterna(), que mostra o alerta da Função Interna.
 
 => funcaoInterna não pode ser acessada de fora, só existe no escopo da funcaoExterna.
-
 
 
 */ 
