@@ -13,14 +13,16 @@ function repetirFrase(frase, n = 2){
     }
 }
 
-repetirFrase('Testando', 5)
+
 
 repetirFrase('só duas vezes')
+repetirFrase('Testando', 5)
 
 
-function potencia(base, exp = 2){ //criei valor default
+function potencia(base, exp = 2){ //criei um valor default(exp = 2)
     return Math.pow(base,exp)
 }
 
 console.log(potencia(3)) // quando uso apenas um argumento eu irei pegar o valor default criado acima(exp = 2)
-console.log(potencia(4,2))
+console.log(potencia(4,2)) // como os dois parâmetros foram passados usa-se eles.
+console.log(potencia(2,3))
