@@ -9,6 +9,6 @@ function funcaoExterna(){
 
 /* 
 
-Neste exemplo, estamos chamando a função interna dentro da função externa e os dois alertas serão mostrados ao usuário
+    Neste exemplo, estamos chamando a função interna dentro da função externa e os dois alertas serão mostrados ao usuário
 
 */ 

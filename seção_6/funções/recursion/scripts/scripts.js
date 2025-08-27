@@ -35,6 +35,25 @@ contagem(5)
 contagem(10)
 
 
+//=========================================================//
+
+
+function contagem(n){
+
+    console.log(n)
+
+    if(n <= 0 ){
+        return  //encerra a função 
+
+    }else{
+        contagem(n-2) //chamada recursiva (diminui o numero em 2)
+    }
+}
+
+
+contagem(10)
+contagem(50)
+
 //=====================================================//
 
 function recursao(n){

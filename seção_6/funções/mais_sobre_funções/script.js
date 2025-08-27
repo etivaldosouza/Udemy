@@ -1,3 +1,27 @@
+/*
+    parâmetro != argumento.
+
+=> parâmetro refere-se genericamente a um valor indefinido
+
+=> argumento é o valor efetivo do parâmetro
+
+*/ 
+
+//======================= ex: ===============================//
+
+function somarDoisNumeros(n1,n2){ // n1,n2 são parâmetros
+    
+    var soma = n1 + n2
+    return soma
+} 
+
+console.log(somarDoisNumeros(3,5)) // 3,5 são os argumentos
+
+
+
+//================================================================//
+
+
 const soma = function(a,b){
     return a + b   
 }
