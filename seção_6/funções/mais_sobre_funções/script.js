@@ -112,9 +112,4 @@ podeDirigir(19,1) // 1 == true
 
     A condição falha, e o código imprime "ñ pode dirigir".
 
-
-
-
-
-
 /*
