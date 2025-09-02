@@ -20,5 +20,5 @@ let resultado = soma(5,10,15)
 console.log(resultado)
 
 
-//exercicio 2:
+
 
