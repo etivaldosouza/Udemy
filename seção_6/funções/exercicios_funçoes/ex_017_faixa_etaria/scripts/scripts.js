@@ -35,9 +35,9 @@ let adulto = faixaEtaria(29)
 
 
 
-// obs: se quero que as variaveis guardem resultados então devo usar o return:
+// obs: se quero que as variaveis guardem resultados para ser exportado para fora da função quando invocarmos a função então devo usar o return:
 
-// quando uso o return eu estou armazenando o valor em uma variavel
+// quando uso o return eu estou armazenando o valor em uma variavel e posso exportar esse valor para fora da função ao invocarmos a função
 
 function faixaEtaria(idade) {
     
@@ -57,8 +57,7 @@ function faixaEtaria(idade) {
 let crianca = faixaEtaria(8)
 
 let adulto = faixaEtaria(29)
-
-
+  
 
 console.log(crianca);
 console.log(adulto);
