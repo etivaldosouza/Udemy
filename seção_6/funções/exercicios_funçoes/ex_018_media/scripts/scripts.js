@@ -2,7 +2,7 @@
 
 =>    escreve uma função chamada calculateAverage que recebe um array de números como arumento
 
-=>    A função deve calcular a média dos números no array
+=>    A função deve calcular a média dos números do array
 
 =>    a média é calculada somando todos os números e dividindo pelo total de números no array
 
@@ -10,13 +10,14 @@
 
 */ 
 
+
 function calculateAverage (arr){
      // somando todos os números do array
     
     soma = 0  // acumulador começa em zero
 
     for(let i = 0; i < arr.length; i++){
-        soma =  soma + arr[i] // a cada volta ele faz a soma com o elemento seguinte do array
+        soma =  soma + arr[i] // a cada volta ele pega o valor acumulado da soma e soma com o elemento atual array
     }
     
     let media = soma/arr.length 
