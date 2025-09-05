@@ -16,9 +16,12 @@ e - 1
 t - 2
 o - 3
 
-let invertida = "" //*
+
 
 function reverseString(str){
+
+    let invertida = "" //*
+
     for(let i = str.length - 1; i >= 0; i--){
         invertida = invertida + str[i]   //* alterando o valor da variável(só posso com let)
     }
@@ -31,9 +34,12 @@ console.log(reverseString("neto"))
 
 // outra maneira: 
 
-let invertida = "" //*
+
 
 function reverseString(str){
+
+    let invertida = "" //*
+    
     for(let i = str.length - 1; i >= 0; i--){
         invertida = invertida + str[i]   //* alterando o valor da variável(só posso com let)
     }
