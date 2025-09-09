@@ -62,12 +62,24 @@ pode:
 let i = 5
 
 i = 9
+==============
+
+let nome; => quando apenas declaro o valor armazenado fica underfined
+nome = 'joão' (estou alterando o valor de underfined p/ joão)
+
+console.log(nome) => vai mostrar o nome joao
+
+
+
+=============
 
 não pode:
 
 let i = 5
 
 let i = 9 => estou redeclarando e não pode
+
+==================================================
 
 =======================================
 

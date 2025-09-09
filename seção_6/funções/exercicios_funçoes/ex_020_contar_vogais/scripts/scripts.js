@@ -29,3 +29,9 @@ console.log(countVowels('Etivaldo'));//
 console.log(countVowels("PARALELEPIPADO"));//
 
 
+
+
+
+
+
+
