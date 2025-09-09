@@ -9,11 +9,15 @@
 const arr = [1,2,3,4,5,6,7,8]
 const semPares = []
 
-for(let i = 0; i < arr.length; i++){
-    if(arr[i] % 2 != 0){       
+for(let i = 0; i < arr.length; i++){  // O laço percorre todo o array arr// arr.length é 8, então o loop vai de i = 0 até i = 7.
+    if(arr[i] % 2 != 0){  // arr[i] % 2 calcula o resto da divisão por 2. se for != de 0 é impar     
         semPares.push(arr[i])  //metodo push adiciona o elemento no fim do array
         
     }    
 }
 console.log(semPares)
+
+
+
+
 
