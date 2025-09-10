@@ -17,7 +17,6 @@ t - 2
 o - 3
 
 
-
 function reverseString(str){
 
     let invertida = "" //*
