@@ -12,10 +12,24 @@
 
     => também podemos inserir parâmetros, em algumas funções são obrigatórios.
 
-    => parâmetros são valores que podem mudar o resultado da função
+   
 
-                nomeDaFuncao(parametro1, parametro2)
+    parâmetro e argumento não são sinônimos. 
+    
+    ** Parâmetro: refere-se genericamente a um valor indefinido.
+    
+    ** argumento:  é o valor efetivo do parâmetro.
+
+    ex:
+
+    function(n1,n2){  n1,n2 são parâmetros
+        soma n1 + n2
+    }
 
 */  
 
+    function somarDoisNumeros(n1,n2){  
+        return n1 + n2
+    }
 
+    console.log(somarDoisNumeros(2,3)) // 2,3 são argumentos
