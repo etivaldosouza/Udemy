@@ -1,7 +1,13 @@
 /*
     objetos
 
-=> uma coleção de propriedades,parecidos com array
+=> uma coleção de propriedades,parecidos com array ou podemos dizer também um conjunto de chave e valor onde chave é a propriedade e o valor o valor da propriedade.
+
+ex: let objeto = {
+    nome = 'etivaldo'  
+}
+    nome => é a chave(propriedade)
+    etivaldo => o valor da chave ou valor da propriedade
 
 => podemos acessar estas propriedades 
 
