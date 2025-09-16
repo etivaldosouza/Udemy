@@ -1,6 +1,6 @@
 /*
 
-=> Podemos copiar todas as propriedades de um objto para outro
+=> Podemos copiar todas as propriedades de um objeto para outro
 
 */ 
 
@@ -32,7 +32,30 @@ let adicionais = {
     arcondicionado: true
 }
 
+console.log(carro)
+
 Object.assign(carro,adicionais)
 
 console.log(carro)
+
+
+//=============================================//
+
+let pm = {
+    nome: 'Etivaldo',
+    id: 822297,
+    batalhao: '9ºBPM'   // ctrl + ]} e ctrl + a tecla do lado de ]} ativa os simbolo de graus
+
+}
+
+let pistola = {
+    numeracao: 80024,
+    calibre: '.40',
+    carregador: 3
+}
+
+let cadastropm = Object.assign(pm,pistola) // vai concatenar os objetos na ordem q tá nos parenteses
+
+console.log(cadastropm)
+
 

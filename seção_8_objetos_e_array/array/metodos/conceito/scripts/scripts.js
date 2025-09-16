@@ -9,9 +9,9 @@
 
 representação:
 
-string.propriedade
+string.propriedade   // de propriedade
 
-string.metodo()
+string.metodo()      // de metodo
 
 */ 
 
