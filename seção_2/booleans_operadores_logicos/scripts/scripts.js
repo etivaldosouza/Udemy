@@ -29,11 +29,29 @@ console.log('Felipe' == 'João' || false) // (f && f = f)
 
 console.log(!(true && true)) // (! (v and v = v -> !(v) = f))
 
+console.log(!(false || false))
+
+console.log(!!(false || false)) // negar duas vezes(volta p/ o valor inicial)
 
        /*
 
        valores que por padrão são considerados false:
        ----------------------------------------------
-         null , underfined, ' '(string vazia), false, 0.
+         null , underfined, ' ' (string vazia), false, 0.
 
        */
+
+console.log(!null)
+console.log(!!null)
+
+console.log(!'')
+console.log(!!'')
+
+console.log(!undefined)
+console.log(!!undefined)
+
+console.log(!0)
+console.log(!!0)
+
+console.log(!false)
+console.log(!!false)
