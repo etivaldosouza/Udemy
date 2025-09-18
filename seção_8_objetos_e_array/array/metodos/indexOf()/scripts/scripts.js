@@ -4,7 +4,7 @@
 => procura um elemento no array, se encontrar, retorna o índice(a posição) desse elemento no array
 caso ñ encontre retorna -1
 
-=> havendo dois ou mais dados iguais e do mesmo tipo, o índice retornado é o valor do elemento de índice mais baixo
+=> havendo dois ou mais dados iguais e do mesmo tipo, o índice retornado é o valor do elemento de índice mais baixo(por exemplo no array abaixo temos o 12 na posição 0 e na posição 6 então ele retornará o primeiro(da posição 0))
 
 */ 
 
@@ -14,11 +14,10 @@ console.log(arr.indexOf("xpto"))
 
 console.log(arr.indexOf(12))
 
-console.log(arr.indexOf(12,2)) // parâmetro obrigatório(12) é o elemento cujo índice desejamos conhecer e o parâmetro opcional inicio (2) de onde começa a busca, ou seja, desejamos saber o índice do elemento 12 a partir do segundo 12
-
+console.log(arr.indexOf(12,2)) // parâmetro obrigatório(12) é o elemento cujo índice desejamos conhecer e o parâmetro opcional inicio (2) de onde começa a busca, ou seja, desejamos saber o índice do elemento 12 a partir do indice 2.
 console.log(arr.indexOf(2,3))
 
 console.log(arr.indexOf(237))
 
 console.log(arr.indexOf(34))
-console.log(arr.indexOf(34,2))
+console.log(arr.indexOf(34,2)) // procura o 34 a partir do índice 2
