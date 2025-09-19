@@ -10,8 +10,9 @@
 
 const arr = [1,2,3,4,5,6,7,8,9]
 
-console.log(arr.reverse())
-const inverte = arr.reverse()
+console.log(arr.reverse()) // iverteu a ordem do array
+
+const inverte = arr.reverse() 
 
 console.log(inverte)
 
@@ -49,7 +50,6 @@ console.log(arr)
 const arr = [12,17,60,319]
 
 const invertido = arr.slice().reverse() // gera apenas copia do array invertido s/ alterar o original
-
 
 console.log(invertido)
 
