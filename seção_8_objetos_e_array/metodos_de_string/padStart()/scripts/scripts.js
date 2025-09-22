@@ -8,9 +8,9 @@
     string.padStart(targetLength, padString)
 
     targetLength → o comprimento final que você deseja que a string tenha.
-
+    --------------
     padString (opcional) → a string usada para preencher.
-
+    ------------------
     Se não for informada, o preenchimento será feito com espaços " ".
 
     Se o preenchimento for maior do que o necessário, ele será cortado para caber.
