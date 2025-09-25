@@ -52,4 +52,12 @@ let palavras = frase.split(" ",4) // o primeiro define o caractere para separar 
 console.log(palavras)
 
 
+//================================================//
+
+
+let frase = 'Banana;Maçã;Jaca;Pera;Bola;Tapete;'
+
+console.log(frase.split(';'))
+
+
 

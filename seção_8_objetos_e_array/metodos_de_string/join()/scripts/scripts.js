@@ -1,7 +1,7 @@
 /*
     Método join()
 
-=> junta elementos em um array em uma frase, por meio de um separador 
+=> junta elementos de um array em uma frase, por meio de um separador 
 
 => retorna a união de todos os elementos de um array em forma de string.
 
@@ -31,7 +31,7 @@ console.log(arr.join('//'))
 
 let arr = [6,11,"x","y"]
 
-console.log(arr.join()) 
+console.log(arr.join()) // quando ñ informa o separador então vai a virgula q é o separador padrão
 
 
 
