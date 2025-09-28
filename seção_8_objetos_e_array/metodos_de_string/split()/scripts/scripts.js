@@ -55,9 +55,11 @@ console.log(palavras)
 //================================================//
 
 
-let frase = 'Banana;Maçã;Jaca;Pera;Bola;Tapete;'
+let frase = 'Banana;Maçã;Jaca;Pera;Bola;Tapete'
 
 console.log(frase.split(';'))
+
+console.log(frase.split(','))
 
 
 
