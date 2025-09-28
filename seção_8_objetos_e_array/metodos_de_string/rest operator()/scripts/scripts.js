@@ -1,9 +1,9 @@
 /*
     Rest operator
 
-=> Uma forma de função receber indefinidos parâmetros;
+=> Uma forma de função receber indefinidos parâmetros e transforma-los em um array para depois manipularmos;
 
-=> O operador rest vai virar um array
+=> O operador rest vai virar um array ou seja: o operador rest vai transformar todos os argumentos em um array e ai a gente manipula como quisermos esse array.
 
 => O parâmetro é definido por: ...nome
 
@@ -16,7 +16,7 @@ let num3 = 4
 
 
 
-function imprimirNumeros(...args){
+function imprimirNumeros(...args){               
     for(let i = 0; i < args.length; i++){
         console.log(args[i])
     }
@@ -43,8 +43,11 @@ let nome4 = 'Pedro'
 
 
 function imprimirNomes(...nome){
+
     for(let i = 0; i < nome.length; i++){
+
         console.log(nome[i])
+        
     }
 }
 
@@ -78,3 +81,16 @@ console.log(curso[3]["linguaExtrangeira"])
 }
 
 pessoa('Etivaldo',42,'JavaScript','Pyton','Java',{linguaExtrangeira: "Inglês"})
+
+
+//===================================================================//
+
+const somar = function(...parcelas){
+    let soma  = 0
+    for(let parcela of parcelas) {
+        soma = soma + parcela
+        return soma
+    }
+}
+
+console.log(somar(5,2,3))

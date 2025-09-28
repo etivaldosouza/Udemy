@@ -8,4 +8,5 @@
 let nome = "\n    Matheus    \n"
 
 console.log(nome)
+
 console.log(nome.trim())
