@@ -1,0 +1,4 @@
+/*
+    Destructuring com objetos
+    
+*/

@@ -57,3 +57,24 @@ imprimirNomes(nome1,nome2,nome3,nome4)
 console.log('**Pausa**')
 
 imprimirNomes('Etivaldo','Carlos', 'Karine')
+
+
+//===================================================//
+
+
+function pessoa(nome,idade,...curso){
+    console.log(nome,idade,curso)
+}
+
+pessoa('Etivaldo',42,'JavaScript','Pyton','Java')
+
+
+
+//==============================================//
+
+
+function pessoa(nome,idade,...curso){
+console.log(curso[3]["linguaExtrangeira"])
+}
+
+pessoa('Etivaldo',42,'JavaScript','Pyton','Java',{linguaExtrangeira: "Inglês"})
