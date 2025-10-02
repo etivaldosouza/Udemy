@@ -29,6 +29,40 @@ const {rodas: vRodas,tetosolar:vtetoSolar, motor: vPotencia} = carro
 
 console.log(vRodas)
 
-console.log(vtetosolar)
+console.log(vtetoSolar)
 
-console.log(vpotencia)
+console.log(vPotencia)
+
+
+//===========================================================//
+
+
+let aluno = {
+    nome: 'José',
+    idade: 45,
+    curso: 'Ads',
+    periodo: '3º'
+}
+
+
+const {nome: inome, curso: icurso,idade: iidade, periodo: iperiodo} = aluno
+
+console.log(inome,iidade,icurso,iperiodo)
+
+
+//================================================================//
+
+/*
+    como era antes do ECMASCRIPT 6 para acessar as propriedades do objeto
+*/ 
+
+
+let aluno = {
+    nome: 'José',
+    idade: 45,
+    curso: 'Ads',
+    periodo: '3º'
+}
+
+console.log(aluno.nome,aluno.curso,aluno.periodo)
+

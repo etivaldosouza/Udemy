@@ -35,6 +35,7 @@ console.log(arr3.concat(arr1).concat(arr2))
 
 //===============================================//
 
+// destructuring
 
 let usuario = ['Ayrton',26,'Programador a bordo',2019,'Brasileiro']
 
@@ -55,5 +56,17 @@ let [num1,num2,num3,num4] = numeros
 console.log(num1)
 console.log(num4)
 
+
 console.log(numeros[numeros.length - 1]) // imprime o ultimo nr do array
 console.log(numeros[0]) // imprime o numero na posição 0
+
+
+//============================================================//
+
+//   como era antes do ECMA 6 p/ acessar os elementos do array
+
+let numeros = [2,4,5,8]
+
+console.log(numeros[1])
+console.log(numeros[0])
+console.log(numeros[numeros.length - 1]) // acessa o último elemento do array
