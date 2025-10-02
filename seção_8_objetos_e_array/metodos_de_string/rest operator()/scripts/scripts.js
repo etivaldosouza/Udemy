@@ -85,12 +85,39 @@ pessoa('Etivaldo',42,'JavaScript','Pyton','Java',{linguaExtrangeira: "Inglês"})
 
 //===================================================================//
 
-const somar = function(...parcelas){
+const somar = function(...parcelas){ 
+
     let soma  = 0
+
     for(let parcela of parcelas) {
+
         soma = soma + parcela
-        return soma
+        
     }
+    return soma
 }
 
-console.log(somar(5,2,3))
+console.log(somar(5,2,3))   
+
+/*
+    parcelas => é o array (...parcelas = [5,2,3] pois transforma os argumentos em array)
+
+    parcela => é cada elemento do array
+*/
+
+
+
+//====================================================================//
+
+function somarNumeros(...numeros){
+
+    let soma = 0
+
+    for(let numero of numeros){
+
+        soma = soma + numero
+    }
+    return soma
+}
+
+console.log(somarNumeros(2,5,10,15))
