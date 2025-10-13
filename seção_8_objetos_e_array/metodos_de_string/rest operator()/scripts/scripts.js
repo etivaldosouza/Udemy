@@ -109,15 +109,4 @@ console.log(somar(5,2,3))
 
 //====================================================================//
 
-function somarNumeros(...numeros){
-
-    let soma = 0
-
-    for(let numero of numeros){
-
-        soma = soma + numero
-    }
-    return soma
-}
-
-console.log(somarNumeros(2,5,10,15))
+k
