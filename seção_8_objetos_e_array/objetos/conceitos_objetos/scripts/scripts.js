@@ -99,7 +99,7 @@ let cor = 'amarelo'
 var usuario = {
     nome: 'Ayrton',
     idade: 25,
-    cor
+    cor          // ou cor: cor
 }
 
 console.log(usuario)
