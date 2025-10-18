@@ -1,5 +1,11 @@
+
 /*
     Objetos:
+
+
+=> é uma estrutura destinada a armazenar dados; onde cada dado é formado de um par chave/valor
+
+=> a chave é o identificador do dado e o valor pode ser uma string, uma função, um objeto ou qualquer entidade da javascript.
 
 => é um valor que permite armazenar uma coleção de pares de chave(propriedade) e valor. ou seja, é como se eu tivesse uma variável que armazenasse outras variáveis.
 
@@ -51,6 +57,12 @@ usuario.competencias = {
 console.log(usuario)
 
 //==============================================//
+
+/*
+
+=> dados cujo valor é uma função(bloco de códigos destinados a executar uma tarefa) são denominados << métodos do objeto >> e os demais dados são denominados << propriedades do objeto >>
+
+*/ 
 
 let usuario = {
     digaOi: function(name){
