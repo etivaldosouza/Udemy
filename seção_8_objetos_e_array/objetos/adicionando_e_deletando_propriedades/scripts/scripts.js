@@ -16,7 +16,7 @@ console.log(carro.portas)
 
 delete carro.eletrico
 
-carro.tetoSolar = true
+carro.tetoSolar = true // adicionando a propriedade tetoSolar
 
 console.log(carro)
 
