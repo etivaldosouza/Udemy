@@ -5,6 +5,29 @@
 
 */ 
 
+// criando um objeto vazio:
+
+
+const livros = new Object() // sintaxe que cria um objeto vazio
+
+console.log(livros)
+// adicionando propriedades ao objeto
+
+livros.nome = 'javaScript'
+livros.autor = 'Maujor'
+livros.paginas = 215
+livros.editora = 'novatec'
+
+console.log(livros)
+
+// destructuring do objeto para imprimir os valores das propriedades do objeto
+
+const {nome: inome,autor: iautor,paginas:ipaginas,editora:ieditora} = livros
+
+console.log(inome,iautor,ipaginas,ieditora)
+
+
+
 let carro = {
     marca: "VW",
     portas: 4,
