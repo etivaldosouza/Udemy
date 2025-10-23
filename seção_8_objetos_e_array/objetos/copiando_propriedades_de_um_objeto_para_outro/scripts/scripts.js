@@ -100,11 +100,15 @@ let informacoesExtras = {
 
 }
 
-console.log(Object.assign({},pm,informacoesExtras)) // ou posso criar uma variável
-// aqui estou adicionando os objetos pm e informacoesExtras num objeto novo vazio
+console.log(Object.assign({},pm,informacoesExtras)) // ou posso criar uma variável.
+// aqui estou adicionando os objetos pm e informacoesExtras num objeto novo vazio.por isso a chaves vazia no início.
+// se ñ tivesse a chave é como se estivesse incorporadno o objeto informacoesExtras no objeto pm. veja o caso abaixo:
 
-let novoObj = Object.assign({},pm,informacoesExtras)
+
+let novoObj = Object.assign(pm,informacoesExtras)
 console.log(novoObj)
+
+console.log(pm)
 
 
 

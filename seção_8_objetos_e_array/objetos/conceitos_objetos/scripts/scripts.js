@@ -115,3 +115,21 @@ var usuario = {
 }
 
 console.log(usuario)
+
+
+
+
+let usuario = {
+    nome: 'Ayrton',
+    idade: 26,
+    pais: 'Brasil',
+    estado: 'RJ'
+}
+
+let extraInfo = {
+    linguagen: 'Java',
+    curso: 'ADS',
+    periodo: 'Noite'
+}
+
+console.log(Object.assign({},usuario,extraInfo))
