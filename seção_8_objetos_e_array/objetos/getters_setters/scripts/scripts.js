@@ -29,9 +29,6 @@ console.log(usuarios[1].nome)
 console.log(usuarios[2].nome)
 
 
-
-
-
 //===================================================================//
 
 
@@ -57,7 +54,7 @@ var usuario = {
 
     posicao: 0,
 
-     get atual() {
+     get atual() {    // get => no objeto quando quero chamar uma função como se fosse uma propriedade que ela só retorna um valor 
         return usuarios[this.posicao]
      },
 
@@ -100,11 +97,11 @@ console.log(usuario.atual)
 //======================================================//
 
 var nomes = {
-    listaNomes: ['ADS', 'JS']
+    listaNomes: ['Etivaldo', 'Carlos']
 }
 
 var nome = {
-    primeiro: 'ADS', 
+    primeiro: 'Etivaldo', 
     
     // Getter para 'primeiroNome'
     get primeiroNome() {
@@ -124,7 +121,7 @@ var nome = {
 
 console.log(nome.primeiroNome)
 
-nome.primeiroNome = 'PHP'
+nome.primeiroNome = 'Karine'
 
 console.log(nome.primeiroNome)
 
@@ -143,7 +140,7 @@ var pessoa = {
     set nomeCompleto(novoNome){
         const partes = novoNome.split(' ')
         if(partes.length >= 2){
-            this.primeiroNome = partes[0]
+            this.nome = partes[0]
             this.sobreNome = partes.slice(1).join('')
         }else {
             console.warn("Aviso: Formato de nome incompleto. Use 'Nome Sobrenome'.");
@@ -151,8 +148,46 @@ var pessoa = {
     }   
 }
 
-console.log(pessoa.nomeCompleto)
+console.log(pessoa.nome,pessoa.sobreNome)
 
 pessoa.nomeCompleto = 'Karine Souza'
 
-console.log(pessoa.primeiroNome,pessoa.sobreNome)
+console.log(pessoa.nome,pessoa.sobreNome)
+
+
+
+//==================================================//
+
+partes = 'Karine Costa'
+novo = (partes.split(' '))
+console.log(novo[0])
+console.log(novo.join(' '))
+
+
+
+partes = ['Karine' , 'Costa']
+console.log(partes.join(' '))
+
+
+const pessoa = {
+    nome : 'Etivaldo',
+    sobreNome: 'Souza',
+
+     get nomeCompleto(){
+        return `${this.nome} ${this.sobreNome}`
+    },
+
+    set nomeCompleto(novoNome){
+        const partes = novoNome.split(' ')
+        if(partes.length >= 2){
+            this.nome = partes[0]
+            this.sobreNome = partes.slice(1).join()
+        }else{
+            console.warn("Aviso: Formato de nome incompleto. Use Nome Sobrenome")
+        }
+    }
+}
+
+console.log(pessoa.nome,pessoa.sobreNome)
+pessoa.nomeCompleto = 'Karine Costa'
+console.log(pessoa.nome,pessoa.sobreNome)
