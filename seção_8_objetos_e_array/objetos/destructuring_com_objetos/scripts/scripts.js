@@ -169,7 +169,7 @@ var usuario = {
     nome: {
         primeiro: 'Etivaldo',
 
-        
+
         sobreNome: 'Souza',
         segundo: 'Carlos'
     }
@@ -178,3 +178,131 @@ var usuario = {
 var{nome: {segundo = 'de'}} = usuario // como a propriedade segundo existe ele irá imprimir  valr existente da propriedade desconsiderando o que foi sugerido('de')
 
 console.log(segundo)
+
+
+
+//==================================================================================//
+
+
+// objeto como parâmetro de uma função
+
+
+function imprimeUsuario(usuario){
+    console.log(usuario.nome)
+    console.log(usuario.idade)
+    console.log(usuario.sexo)
+}
+
+var usuarioFunction = {
+    nome: 'Ayrton Teshima',
+    idade: 27,
+    sexo: 'M'
+}
+
+imprimeUsuario(usuarioFunction)
+
+
+
+
+//================================================================//
+
+
+// destructuring na função
+
+function calcularDesconto({nome, preco, desconto}){
+    const precoFinal = preco - (preco * desconto / 100)
+    console.log(`O produto ${nome} com ${desconto}% de desconto custa R$ ${precoFinal.toFixed(2)}`)
+}
+
+const produto = {
+    nome: 'Teclado Mecânico',
+    preco: 250,
+    desconto: 10
+}
+
+calcularDesconto(produto)
+
+
+//==================================================================//
+
+function imprimeUsuario({nome, idade, sexo}){
+    console.log(`nome: ${nome}`)
+    console.log(`idade: ${idade}`)
+    console.log(`sexo: ${sexo}`)
+}
+
+const usuarioFunction = {
+    nome: 'Ayrton',
+    idade: 27,
+    sexo: 'M',
+    país: 'Brasil'
+}
+
+imprimeUsuario(usuarioFunction)
+
+
+//============================================================//
+
+function imprimeProduto(produto) {
+    console.log(`Produto: ${produto.nome}`)
+    console.log(`Preço: R$ ${produto.preco}`)
+    console.log(`Categoria: ${produto.categoria}`)
+    console.log('-----------------------------')
+}
+
+var lista = [
+    {
+        nome: 'mouse gamer',
+        preco: 149.99,
+        categoria: 'periférico'
+    },
+    {
+        nome: 'gabinete',
+        preco: 300,
+        categoria: 'periférico'
+    }
+]
+
+// percorre todos os produtos da lista
+lista.forEach(imprimeProduto)
+
+
+//=======================================
+
+
+// valor defaul p/ função
+
+function imprimeUsuario({nome, idade, sexo, pais = 'Brasil'}){ 
+    console.log(nome,idade,sexo,pais)
+   
+}
+
+const usuarioFunction = {
+    nome: 'Etivaldo',
+    idade: 42,
+    sexo: 'M'
+    
+}
+
+imprimeUsuario(usuarioFunction)
+
+
+//=========================================================//
+
+
+// 
+
+function imprimeUsuario({nome, idade, sexo, pais = 'Brasil'}){ 
+    console.log(nome,idade,sexo,pais)
+   
+}
+
+const usuarioFunction = {
+    nome: 'Etivaldo',
+    idade: 42,
+    sexo: 'M',
+    pais: 'japão'
+    
+}
+
+imprimeUsuario(usuarioFunction)
