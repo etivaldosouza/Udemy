@@ -142,3 +142,9 @@ console.log(sobreNome)
 var {nome: {primeiroNome}} = pm
 
 console.log(primeiroNome)
+
+
+
+//============== destructuring com valor default ======================================//
+
+
