@@ -10,7 +10,7 @@ const person = {
     lastname: 'Doe'
 }
 
-const {name: fname, lastname: lname} = person
+const {name: fname, lastname: lname} = person // estou criando variaveis chamadas fname e lname e armazenando nelas os valores das propriedades(name e lastname) do objeto person
 
 
 console.log(fname)
@@ -136,7 +136,7 @@ console.log(nome)
 
 console.log(' \n==================================================\n')
 
-var {nome: {sobreNome}} = pm
+var {nome: {sobreNome}} = pm  // segue a ordem(da propriedade nome(que no caso é um objeto) eu quero que extraia a propriedade sobreNome)
 console.log(sobreNome)
 
 var {nome: {primeiroNome}} = pm
@@ -148,3 +148,33 @@ console.log(primeiroNome)
 //============== destructuring com valor default ======================================//
 
 
+// vai assumir valores caso determinada propriedade ñ exista.
+
+
+var usuario = {
+    nome: {
+        primeiro: 'Etivaldo',
+        sobreNome: 'Souza'
+    }
+}
+
+var {nome: {segundo = 'Coelho'}} = usuario // como ñ existe a propriedade segundo, o programa imprimiu coelho. 
+console.log(segundo)
+
+// porém caso exista a propriedade que queremos ele irá imprimir a propriedade que já existe e irá desconsiderá a que sugerimos. ex:
+
+
+
+var usuario = {
+    nome: {
+        primeiro: 'Etivaldo',
+
+        
+        sobreNome: 'Souza',
+        segundo: 'Carlos'
+    }
+}
+
+var{nome: {segundo = 'de'}} = usuario // como a propriedade segundo existe ele irá imprimir  valr existente da propriedade desconsiderando o que foi sugerido('de')
+
+console.log(segundo)
