@@ -31,13 +31,17 @@ const total = soma(3,5)
 console.log(total) 
 
 
-// outra maneira:
+//=================================================================//
+
+// outra maneira (direto com console.log):
 
 const soma = function(a,b){
     return a + b   
 }
 
 console.log(soma(4,5))
+
+
 
 //==========================================//
 
@@ -77,6 +81,9 @@ function podeDirigir(idade,cnh){
 podeDirigir(30,true)
 podeDirigir(44,0) // 0 == false
 podeDirigir(19,1) // 1 == true
+
+var podeOuNao = podeDirigir(14,false)
+console.log(podeOuNao) // vai dá undefine pois a função esta apenas exibindo algo na tela s/ armazenar valor
 
 
 // cuidado ao usar o ===(extritamente igual):

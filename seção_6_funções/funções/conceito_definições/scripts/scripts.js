@@ -24,7 +24,7 @@
 
 => o corpo da função é definido entre {}
 
-=> geralmente uma função retorna um valor ñ é obrigatório.
+=> geralmente uma função retorna um valor. ñ é obrigatório.
 
 => é possível delcarar funções em váriáveis;
 
@@ -39,11 +39,14 @@ function escreverNoConsole(){   // É uma boa prática usar nomes  que descrevam
 
 escreverNoConsole() // chamando ou executando a função
 
+
 /*
     As chaves delimitam o bloco de código da função. Tudo o que estiver dentro delas será executado quando a função for chamada. No exemplo acima, o único comando é console.log('escrevendo no console').
 
     Para executar o código dentro da função, você precisa chamá-la usando o nome dela, seguido pelos parênteses.
+
     Quando o JavaScript encontra essa linha, ele vai procurar a função com esse nome e executar o bloco de código que está dentro dela.
+
     No Exemplo, a chamada escreverNoConsole() fará com que o texto 'escrevendo no console' seja exibido no console do navegador ou do Node.js.
 */ 
 
@@ -81,5 +84,29 @@ textPorParametro('Testando por parâmetro')
 
     Para usar essa função, você precisa passá-la um valor quando a chamar.
 
-    Em resumo, essa função é mais flexível porque não tem um valor fixo para imprimir. Ela imprime o que for passado a ela como argumento no momento da chamada.
+    Em resumo, essa função é mais flexível porque não tem um valor fixo para imprimir. Ela imprime o que for passado a ela como argumento no momento da chamada. isso serve para casos que vc pode customizar a função no decorrer do programa. 
 */ 
+
+
+function escrevaMsg(a) {
+
+    console.log(a) // ao usar o console a função ñ armazena nenhum valor apenas exibe na tela.
+}
+
+var msg = escrevaMsg('Seja Bem Vindo!!')
+
+console.log(msg)  // irá dá undefined pois a função ñ está armazenando nenhum valor.
+
+
+
+//==============  armazenando valor  ===========================//
+
+
+function escrevaMsg() {
+
+    return `Seja Bem Vindo!!` // ao usar o return a função armazena o valor.
+}
+
+var msg = escrevaMsg()
+
+console.log(msg)

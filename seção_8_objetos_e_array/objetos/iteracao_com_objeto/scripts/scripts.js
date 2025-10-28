@@ -1,6 +1,7 @@
 /*
     iterando objeto com o loop for
 
+=> para iterar usando o loop for normal tem que utilizar o objec.keys que irá retornar um array e a partir disso fazermos a iteração com base no array das propriedades gerado. 
 */ 
 
 
@@ -58,4 +59,39 @@ for(var i = 0; i < props.length;i++){
 
 //====================================================//
 
+// iterando com loop for of
 
+
+const usuarioFunction = {
+    nome: 'Ayrton Teshima',
+    idade: 27,
+    sexo: 'M',
+    pais: 'Brasil'
+}
+
+var props = Object.keys(usuarioFunction)
+
+console.log(props)
+
+for(var props of props){
+    console.log(usuarioFunction[props])
+}
+
+
+//======================= utilizando for in ==========================//
+
+const usuarioFunction = {
+    nome: 'Ayrton Teshima',
+    idade: 27,
+    sexo: 'M',
+    pais: 'Brasil'
+}
+
+const props = Object.keys(usuarioFunction)
+
+console.log(props)
+
+for(const props in usuarioFunction){
+    // console.log(props) imprime apenas as propriedades
+    console.log(props,usuarioFunction[props]) // imprime os valores das propriedades
+}

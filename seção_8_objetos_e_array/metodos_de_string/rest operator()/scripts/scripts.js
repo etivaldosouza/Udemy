@@ -109,4 +109,23 @@ console.log(somar(5,2,3))
 
 //====================================================================//
 
-k
+
+function pessoa(nome,idade,...curso){
+console.log(curso[3]["turno"])
+}
+
+pessoa('Etivaldo',42,'JavaScript','Pyton','Java',{linguaExtrangeira: "Inglês",turno:'Noite'})
+
+
+//=======================================================================//
+
+function endereco(rua,cidade,pais,...complemento){]
+
+    console.log(complemento)
+    
+    return `${rua},${cidade},${pais},${complemento}`
+    
+
+}
+
+console.log(endereco('Rua 35','São José de Ribamar','Brasil','Nordeste','Maranhão'))
