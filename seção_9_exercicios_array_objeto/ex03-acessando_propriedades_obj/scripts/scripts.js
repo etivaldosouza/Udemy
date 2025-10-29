@@ -5,7 +5,7 @@
     * limite de passageiro = 40
     * portas = 2
     * 
-    * imprima todas od valores das propriedades no console.
+    * imprima todas od valores das propriedades no console
     
 */ 
  
@@ -23,3 +23,11 @@ let onibus = {
 let {rodas: irodas, limitePassageiros: ilimite, portas: iportas} = onibus
 
 console.log(irodas,ilimite,iportas)
+
+
+//========== maneira 2 ===================
+
+let {rodas,limitePassageiros,portas} = onibus
+
+console.log(rodas,limitePassageiros,portas)
+
