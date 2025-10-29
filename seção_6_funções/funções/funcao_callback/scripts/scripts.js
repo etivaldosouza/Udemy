@@ -42,8 +42,11 @@ var multiplica = function(resultado){
 var total = soma(2,5,multiplica)
 console.log(total)
 
-//==========================
+//===================================
 
 console.log(soma(10,2,function(x){
     return x + 20
 }))
+
+
+

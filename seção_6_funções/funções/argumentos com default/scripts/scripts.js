@@ -9,14 +9,15 @@
 
 function repetirFrase(frase, n = 2){
     for(let x = 1; x <= n; x++){
-        console.log(`${frase}  ${x} `)
+        console.log(`\n${frase}  ${x}\n`)
     }
 }
 
 
 
 repetirFrase('só duas vezes')
-repetirFrase('Testando', 5)
+console.log('======= TESTE ==============')
+repetirFrase('Testando', 5) // como existe o segundo argumento então é ele q vai valer como parâmetro
 
 
 function potencia(base, exp = 2){ //criei um valor default(exp = 2)
@@ -27,6 +28,10 @@ console.log(potencia(3)) // quando uso apenas um argumento eu i
 // rei pegar o valor default criado acima(exp = 2)
 console.log(potencia(4,2)) // como os dois parâmetros foram passados usa-se eles.
 console.log(potencia(2,3))
+
+
+
+//===========================================================================//
 
 
 
