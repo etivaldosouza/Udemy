@@ -37,3 +37,19 @@ arr.map(num => console.log(num))
 let arr = [1,2,3,4,5]
 
 arr.forEach(num => console.log(num))
+
+
+//a diferença do map para o forEach é que no map retorna um array
+
+
+let frutas = ['Maçã', 'Pêra','Goiaba']
+
+console.log(frutas.map(fruta => fruta))
+
+//============================================//
+
+let frutas = ['Maçã', 'Pêra','Goiaba']
+
+frutas.map((fruta) => {
+    console.log(fruta)
+})
