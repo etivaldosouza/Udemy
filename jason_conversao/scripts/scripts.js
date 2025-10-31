@@ -1,9 +1,9 @@
 /*
     JSON para String
 
-=> Podemos converter o JSON para uma string de forma fácil
+=> Podemos converter o JSON para uma string de forma fácil( jason.stringify() )
 
-=> ou também uma string para JSON
+=> ou também uma string para JSON(json.parse)
 
 
 */ 
@@ -38,15 +38,23 @@ let pessoa = {
     "hobbies": ["Video game","Leitura","Correr"]
 }
 
-let pessoaTexto = JSON.stringify(pessoa) // quando quero enviar em formato texto.
+
+console.log(pessoa.nome)
+
+let pessoaTexto = JSON.stringify(pessoa) //convertendo jason p/ str (quando quero enviar em formato texto.)
 
 console.log(pessoaTexto) 
+console.log(typeof(pessoaTexto))
 
-console.log(pessoaTexto)
- 
-let textoJson = JSON.parse(pessoaTexto) // transformando de texto para json
+console.log(pessoa.nome)
+
+
+// transformando de texto para json
+
+let textoJson = JSON.parse(pessoaTexto) 
 
 console.log(textoJson)
+console.log(typeof(pessoaTexto))
 
 console.log(textoJson.nome) // como ta em formato json eu consigo acessar as propriedades 
 
