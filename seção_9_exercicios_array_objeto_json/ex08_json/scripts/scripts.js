@@ -10,12 +10,41 @@
 
 
 let pm = {
-    "z" "Etivaldo",    "id": 822297,
+    "nome": "Etivaldo",    
+    "id": 822297,
     "graduacao": "CB"
 }
 
-// p/ acessar as propriedades é igual ao objeto:
+// p/ acessar os valores das propriedades é igual ao objeto:
 
-let (nome,id,graduacao) = pm
+let {nome,id,graduacao} = pm  // utilizando destructuring
 
-console.log(nome)
+console.log(nome,id,graduacao)
+
+
+//============== utilizando o Object.values =======================//
+
+let pm = {
+    "nome": "Etivaldo",    
+    "id": 822297,
+    "graduacao": "CB"
+}
+
+let valor_prop = Object.values(pm) // exibe os valores das chaves num array
+
+console.log(valor_prop)
+
+
+//========================================================//
+
+// quando quero acessar os nomes das propriedades
+
+
+let pm = {
+    "nome": "Etivaldo",    
+    "id": 822297,
+    "graduacao": "CB"
+}
+
+let propriedades = Object.keys(pm)
+console.log(propriedades)

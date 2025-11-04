@@ -30,7 +30,7 @@ var usuarioFunction = {
     pais: 'Brasil'
 }
 
-var valores = Object.values(usuarioFunction)
+var valores = Object.values(usuarioFunction) // exibe os valores das chaves num array
 
 console.log(valores)
 
