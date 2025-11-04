@@ -18,9 +18,13 @@ let pm = {
 // p/ acessar os valores das propriedades é igual ao objeto:
 
 let {nome,id,graduacao} = pm  // utilizando destructuring
-
 console.log(nome,id,graduacao)
 
+//ou:
+
+
+
+console.log(pm.nome,pm.id,pm.graduacao)
 
 //============== utilizando o Object.values =======================//
 
