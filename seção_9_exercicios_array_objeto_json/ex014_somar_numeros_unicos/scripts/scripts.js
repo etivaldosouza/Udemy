@@ -1,18 +1,22 @@
 /*
-    Soma de Números Únicos:
+   
+Crie uma função chamada removeDuplicates que recebe como parâmetro um array de elementos.
 
-
-=>  Escreva uma função chamada sumUniqueNumbers que recebe um array de números como argumento.
-
-=>  A função deve calcular e retornar a soma de todos os números que aparecem apenas uma vez no array.
-
-=>  Utilize uma estrutura de dados auxiliar para armazenar a contagem de cada número no array.
-
-=>  Percorra o array e verifique se cada número ocorre apenas uma vez. Se sim, some-o à variável de soma.
-
-=>  Considere que o array pode conter tanto números inteiros positivos quanto negativos.
-
+A função deve remover os elementos duplicados do array, mantendo apenas as ocorrências únicas.
 
 */ 
 
+function removeDuplicates(arr){
 
+    let unicos = []
+
+    for(let item of arr){
+        if(!unicos.includes(item)){
+            unicos.push(item)
+        }
+    }
+    return unicos
+}
+
+
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
