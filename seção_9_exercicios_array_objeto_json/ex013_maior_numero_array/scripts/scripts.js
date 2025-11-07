@@ -19,9 +19,8 @@ console.log(findMaxNumber([2,5,10,15]))
 
 
 /*
-
     Explicação:
-
+    
 O parâmetro arr é o array de números.
 
 O operador ... (spread) “espalha” os valores do array dentro da função Math.max().
