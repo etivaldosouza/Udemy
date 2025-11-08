@@ -85,3 +85,12 @@ console.log(pais)
 
 
 
+if(true){
+    var youtube = 'ProgramadorAbordo'
+    let autor = 'Ayrton'   // variavel inicializada com a palavra reservada let vai funcionar como variavel de escopo local
+}
+
+console.log(youtube)
+
+console.log(autor) // vai dá erro pois a variável é de escopo local
+
