@@ -28,7 +28,7 @@ console.log(y) // imprime variável do escopo global
 //=======================================================//
 
 
-let a = 10
+let a = 10 // variável de escopo global
 
 function multiplicar(x,y){ // (3,7)
 
@@ -55,9 +55,9 @@ console.log(a) // imprime a variável do escopo global
 
 /*
 
- uma função cria um escopo local dentro do seu corpo(bloco). fora das funções existe o escopo global.
- nesse sentido, podemos dizer que em um script poderiam existir vários escopos locais(funções) aninhados em um
- escopo global.
+ => uma função cria um escopo local dentro do seu corpo(bloco). fora das funções existe o escopo global.
+ 
+ => nesse sentido, podemos dizer que em um script poderiam existir vários escopos locais(funções) aninhados em um escopo global.
 
 */ 
 
