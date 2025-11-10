@@ -1,9 +1,11 @@
 /*
     Métodos:
 
-=> Propriedades que servem como funções, ou seja, dados cujo valor é uma função.
+=> dados cujo valor é uma função.
 
-=> posso dizer também que são as ações dos objetos
+=> Propriedades que servem como funções
+
+=> posso dizer também que métodos são as ações dos objetos
 
 => Invocamos os métodos da mesma maneira que as funções
 
@@ -24,15 +26,18 @@ console.log(cachorro.latir())
 
 const cachorro = {
     uivar: function(){
+
         console.log('Auuuuu..')
 
     },
     rosnar: function(){
+
         console.log('Ruuuu...')
     }
 }
 
 cachorro.uivar()
+
 cachorro.rosnar()
 
 
@@ -69,6 +74,7 @@ console.log(pessoa.getNome())
 //===============================================================================//
 
 const cachorro = {
+
     raca: 'SRD',
     uivar: function(){
         console.log('Auuuuuu')
@@ -80,13 +86,14 @@ const cachorro = {
         this.raca = marca     // o this é uma referencia ao proprio objeto( é a mesma coisa que cachorro.raca)
     },
 
-    getRaca: function(){
+    getRaca: function(){            
         return `a raca é ${this.raca}`
     }
 }
 
 
 cachorro.setRaca('Pastor Alemão')
+
 console.log(cachorro.getRaca())
 
 console.log('================')
@@ -96,5 +103,5 @@ console.log(cachorro.getRaca())
 
 console.log('================')
 
-cachorro.setRaca('Poodle')
+cachorro.setRaca('Poodle')   
 console.log(cachorro.getRaca())
