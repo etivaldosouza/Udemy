@@ -1,0 +1,9 @@
+/*
+    método apply
+
+=> 
+
+
+*/ 
+
+function personagem()
