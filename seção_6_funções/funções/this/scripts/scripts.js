@@ -3,16 +3,29 @@
 
 
 */ 
+// console.log(this) 
+
+/*
+ 
+    quando chamo o diz no escopo global o this vai valer window.(se abrirmos o inspecionar vamos ver o objeto window com todos os elementos do navegador)
+ */ 
+
+//===================================================//
+
+//alterando o this com o operador new
 
 function usuario(){
     
-    console.log(this) // o this é o proprio objeto
+    console.log(this) 
 
 }
- new usuario()
+
+//usuario()
+
+new usuario()  // o this passa agora a ser o objeto usuario
 
 
-//======================================================//
+// obs: eu utilizo o operador new para alterar o this do objeto. ======================================================//
 
 function usuario(){
     this.nome = 'Etivaldo'
@@ -34,4 +47,41 @@ console.log(objeto.nome)
 console.log(objeto.soma(10,2))
 
 // sempre que invoca uma function com operador new ele retorna sempre um this e o this é um objeto e sendo um objeto a gente vai ter acesso as propriedades nome, idade e soma.
+
+
+//=============== mais exemplo ==========//
+
+function militar(){
+    console.log(this)  // o this vale window
+}
+
+militar()
+
+
+// invocando com o operador new() 
+
+
+
+function militar(){
+    console.log(this)  
+}
+
+new militar() // o this deixa de ser o objeto window e passa agora a referenciar o objeto militar
+
+
+// então como this é o objeto militar, então para eu adicionar as propriedades e métodos ao objeto militar faremos:
+
+
+
+function militar(){
+
+    this.nome = 'Etivaldo'  // o this vale window
+    this.graduacao = 'Cabo'
+    this.id =  822297
+        
+}
+
+
+console.log(new militar())     // sempre que invocarmos uma function com operador new ele retorna sempre o this e o this é um objeto e sendo um objeto a gente vai ter acesso as propriedades nome, idade e soma.
+
 
