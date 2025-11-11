@@ -18,14 +18,15 @@ personagem()// vai retornar o this e nesse caso o this é o objeto window
 // usando o call p/ alterar o this.
 
 function personagem(){
-    console.log(this) 
+    console.log(this)      // o objeto this aqui é o personagemUsuario
 }
 
 let personagemUsuario = {
-    nome : 'Homem Aranha'
+    nome : 'Homem Aranha',
+    idade: 25
 }
 
- personagem.call(personagemUsuario) // com o call eu to dizendo que o objeto this agora é o persongemUsuario.
+ personagem.call(personagemUsuario) // com o call eu to dizendo que o persongemUsuario vai ser o objeto this  .
 
 
 //=================================================== 
@@ -95,7 +96,11 @@ apresentar.call(pessoa2); // Olá, meu nome é Tony Stark e eu sou um engenheiro
 
 
 function militares(){
-    return Object.values(this).map(militar)
+
+    for(let i = 0; i < this.length; i++){
+        console.log(`o militar é ${this[i].graduação} ${this[i].nome},id: ${this[i].id}, Batalhão:${this[i].unidade}`)
+    }
+    
 }
 
 let pms = [
@@ -126,5 +131,4 @@ let pms = [
     },
 ]
 
-
-console.log(militares.call(pms))
+militares.call(pms)
