@@ -1,14 +1,53 @@
 /*
     this:
 
+=> é uma referência a um objeto que está sendo usado. exemplo se estivermos um objeto pessoa e estivessemos acessando sua propriedade nome poderiamos substituir o nome pessoa por this. exemplo:
+    pessoa.nome == this.name
 
 */ 
-// console.log(this) 
+
+
 
 /*
- 
-    quando chamo o diz no escopo global o this vai valer window.(se abrirmos o inspecionar vamos ver o objeto window com todos os elementos do navegador)
+ => console.log(this) 
+
+=> quando chamo o diz no escopo global o this vai valer window.(se abrirmos o inspecionar vamos ver o objeto window com todos os elementos do navegador)
+
+=> ñ funciona com aerow function
+
  */ 
+
+
+const pessoa1 = {
+    nome: 'Bob Esponja',
+    comidaFavorida: 'Hamburguers',
+    mensagem: function(){
+    console.log(`olá eu sou ${this.nome}`)
+    },
+    comer: function(){
+        console.log(`${this.nome} está comendo ${this.comidaFavorida}`)
+    }
+}
+
+const pessoa2 = {
+    nome: 'Patrick',
+    comidaFavorida: 'Pizza',
+    mensagem: function(){
+    console.log(`olá eu sou ${this.nome}`)
+    },
+    comer: function(){
+        console.log(`${this.nome} está comendo ${this.comidaFavorida}`)
+    }
+}
+
+pessoa1.mensagem()
+pessoa1.comer()
+
+pessoa2.mensagem()
+pessoa2.comer()
+
+
+
 
 //===================================================//
 
