@@ -96,3 +96,36 @@ let biblioteca = minhaBibioteca()
 
 console.log(biblioteca.add5())
 console.log(biblioteca.add7())
+
+
+//======================================================
+
+function imprimeNomeCompleto(){
+    console.log('teshima')
+}
+
+function inicializa (){
+    let nome = 'Ayrton'
+    console.log('Primeiro')
+    setTimeout(imprimeNomeCompleto,2000)
+}
+
+inicializa()
+
+// obs: a função setTimeout recebe 2 parâmetros o primeiro é uma função e o segundo parâmetro é o tempo que ela vai ser executada
+
+function resultado(m){
+    return function(){
+        console.log(`a media é ${m}`)
+}
+}
+function media(x,y){
+    let m = (x+y)/2
+    setTimeout(resultado(m),2000)
+}
+
+media(100,0)
+
+
+
+
