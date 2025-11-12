@@ -11,6 +11,7 @@ function armazenarSoma(x){
 
 let soma1 = armazenarSoma(3) //(y = 3 + y)
 console.log(soma1(5)) // 3 + 5 = 8
+
 let soma2 = armazenarSoma(5)
 console.log(soma2(10)) // 5 + 10
 
@@ -52,3 +53,46 @@ let meuContador2 = contador(1)
 meuContador2()
 meuContador2()
 meuContador2()
+
+
+//=================================================================
+
+function imprimeNome(){
+
+    let nome = 'Etivaldo'
+    
+    return function(){
+        return nome
+    }
+}
+
+let func = imprimeNome()
+console.log(func())
+
+
+//==========================================================================
+
+function minhaBibioteca(){
+
+    function auxiliar(valor){
+        return 10 + valor
+    }
+
+    return {
+
+        add5(){
+            return auxiliar(5)
+        },
+
+        add7(){
+            return auxiliar(7)
+        }
+    }
+}
+
+
+
+let biblioteca = minhaBibioteca()
+
+console.log(biblioteca.add5())
+console.log(biblioteca.add7())
