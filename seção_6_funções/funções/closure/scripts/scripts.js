@@ -3,6 +3,12 @@
 
 => uma função que se lembra do ambiente em que ela foi criada
 
+=> A função interna “carrega” com ela o ambiente onde foi criada, incluindo variáveis da função externa.
+
+=> Uma função interna acessa variáveis da função externa,
+
+=> Mesmo depois da função externa já ter sido finalizada.
+
 */ 
 
 function armazenarSoma(x){
@@ -127,5 +133,53 @@ function media(x,y){
 media(100,0)
 
 
+//======================= EXEMPLO 3 ===========================================//
 
+function contador() {
+    let numero = 0
+    return function(){
+        numero++
+        return numero
+    }
+}
+
+let funcaoInterna = contador()
+
+console.log(funcaoInterna())
+
+
+
+//=========================== Guardando o nome de uma pessoa ========================//
+
+
+function criarSaudacao(){                           
+    let nome = 'etivaldo'
+    return function(){
+        return `olá ${nome}`
+    }
+
+}
+
+let saudacaoNome = criarSaudacao()
+
+console.log(saudacaoNome())
+
+
+//outra maneira ====================//
+
+
+function saudacaoNome(nome){
+    return function(){
+        return `olá ${nome}`
+    }
+}
+
+let saudarNome1 = saudacaoNome('Etivaldo')
+let saudarNome2 = saudacaoNome('Pedro')
+let saudarNome3 = saudacaoNome('Carlos')
+
+
+console.log(saudarNome1())
+console.log(saudarNome2())
+console.log(saudarNome3())
 
