@@ -183,3 +183,73 @@ console.log(saudarNome1())
 console.log(saudarNome2())
 console.log(saudarNome3())
 
+
+//=========================== Controlando acesso a dados privados ====================//
+
+
+/*
+abaixo temos: 
+
+uma função criarUsuario() que está retornando um objeto anônimo que tem duas propriedades que são duas funcoes(verSenha e alterarSenha)    
+
+*/
+
+
+function criarUsuario(){ 
+
+    let senha = '12345'
+
+    return {
+
+        verSenha(){
+            return senha
+        },
+
+        alterarSenha(novaSenha){
+            senha = novaSenha
+        }
+
+    }
+}
+
+let user = criarUsuario() // user ta recebendo a funcao criarUsuario() q retorna um objeto anonimo, logo user é um objeto  
+
+console.log(user.verSenha()) 
+
+user.alterarSenha('ecoelho')
+
+console.log(user.verSenha())
+
+
+user.alterarSenha('ETIVALDO83')
+console.log(user.verSenha())
+
+
+function minhaBiblioteca(){
+    
+    function auxiliar(numero){
+        return numero + 10
+    }
+
+    return {
+
+        add5(){
+            return 10 + 5
+        },
+        add7(){
+            return 10 + 7
+        }
+    }
+}
+
+let biblioteca = minhaBiblioteca()
+
+console.log(biblioteca.add5())
+console.log(biblioteca.add7())
+
+
+
+
+
+
+
