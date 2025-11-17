@@ -78,7 +78,13 @@ console.log(func())
 
 //==========================================================================
 
-function minhaBibioteca(){
+/*
+    abaixo mais um exemplo em que temos uma função externa e uma funcao interna(auxiliar()) que será responsavel por calcular o resultado do retorno do objeto anônimo  que tem dois metodos (add5 e add7)
+
+*/ 
+
+
+function minhaBibioteca(){                 
 
     function auxiliar(valor){
         return 10 + valor
@@ -97,7 +103,6 @@ function minhaBibioteca(){
 }
 
 
-
 let biblioteca = minhaBibioteca()
 
 console.log(biblioteca.add5())
@@ -113,12 +118,31 @@ function imprimeNomeCompleto(){
 function inicializa (){
     let nome = 'Ayrton'
     console.log('Primeiro')
-    setTimeout(imprimeNomeCompleto,2000)
+    setTimeout(imprimeNomeCompleto,2000)  // o setTimout que invoca a função imprimeNomecompleto. ou seja por isso a função nao ta com o () após 
 }
 
 inicializa()
 
 // obs: a função setTimeout recebe 2 parâmetros o primeiro é uma função e o segundo parâmetro é o tempo que ela vai ser executada
+
+//================ armazenando a variavel nome:==========================
+
+function exibeNome(nome){
+    return function(){
+        console.log(nome)
+    }
+    
+}
+
+function inicializa(){
+    let nome = 'Etivaldo'
+    setTimeout(exibeNome(nome),2000)
+}
+
+inicializa()
+
+
+//=====================================================================//
 
 function resultado(m){
     return function(){
@@ -165,7 +189,7 @@ let saudacaoNome = criarSaudacao()
 console.log(saudacaoNome())
 
 
-//outra maneira ====================//
+//=============== outra maneira ====================//
 
 
 function saudacaoNome(nome){
@@ -225,31 +249,77 @@ user.alterarSenha('ETIVALDO83')
 console.log(user.verSenha())
 
 
-function minhaBiblioteca(){
-    
-    function auxiliar(numero){
-        return numero + 10
+//=====================================================================================//
+
+function init(){
+
+    const nome = 'Olá Mundo!'
+
+    function mostrarNome(){     // essa função consegue acessar oq esta fora dela.
+        console.log(nome)
     }
 
-    return {
+    mostrarNome()    // a função só é executada dentro da funcao init
+}
 
-        add5(){
-            return 10 + 5
-        },
-        add7(){
-            return 10 + 7
-        }
+init()
+
+
+
+function init(){
+
+    const nome = 'Etivaldo'
+    
+    function mostrarNome(){
+        console.log(nome)
+    }
+
+    return mostrarNome
+    
+}
+
+const minhaFuncao = init()
+
+minhaFuncao()
+
+
+
+//=================================================
+
+
+function contador(){
+
+    let contador = 0
+
+    return function(){
+        console.log(contador)
+        contador++
     }
 }
 
-let biblioteca = minhaBiblioteca()
+let resultado = contador() 
 
-console.log(biblioteca.add5())
-console.log(biblioteca.add7())
+resultado()  
+resultado()              
+resultado()
+resultado()
+resultado()  
+resultado()              
+resultado()
+resultado()
 
 
 
 
+/*
+entendendo:
 
+let resultado = contador() => eu estou executando a funcao contador e armazenando na variável resultado. logo,
+resultado esta recebendo a função anonima entao resultado tb é uma função
 
+let resultado = function(){
+    console.log(contador)
+    contador++
+}
 
+*/

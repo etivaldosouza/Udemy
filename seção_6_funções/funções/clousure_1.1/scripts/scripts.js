@@ -7,18 +7,22 @@
 => Em JavaScript, essa palavra é usada para confinar uma função(interna) dentro de outra
 função(externa, ou seja, aninhar funções)
 
-=> Funções aninhadas rodam dentro da função na qual estão aninhadas. Assim, uma função interna é visivel somente dentro da função externa e não será executada se for invocada fora dela.
+=> Funções aninhadas rodam dentro da função na qual estão aninhadas. 
+
+=> Assim, uma função interna é visivel somente dentro da função externa e não será executada se for invocada fora dela.
 
 */ 
 
 function funcaoExterna(){
+    
     alert('Função Externa')
 
     function funcaoInterna(){
         alert('Função Interna')
     }
-    // a interna é chamada aqui dentro
-    funcaoInterna()
+   
+    funcaoInterna()  // a interna é chamada aqui dentro
+
 }
 
 
