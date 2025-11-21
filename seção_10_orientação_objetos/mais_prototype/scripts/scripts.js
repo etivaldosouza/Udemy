@@ -40,3 +40,14 @@ obs: mesmo eu nao criando o metodo hasOwnProperty para o pessoa ele pode ser uti
 
 */ 
 
+
+
+const animal = {
+    som: 'um som de animal',
+    tipo: 'animal',
+    emitirSom: function(){
+        console.log(this.som)
+    }
+}
+
+animal.emitirSom()
