@@ -42,6 +42,9 @@ obs: mesmo eu nao criando o metodo hasOwnProperty para o pessoa ele pode ser uti
 
 
 
+//========================================================================================================//
+
+
 const animal = {
     som: 'um som de animal',
     tipo: 'animal',
@@ -50,4 +53,52 @@ const animal = {
     }
 }
 
-animal.emitirSom()
+
+let gato = {
+    som: 'MiaaAAuUU',
+    tipo: 'gato'
+}
+
+Object.setPrototypeOf(gato,animal) // to dizendo que a classe animal vai ser pai(prototipo) da classe gato
+
+gato.emitirSom()
+
+// a classe gato procura a propriedade emitirSom em sua instância e como não tem ela vai buscar na classe animal.
+
+
+
+
+//==================================================================================================================//
+
+
+const animal = {
+    som: 'um som de animal',
+    tipo: 'animal',
+    emitirSom: function(){
+        console.log(this.som)
+    }
+}
+
+
+let gato = {
+    som: 'MiaaAAuUU',
+    tipo: 'gato'
+}
+
+let gatoRaivoso ={
+    tipo: 'gatoRaivoso',
+    miarForte: function(){
+        console.log(this.som.toUpperCase())
+    }
+}
+
+Object.setPrototypeOf(gato,animal) // to dizendo que a classe animal vai ser pai(prototipo) da classe gato
+
+gato.emitirSom()
+
+Object.setPrototypeOf(gatoRaivoso,gato) 
+
+gatoRaivoso.miarForte()  // quando chamo a função miarForte ela vai executar a propiredade som do gatoRaiovoso porém essa propriedade ñ existe dentro de gatoRaivoso então ela vai buscar no seu prototype(gato)
+
+
+
