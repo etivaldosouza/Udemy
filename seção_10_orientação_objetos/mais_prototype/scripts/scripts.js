@@ -113,6 +113,11 @@ Object.setPrototypeOf(cachorro,animal)
 cachorro.emitirSom()
 
 
-Object.prototype.hasOwnProperty()
+
+//============================  identificando se existe determinada propriedade nos objetos: ==============================//
+
+console.log(gato.hasOwnProperty('som'))
+
+console.log(gatoRaivoso.hasOwnProperty('som'))
 
 
