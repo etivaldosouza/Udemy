@@ -52,7 +52,9 @@ console.log(novoObjeto)
 
 console.log(meuObjeto.b + novoObjeto.b)
 
-console.log(meuObjeto.hasOwnProperty('map'))
+console.log(meuObjeto.hasOwnProperty('map')) // quando quero saber se tem a propriedade map
+
+
 
 
 
