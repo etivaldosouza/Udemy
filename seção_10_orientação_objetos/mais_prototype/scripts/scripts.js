@@ -92,13 +92,27 @@ let gatoRaivoso ={
     }
 }
 
+let cachorro = {
+    som: 'Au Au...',
+    tipo: 'Cachorro',
+    emitirSom: function(){
+        console.log(this.som + this.som)
+    }
+}
+
 Object.setPrototypeOf(gato,animal) // to dizendo que a classe animal vai ser pai(prototipo) da classe gato
 
 gato.emitirSom()
 
 Object.setPrototypeOf(gatoRaivoso,gato) 
 
-gatoRaivoso.miarForte()  // quando chamo a função miarForte ela vai executar a propiredade som do gatoRaiovoso porém essa propriedade ñ existe dentro de gatoRaivoso então ela vai buscar no seu prototype(gato)
+gatoRaivoso.miarForte()  // quando chamo a função miarForte ela vai executar ela, porém ñ existe a propriedade som dentro do gatoRaiovoso então ela vai buscar no seu prototype(gato)
 
+Object.setPrototypeOf(cachorro,animal)
+
+cachorro.emitirSom()
+
+
+Object.prototype.hasOwnProperty()
 
 
