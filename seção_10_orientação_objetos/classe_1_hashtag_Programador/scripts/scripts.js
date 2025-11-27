@@ -14,20 +14,21 @@
 
 // veja os objetos criados manualmente(ou seja de forma literal):
 
-const corredor1 = {
+const corredor_1 = {
 
     nome:'Ayrton Senna',
     equipe: 'Mclaren',
     idade: 29,
-    correr: function(){               //a propriedade o objeto que tem como valor uma função, é chamado de método
+    correr: function(){               //a propriedade do objeto que tem como valor uma função, é chamado de método
         console.log('VruuUU...')
     }
 }
 
-console.log(corredor1.nome)
-console.log(corredor1.correr())
+console.log(corredor_1.nome)
+console.log(corredor_1.correr())
 
-const corredor2 = {
+
+const corredor_2 = {
 
     nome:'Max Verstappen',
     equipe: 'Red Bull Racing',
@@ -38,7 +39,7 @@ const corredor2 = {
 
 }
 
-const corredor3 = {
+const corredor_3 = {
 
     nome:'Lewis Hamilton',
     equipe: 'Mercedes',
@@ -48,7 +49,7 @@ const corredor3 = {
     }
 }
 
-const corredor4 = {
+const corredor_4 = {
 
     nome:'Charles Leclerc',
     equipe: 'Ferrari',
@@ -59,7 +60,7 @@ const corredor4 = {
 
 }
 
-const corredor5 = {
+const corredor_5 = {
 
     nome:'Lando Norris',
     equipe: 'MacLaren',
@@ -93,17 +94,25 @@ const corredor1 = new pilotoFormula1()
 
 console.log(corredor1)
 
+
 corredor1.nome = 'Ayrton Sena'
+
 corredor1.equipe = 'McLaren'
+
 corredor1.idade = 29
+
 corredor1.correr()
 
 console.log(corredor1)
 
 
+
+//=============================================================================================//
+
+
 /*
  
-    criando função construtor para gerar um objeto num formato especifico:
+    criando função construtora para gerar um objeto num formato especifico:
 
     a forma acima mesmo melhorando com relação a quantidade de linhas de códigos, ainda permanece muito longo o codigo. e por isso podemos enxugar mais ainda como veremos nas linhas abaixo:
 
@@ -111,10 +120,10 @@ console.log(corredor1)
 */ 
 
 class pilotoFormula1 {
-    constructor(nome,equipe,idade){  // lembrando que os parâmetros pode ser qualquer nome, o que importa é a ordem que está recebendo lá de baixo
-        this.nome = nome
-        this.equipe = equipe
-        this.idade = idade
+    constructor(nomeDoPiloto,equipeDoPiloto,idadeDoPiloto){  // lembrando que os parâmetros pode ser qualquer nome, o que importa é a ordem que está recebendo lá de baixo
+        this.nome = nomeDoPiloto
+        this.equipe = equipeDoPiloto
+        this.idade = idadeDoPiloto
     } 
     correr() {
         console.log('VruuUU...')
@@ -135,10 +144,13 @@ console.log(corredor1)
 corredor1.correr()
 
 console.log(corredor2)
+corredor1.correr()
 
 console.log(corredor3)
+corredor1.correr()
 
 console.log(corredor4)
+corredor1.correr()
 
 console.log(corredor5)
-
+corredor1.correr()
