@@ -7,7 +7,6 @@
 
 => ou seja, podemos criar diversos objetos em cima de um prototype
 
-
 */ 
 
 //  classe cachorro é molde para objetos como por exemplo pastor alemão.
