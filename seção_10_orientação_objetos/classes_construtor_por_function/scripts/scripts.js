@@ -2,6 +2,7 @@
     
     classes: construtor por função
 
+
 => construtores são formas de instanciar uma classe em uma linguagem de programação;
 
 => instanciar = criar um objeto novo
@@ -49,4 +50,7 @@ function criarCachorros(racaDoCachorro,patasDoCachorro,corDoCachorro){
 
 let pastor = criarCachorros('pastor',4,'amarelo') 
 
-let doberman = 
+let Doberman = criarCachorros('doberman',4,'preto')
+
+console.log(pastor)
+console.log(Doberman)
