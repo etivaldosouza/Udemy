@@ -59,6 +59,8 @@ const p2 = new Produto('Monitor',800.0,10)
 console.log(p2)
 
 
+
+
 //==================================================================================
 
 // boa prática: 
@@ -72,6 +74,20 @@ const Produtos = function(nomeDoProduto,precoDoProduto,quantidadeDoProduto){
 Produtos.prototype.total = function(){
     return this.preco * this.quantidade
 }
+Produtos.prototype.add = function(qtde){
+    this.quantidade = this.quantidade + qtde
+
+}
+Produtos.prototype.remove = function(qte){
+    if(this.quantidade >= qte) {
+        this.quantidade = this.quantidade - qte
+    }
+   
+}
+
+Produtos.prototype.label = function(){
+    return `Dados: ${this.nome}, ${this.preco}`
+}
 
 const p_1 = {  //  objeto criado de forma literal
 
@@ -80,6 +96,7 @@ const p_1 = {  //  objeto criado de forma literal
     quantidade: 2
 }
 
+//*: const p_1 = new Produtos('Computador',3000.0,2) (caso quisesse criar o p1 usando o construtor)
 
 p_1.total = Produtos.prototype.total   //como o objeto p_1 foi criado de forma literal ou seja ñ foi criado através do construtor Produto então tive q adicionar o metodo para o objeto literal
 
@@ -95,4 +112,18 @@ console.log(p_3.total())
 
 
 
-//*: const p_1 = new Produtos('Computador',3000.0,2) (caso quisesse criar o p1 usando o construtor)
+console.log(p_2.quantidade)
+
+p_2.add(3) // adicionando 3 quantidades
+
+console.log(p_2.quantidade)
+
+console.log(p_3.quantidade)
+
+p_3.remove(4)
+console.log(p_3.quantidade)
+
+
+console.log(p_2.label())
+
+console.log(p_3.label())

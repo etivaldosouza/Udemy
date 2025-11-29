@@ -42,7 +42,10 @@ pessoa.prototype.mostrar = function(){
 console.log(p.mostrar())
 
 
-// console.log(pessoa.prototype)
+//console.log(pessoa.prototype)
 //console.log(p.__proto__)
 
 
+// o prototype é um objeto pertencente as funções. quando um objeto não é uma função ele ñ tem prototype.
+
+console.log(p.prototype) // vai retornar undefine.
