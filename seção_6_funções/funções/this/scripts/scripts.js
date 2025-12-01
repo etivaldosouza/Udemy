@@ -6,12 +6,11 @@
 
 */ 
 
-
-
+console.log(this) 
 /*
- => console.log(this) 
+=> console.log(this) 
 
-=> quando chamo o diz no escopo global o this vai valer window.(se abrirmos o inspecionar vamos ver o objeto window com todos os elementos do navegador)
+=> quando chamo o this no escopo global o this vai valer window.(se abrirmos o inspecionar vamos ver o objeto window com todos os elementos do navegador)
 
 => ñ funciona com aerow function
 
