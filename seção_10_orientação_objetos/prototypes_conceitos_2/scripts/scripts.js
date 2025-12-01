@@ -70,6 +70,8 @@ salaAula.prototype = {
 
 const minhaSala = new salaAula(['João','Maria'])
 
+console.log(minhaSala)
+
 minhaSala.adicionarAluno('pedro')
 
 console.log(minhaSala.alunos)

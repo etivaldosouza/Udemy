@@ -10,11 +10,11 @@ console.log(Object.getPrototypeOf(pessoa) === Object.prototype)
 
 // criando um novo objeto usando como referencia um objeto existente:
 
-const pessoa = {
+const Pessoa = {
     maos: 2
 }
 
-const pessoaNova = Object.create(pessoa) 
+const pessoaNova = Object.create(Pessoa) 
 
 console.log(pessoaNova.maos) // está acessando(herdando) a propriedade maos do objeto herdado pessoa porém pessoaNova ñ tem a propriedade maos.
 

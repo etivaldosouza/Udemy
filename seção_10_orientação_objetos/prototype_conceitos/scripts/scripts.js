@@ -16,7 +16,7 @@ nave.prototype.vidas = 3
 nave.prototype.disparar = function(){
 
     if(this.disparos > 0){
-        this.disparos--
+        this.disparos--         //diminui em 1und a cada disparos
         console.log('disparo realizado')
     }else{
         console.log('sem munição')
