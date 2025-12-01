@@ -17,10 +17,16 @@ function Cachorro(racaDoCachorro){  //convenção: a 1ª letra maiúscula determ
 
 }
 
+Cachorro.prototype.latir = function() {    // criar metodo fora do construtor é mais eficiente pois o programa ocupa menos espaco em memória.
+    console.log('AuAu')
+}
 
-let foxPaulistinha = new cachorro('Fox Paulistinha')
+
+let foxPaulistinha = new Cachorro('Fox Paulistinha')
 
 console.log(foxPaulistinha)
+
+foxPaulistinha.latir()
 
 
 
