@@ -46,6 +46,7 @@ Cachorros.prototype.raca = 'SRD'       //estou definindo a raça quando ainda ñ
 Cachorros.prototype.patas = 4
 
 console.log(Cachorros.prototype)
+console.log(Cachorros.prototype.latir())
 
 let labrador = new Cachorros('Labrador','Amarelo')
 
