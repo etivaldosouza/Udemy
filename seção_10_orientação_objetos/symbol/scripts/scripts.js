@@ -14,6 +14,7 @@ class Cachorro {
         this.raca = racaDoCachorro
     }
 }
+
 let patas = Symbol()
 
 Cachorro.prototype[patas] = 4
@@ -26,4 +27,6 @@ let goldem = new Cachorro('Golden Retriever')
 console.log(goldem)
 
 console.log(goldem[patas])
+
+
 

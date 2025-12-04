@@ -1,14 +1,17 @@
 /*
     Getters e setters
 
-=> Get: serve para resgatar o valor de uma propriedade
+=> métodos que vão setar propriedades
 
-=> Set: serve para alterar o valor de uma propriedade
+=> Get: serve para resgatar o valor de uma propriedade(verifica valor)
+
+=> Set: serve para alterar o valor de uma propriedade(atribui valor)
 
 */ 
 
 
 class Cachorro {
+    
     constructor(racaDoCachorro){
         this.raca = racaDoCachorro
     }
