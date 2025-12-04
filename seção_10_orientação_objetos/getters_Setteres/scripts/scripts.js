@@ -56,7 +56,7 @@ class Cachorros {
         return this.raca
     }
 
-    set novaCor(valor){
+    set novaCor(valor){        // o set só pode receber um único valor como parâmetro
         this.cor = valor
     }
     set novaRaca(racaNova){
