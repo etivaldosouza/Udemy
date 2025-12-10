@@ -41,6 +41,7 @@ console.log(exemplo.obeterAtributo)
 
 exemplo.definirAtributo = 'Novo Teste'
 
+console.log(exemplo)
 console.log(exemplo.obeterAtributo)
 
 

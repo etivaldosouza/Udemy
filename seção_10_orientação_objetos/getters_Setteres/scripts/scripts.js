@@ -80,3 +80,39 @@ pastor.novaRaca = 'Poodle'
 console.log(pastor.verRaca)
 console.log(pastor.latir())
 
+
+
+//================================================================//
+
+class Pm {
+    constructor(nomeDoPm,barraDoPm,batalhaoDoPm,idDoPm){
+        this.nome = nomeDoPm
+        this.barra = barraDoPm
+        this.batalhão = batalhaoDoPm
+        this.id = idDoPm
+    }
+
+    identifica(){
+        console.log(`Nome: ${this.nome}, Barra: ${this.barra},Batalhão: ${this.batalhão}, Id: ${this.id}`)
+    }
+
+    get getBpm(){
+        return this.batalhão
+    }
+
+    set setBpm(bpm){
+        this.batalhão = bpm
+    }
+}
+
+let mike = new Pm('Etivaldo',14,'20ºBPM',822297)
+
+console.log(mike)
+
+mike.setBpm = '9ºBPM'
+
+console.log(mike)
+
+mike.identifica()
+
+console.log(`Batalhão: ${mike.getBpm}`)
