@@ -16,7 +16,7 @@ console.log(s2)
 console.log(s3===s4)
 console.log(typeof(s1))
 
-console.log(Symbol.keyFor(s1))
+console.log(Symbol.keyFor(s1)) // saber o nome que vem dentro do parenteses.
 
 console.log(Symbol.keyFor(s3))
 console.log(Symbol.keyFor(s4))
@@ -39,6 +39,7 @@ class Jogador {
 let jogadores = [new Jogador('j1'),new Jogador('j2'),new Jogador('j3'),new Jogador('j4')]
 
 let s_1 = jogadores[0].id
+
 
 // p/ remover um jogador do array:
 

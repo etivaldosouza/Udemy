@@ -1,13 +1,16 @@
 /*
     Herança
 
-=> Uma classe pode herdar propriedades de outra classe por herança.
+=> Uma classe pode herdar propriedades e métodos de outra classe por herança.
 
 => para isso utilizamos extends
+
+=> é quando eu quero usar além das propriedades da classe pai criar outras propriedades.
 
 */ 
 
 // classe pai (super classe)
+
 class Mamifero {
 
     constructor(patasDoMamifero,corDoMamifero){
@@ -19,13 +22,13 @@ class Mamifero {
 
 /*
 Cria a classe Cachorro e diz que ela herda (extends) tudo da classe Mamifero.
-Ou seja, Cachorro também terá patas, pois Mamifero tem.
+Ou seja, Cachorro também terá patas e cor, pois Mamifero tem.
 */
 class Cachorro extends Mamifero {
 
-    constructor(patas,cor,racaDoMamifero){
-        super(patas,cor) 
-        this.raca = racaDoMamifero
+    constructor(patas,cor,racaDoCachorro){
+        super(patas,cor)                 //  propriedades da classe pai 
+        this.raca = racaDoCachorro
     }
 }
 
@@ -51,7 +54,7 @@ ou seja:
 
 Criando o atributo exclusivo da classe Cachorro:
 
-=> this.raca = racaDoMamifero ( Adiciona a propriedade raca ao objeto Cachorro.)
+=> this.raca = racaDoCachorro ( Adiciona a propriedade raca ao objeto Cachorro.)
 
 Cachorro agora tem:
 

@@ -1,5 +1,5 @@
 /*
-    Override nas propriedades do Prototype
+    Override(substituir) nas propriedades do Prototype
 
 => Sempre que adicionamos uma propriedade a um objeto, é criada uma idêntica no prototype.
 
@@ -38,11 +38,11 @@ class Cachorros {
         this.cor = corDoCachorro
     }
     latir() {
-        console.log('AuAuAuAu....')
+        console.log('AuAuAuAu....')  // se usar o return deixa de da underfined
     }
 }
 
-Cachorros.prototype.raca = 'SRD'       //estou definindo a raça quando ainda ñ foi definida
+Cachorros.prototype.raca = 'SRD'       //estou definindo a raça quando ainda ñ foi definida(valor default)
 Cachorros.prototype.patas = 4
 
 console.log(Cachorros.prototype)
@@ -60,3 +60,4 @@ console.log(labrador.raca)
 console.log(labrador.cor)
 
 
+// valor default é quando não estiver um valor indormado ai usa o default

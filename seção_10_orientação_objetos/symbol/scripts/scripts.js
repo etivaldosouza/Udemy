@@ -7,8 +7,9 @@
 
 */ 
 
-
+// relembrando: em classes as propriedades são criadas dentro do constructor. quando quero criar uma propriedade fora do constructor eu utulizo o .prototye
 class Cachorro {
+
     constructor(racaDoCachorro){
 
         this.raca = racaDoCachorro
