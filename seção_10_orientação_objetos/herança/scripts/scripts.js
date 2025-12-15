@@ -22,8 +22,9 @@ class Mamifero {
 
 /*
 Cria a classe Cachorro e diz que ela herda (extends) tudo da classe Mamifero.
-Ou seja, Cachorro também terá patas e cor, pois Mamifero tem.
+Ou seja, Cachorro também terá patas e cor, pois Mamifero tem além de propriedades próprias.
 */
+
 class Cachorro extends Mamifero {
 
     constructor(patas,cor,racaDoCachorro){

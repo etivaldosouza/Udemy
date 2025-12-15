@@ -91,7 +91,7 @@ class pessoa {
     }
 
     falar(){
-        console.log(`${this.nome} está falando`)
+        console.log(`${this.nome} está falando`)  
     }
     andar(){
         console.log(`${this.nome} está andando`)
@@ -121,6 +121,7 @@ let pf1 = new PessoaFisica('Etivaldo','(98)98198-6302','etivaldosouza@hotmail.co
 
 let pf2 = new PessoaFisica('Roberto','(98)98190-6203','robertosouza@hotmail.com','0576249702')
 
+
 console.log(pf1)
 pf1.falar()
 pf1.andar()
@@ -131,5 +132,17 @@ pf2.falar()
 
 
 
-console.log(pf1.nome)
+console.log(pf1.nome,pf1.cpf)
 console.log(pf2.nome)
+
+let pj1 = new PessoaJuridica('Display','(98)98187-8948','displayinfo@hotmail.com','69345/0001-89')
+
+console.log(pj1)
+pj1.pagarSalario()
+
+let pj2 = new PessoaJuridica('KF Emprestimos','(98)3237-5598','kfempprestimos@gmail.com','54097/0001-34')
+console.log(pj2)
+
+pj2.pagarSalario()
+
+pj2.andar()
