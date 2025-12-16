@@ -108,23 +108,49 @@ minhaConta.verExtrato()
 
 
 
-class Contador {
-    constructor(valor){
-        this.valor = valor
-    }
-    incrementar(incremento){
-        this.incremento = this.incremento +  this.valor  
+
+
+//===========================================================================//
+
+
+
+class ContaBancaria {
+
+    constructor(saldo) {
+        this.saldo = saldo
+        this.extrato = []
     }
 
-    decrementar(decremento) {
-        this.decremento = this.valor - this.decremento
+    depositar(valor){
+        if(valor <= 0){
+            console.log(`❌ Valor Inválido`)
+            return
+        }
+        this.saldo = this.saldo + valor
+        this.extrato.push(`+Depósito:R$ ${valor}`)  // registrando o deposito no array
+    }
+    sacar(valor){
+        if(valor > this.saldo){
+            console.log(`❌ Saldo Insuficiente`)
+            return
+        }
+        this.saldo = this.saldo - valor
+        this.extrato.push(`- Saque: R$ ${valor}`) // registrando o saque no array
+    }
+    verExtrato(){
+        console.log(`📄 Extrato da conta:`)
+        this.extrato.forEach(item => console.log(item)) // percorrendo cada registro(item) do array e imprimindo os registros
+        console.log(`Saldo Atual: R$ ${this.saldo}`)
     }
 }
 
-let meuValor = new Contador(10)
+let contaEtivaldo = new ContaBancaria(1000)
 
-console.log(meuValor)
+contaEtivaldo.depositar(100)
 
-meuValor.incrementar(20)
+contaEtivaldo.sacar(10)
 
-console.log(meuValor)
+
+contaEtivaldo.verExtrato()
+
+
