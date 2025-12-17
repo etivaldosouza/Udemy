@@ -47,10 +47,6 @@ class Carrinho {
                 this.valorTotal = this.valorTotal - this.itens[itemCarrinho].preco * this.itens[itemCarrinho].qtd
                 
                 this.itens.splice(index,1)
-
-
-
-
             }
         }
     }

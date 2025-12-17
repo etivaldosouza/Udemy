@@ -4,53 +4,92 @@
 
 
 class CarrinhoDeCompras {
-    constructor(itens,qtd,valorTotal){
-        this.itens = itens
-        this.qtd = qtd
-        this.valorTotal = valorTotal
+
+  constructor(itens,qtd,valorTotal){
+    this.itens = itens
+    this.qtd = qtd
+    this.valorTotal = valorTotal
+  }
+  addItem(item){
+
+    let contador = 0
+    for (let itemCarrinho of this.itens) {
+      if (itemCarrinho.id === item.id) {
+        itemCarrinho.qtd = itemCarrinho.qtd + item.qtd  
+        contador = 1
+      }
     }
-
-    adicionarItem(nome,preco,quantidade){
-
-        const produto = {
-            nome: nome,
-            preco: preco,
-            quantidade: quantidade
-        }
-
-        this.itens.push(produto)
-
-        this.quantidadeTotal = this.quantidadeTotal + quantidade
-        this.valorTotal = this.valorTotal + preco * quantidade
+    if (contador === 0){
+      this.itens.push(item)
     }
-    
-    removerItem(nome){
-        const index = this.itens.findIndex(item => item.nome === nome)
+    this.qtd = this.qtd + item.qtd
+    this.valorTotal = this.valorTotal + item.preco * item.qtd
+  }
 
-        if(index != -1){
-            const itemRemovido = this.itens[index]
+  removeItem(item) {
+    for (let itemCarrinho of this.itens) {
+      if (itemCarrinho.id === item.id) {
+        let index = this.itens.findIndex(obj => obj.id === item.id)
 
-            this.quantidadeTotal = this.quantidadeTotal - itemRemovido.quantidade
-            this.valorTotal = this.valorTotal - itemRemovido.preco * itemRemovido.quantidade
+        this.qtd = this.qtd - itemCarrinho.qtd 
+        this.valorTotal = this.valorTotal - itemCarrinho.preco * itemCarrinho.qtd
 
-            this.itens.splice(index,1)   // remove 1 item a partir de index
-        }else {
-            console.log('Item não encontrado no carrinho')
-        }
+        this.itens.splice(index, 1)
+        break
+      }
     }
+  }
 }
 
-let carrinho = new CarrinhoDeCompras()
+let carrinho = new CarrinhoDeCompras([
+  {
+    id: 1,
+    nome: 'Camisa',
+    qtd: 1,
+    preco:20
+  },
 
-carrinho.adicionarItem("Camisa", 50, 2)
-carrinho.adicionarItem("Tênis", 200, 1)
+  {
+    id: 2,
+    nome: 'Calça',
+    qtd: 2,
+    preco: 50
+  }
+  
+], 3,120)
 
 console.log(carrinho)
 
-/*
-    explicação linha por linha:
+carrinho.addItem({id: 1,nome: 'Camisa',qtd: 2, preco: 20})
 
-    removendo item:
+console.log(carrinho)
+
+carrinho.addItem({id: 3,nome: 'Boné',qtd: 1, preco: 15})
+
+console.log(carrinho)
+
+
+removeItem({id: 1,nome: 'Camisa', qtd: 1, preco: 20})
+/*
+
+obs:
+
+REGRA DE OURO (GUARDE ISSO!)
+
+Tipo de loop	O que você recebe
+
+for...in	índice (0, 1, 2)
+
+for...of	valor (objeto)
+
+👉 Se usar for...of, nunca faça:
+
+array[item]
+
+
+  explicação linha por linha:
+
+  removendo item:
 
 SITUAÇÃO INICIAL (ARRAY)
 
