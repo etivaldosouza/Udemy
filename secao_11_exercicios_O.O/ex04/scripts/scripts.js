@@ -16,23 +16,60 @@ class Carro {
     constructor(marca,cor,gasolinaRestante){
         this.marca = marca
         this.cor = cor
-        this.gasolina = gasolinaRestante
+        this.gasolinaRestante = gasolinaRestante
         
     }
 
-    dirigir(km){ // consumo: 1l a cada 10km
+    dirigir(km){  
         
-        let consumo = distancia/this.gasolina
+        let litrosConsumidos = km / this.consumo
+
+        if(this.gasolinaRestante >= this.consumo){
+            this.gasolinaRestante = this.gasolinaRestante - litrosConsumidos
+            console.log(`Você dirigiu ${km} km.`)
+            console.log(`Gasolina restante: ${this.gasolinaRestante} litros`)
+        }else{
+            console.log("Gasolina insuficiente para essa distância!")
+        }
+    }
+
+    abastecer(litros) {
+        this.gasolinaRestante = this.gasolinaRestante + litros
+        console.log(`abastecido com ${litros} litros`) 
+    }
+    autonomia(){
+        let kmRestante = this.gasolinaRestante * this.consumo
+        return `você tem uma autonomia de ${kmRestante} Km`
     }
 }
 class CarroA extends Carro{
     constructor(marca,cor,gasolinaRestante,consumo){
-        super(marca,cor,gasolinaRestante){
-            
-        }
+
+        super(marca,cor,gasolinaRestante)
+        this.consumo = consumo
+        
     }
 }
 
-let carro = new Carro('Wv','Cinza',100,14)
+let carro = new CarroA('Wv','Cinza',0,16)
 
 console.log(carro)
+
+carro.abastecer(51)
+
+console.log(carro.autonomia())
+
+carro.dirigir(350)
+
+console.log(carro)
+
+carro.abastecer(10)
+
+carro.dirigir(500)
+
+console.log(carro)
+
+carro.abastecer(5)
+
+console.log(carro)
+
