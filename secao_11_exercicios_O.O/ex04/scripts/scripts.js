@@ -10,6 +10,15 @@
 => e um de abastecer para aumentar a gasolina quando necessário.
 
 
+    Calculo de consumo médio:
+
+    consumoMédio = distância percorrida / qtde de litros abastecido
+
+    Calculo de Custo por Km:
+
+        Custo Km = consumoMedio / preço do litro
+              
+
 */ 
 
 class Carro {
