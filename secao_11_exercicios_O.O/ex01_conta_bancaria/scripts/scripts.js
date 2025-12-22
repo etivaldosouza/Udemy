@@ -103,7 +103,6 @@ let minhaConta = new Conta(2000)
 minhaConta.depositar(1200)
 minhaConta.sacar(500)
 minhaConta.depositar(300)
-
 minhaConta.verExtrato()
 
 
