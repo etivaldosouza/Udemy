@@ -92,3 +92,10 @@ console.log(splitagens)
 
 
 
+/*
+
+=> Construtor vazio = não recebe parâmetros e não cria this.propriedade
+
+=> Você só cria o objeto para usar os métodos.
+
+*/ 
