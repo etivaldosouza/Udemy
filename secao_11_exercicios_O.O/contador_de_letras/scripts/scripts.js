@@ -12,3 +12,10 @@
 */ 
 
 
+class LetterCounter{
+    constructor(){
+
+    }
+}   countLetter(str){
+    let textoTratado = str.trim().
+}
