@@ -22,9 +22,10 @@ class LetterCounter{
 
     let letter = textoTratado.split('')
 
-    if(letter[0] === ''){
+    if(letter.length === 0){
         return 0
     }
+    else if(letter )
     return letter.length
 }
 
@@ -34,10 +35,15 @@ class LetterCounter{
 
 let counter = new LetterCounter()
 
-console.log(counter.countLetter('olá mundo!!'))
+console.log(counter.countLetter('olá mundo!!!'))
 
 
-let texto = 'Olá mundo!!'
-texto.trim().replace(/\s+/g,"")
-let arr = texto.split('')
-console.log(arr.length)
+
+
+
+
+
+let texto = ''
+let tratarTexto = texto.split('')
+console.log(tratarTexto)
+console.log(tratarTexto.length)
