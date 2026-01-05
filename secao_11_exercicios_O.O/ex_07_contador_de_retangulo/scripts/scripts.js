@@ -18,24 +18,81 @@
 */ 
 
 
-class Retamgulo{
+class Retangulo{
     constructor(largura,altura){
+
+        if (largura <= 0 || altura <= 0) {
+
+            throw new Error("Largura e altura devem ser maiores que zero")
+        }
+        
         this.largura = largura
         this.altura = altura
     }
     calcularArea(){
+
         let area = this.largura * this.altura
         return area
 
     }
     calcularPerimetro(){
+
         let perimetro = 2 * (this.altura + this.largura)
         return perimetro
     }
 }
 
+try{
+    
+    let calculadoraRetangulo = new Retangulo(3,-2)
 
-let calculadoraRetangulo = new Retamgulo(3,2)
 
-console.log(calculadoraRetangulo.calcularArea())
-console.log(calculadoraRetangulo.calcularPerimetro())
+    console.log(calculadoraRetangulo.calcularArea())
+
+    console.log(calculadoraRetangulo.calcularPerimetro())
+
+}catch(erro){
+    console.log(erro.message)
+}
+
+
+
+
+//============================================================================//
+
+
+
+class Retangulo{
+    constructor(largura,altura){
+
+        if (largura <= 0 || altura <= 0) {
+
+            throw new Error("Largura e altura devem ser maiores que zero")
+        }
+        
+        this.largura = largura
+        this.altura = altura
+    }
+    calcularArea(){
+
+        return this.largura * this.altura
+        
+    }
+    calcularPerimetro(){
+
+        return 2 * (this.altura + this.largura)
+    }
+}
+
+try{
+    
+    let calculadoraRetangulo = new Retangulo(3,2)
+
+
+    console.log(calculadoraRetangulo.calcularArea())
+
+    console.log(calculadoraRetangulo.calcularPerimetro())
+
+}catch(erro){
+    console.log(erro.message)
+}
