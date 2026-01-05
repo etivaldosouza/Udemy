@@ -63,6 +63,7 @@ try{
 
 
 class Retangulo{
+
     constructor(largura,altura){
 
         if (largura <= 0 || altura <= 0) {
@@ -96,3 +97,56 @@ try{
 }catch(erro){
     console.log(erro.message)
 }
+
+
+/*
+    O que é o try?
+
+=>  try significa "tente executar este código"
+
+=>  Ele envolve um bloco onde pode acontecer um erro
+
+    Na prática:
+
+=>  O JavaScript tenta executar tudo dentro do try
+
+=>  Se não houver erro, o catch é ignorado
+
+=>  Se houver erro, a execução pula imediatamente para o catch
+
+    exemplo:
+
+    ...new Retangulo(3, -2)
+
+
+➡️ dispara um erro por causa do throw new Error(...)
+
+
+    O que é o catch?
+
+=>  Ele captura o erro que foi lançado dentro do try
+
+=>  O parâmetro erro é o objeto de erro criado pelo new Error()
+
+
+    O que é erro.message?
+
+=>  É a mensagem que você definiu no throw
+
+*/ 
+
+
+/*
+    Resumo rápido
+
+    Palavra	                Função
+
+    throw	            Lança um erro manualmente
+
+    new Error()	        Cria um objeto de erro
+
+    try	                Tenta executar um bloco de código
+
+    catch	            Captura e trata o erro
+
+*/ 
