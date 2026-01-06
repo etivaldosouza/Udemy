@@ -98,6 +98,9 @@ try{
     console.log(erro.message)
 }
 
+// message => faz referencia ao erro lá do throw new Error.
+
+
 
 /*
     O que é o try?
