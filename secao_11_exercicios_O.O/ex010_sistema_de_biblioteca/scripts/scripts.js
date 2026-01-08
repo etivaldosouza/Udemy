@@ -22,3 +22,91 @@
 
 
 */
+
+
+class Livro {
+    constructor(titulo, autor) {
+        this.titulo = titulo
+        this.autor = autor
+        this.disponivel = true
+    }
+
+    emprestar() {
+        if (this.disponivel === true) {
+            console.log(`O livro "${this.titulo}" já está emprestado.`)
+            return
+        }
+
+        this.disponivel = false
+        console.log(`Você emprestou o livro "${this.titulo}".`)
+    }
+
+    devolver() {
+        if (this.disponivel === false) {
+            console.log(`O livro "${this.titulo}" já está disponível.`)
+            return
+        }
+
+        this.disponivel = true
+        console.log(`O livro "${this.titulo}" foi devolvido.`)
+    }
+
+    consultarDisponibilidade() {
+        return this.disponivel
+    }
+}
+
+
+const livro1 = new Livro("Dom Casmurro", "Machado de Assis")
+
+console.log(livro1.consultarDisponibilidade()) 
+
+livro1.emprestar()
+
+
+
+//================== Maneira 2 //==============================
+
+
+class Livro{
+    constructor(titulo,autor,disponivel){
+
+        this.titulo = titulo
+        this.autor = autor
+        this.disponivel = disponivel
+    }
+    emprestar(){
+        if(this.disponivel === true ){
+            this.disponivel = false
+            console.log('Livro emprestado com sucesso')
+        } else {
+            console.log('Livro não está disponível')
+        }
+    }
+    devolver(){
+        if(this.disponivel === false ){
+            this.disponivel = true
+            console.log('Livro devolvido com sucesso')
+        } else {
+            console.log('Livro já está disponível')
+        }
+    }
+    consultarDisponibilidade(){
+        return this.disponivel
+    }
+}
+
+let iaParaDev = new Livro('IA para devs','Guanabara',false)
+
+console.log(iaParaDev.consultarDisponibilidade())
+
+iaParaDev.emprestar()
+
+iaParaDev.devolver()
+
+iaParaDev.emprestar()
+
+
+
+
+
