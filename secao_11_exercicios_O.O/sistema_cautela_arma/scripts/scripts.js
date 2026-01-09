@@ -33,18 +33,18 @@ class Arma{
     cautelar(){
         if(this.disponivel === true){
             this.disponivel = false
-            console.log(`arma ${this.serie} cautelada com sucesso`)
+            console.log(`arma ${this.serie} cautelada com sucesso`)           
             return
         }
         console.log(`a arma ${this.serie} ñ está disponível`)
     }
     devolver(){
-        if(this.disponivel === false){           
-            console.log(`a arma ${this.serie} já está disponível`)
+        if(this.disponivel === false){   
+            this.disponivel = true        
+            console.log(`a arma ${this.serie} devolvida com sucesso`)
             return
         }
-
-        this.disponivel = true
+        console.log(`a arma ${this.serie} já foi devolvida`)
                 
     }
     consultarDisponibilidade(){
@@ -60,4 +60,11 @@ console.log(arma1.consultarDisponibilidade())
 arma1.cautelar()
 
 arma1.devolver()
+
+console.log(arma1.consultarDisponibilidade())
+
 arma1.devolver()
+
+arma1.cautelar()
+
+arma1.cautelar()

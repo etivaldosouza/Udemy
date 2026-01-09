@@ -33,22 +33,22 @@ class Livro {
 
     emprestar() {
         if (this.disponivel === true) {
-            console.log(`O livro "${this.titulo}" já está emprestado.`)
+            this.disponivel = false
+            console.log(`O livro "${this.titulo}" emprestado com sucesso.`)
             return
-        }
-
-        this.disponivel = false
-        console.log(`Você emprestou o livro "${this.titulo}".`)
+        }       
+        console.log(`o livro "${this.titulo}" não está disponível.`)
     }
 
     devolver() {
         if (this.disponivel === false) {
-            console.log(`O livro "${this.titulo}" já está disponível.`)
+            this.disponivel = true
+            console.log(`O livro "${this.titulo}" devolvido com sucesso.`)            
             return
         }
-
-        this.disponivel = true
-        console.log(`O livro "${this.titulo}" foi devolvido.`)
+        console.log('Livro já foi devolvido')
+        
+        
     }
 
     consultarDisponibilidade() {
@@ -61,7 +61,21 @@ const livro1 = new Livro("Dom Casmurro", "Machado de Assis")
 
 console.log(livro1.consultarDisponibilidade()) 
 
+
+livro1.devolver()
+
 livro1.emprestar()
+
+console.log(livro1.consultarDisponibilidade())
+
+livro1.emprestar()
+
+livro1.devolver()
+
+livro1.devolver()
+
+console.log(livro1.consultarDisponibilidade())
+
 
 
 
@@ -105,6 +119,8 @@ iaParaDev.emprestar()
 iaParaDev.devolver()
 
 iaParaDev.emprestar()
+
+console.log(iaParaDev.consultarDisponibilidade())
 
 
 
