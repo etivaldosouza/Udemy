@@ -15,7 +15,7 @@
 
 // inicio do código:
 
-//'use strict' 
+'use strict' 
 
 opa = 'teste'
 
@@ -28,3 +28,15 @@ function teste(){
 }
 
 teste()
+
+
+
+'use strict'
+false.prop = ''  // ñ posso definir propriedades com valores primitivos
+'teste'.prop = ''   
+
+
+/*
+ resumindo: se quisermos melhorarmos a qualidade do código aconselha-se usar o strict que irá deixar o código
+ mais 'correto' e não vai alterar em nada o codigo.
+*/ 

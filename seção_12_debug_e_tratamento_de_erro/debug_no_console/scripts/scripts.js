@@ -1,9 +1,9 @@
 /*
     Método de debug: console.log
 
-=> Um método bastante utilizada para debug é o console.log
+=> Era o método oficial do javaScript para debug.
 
-=> Função que estavámos utilizando para mostrar os valores no console
+=> Um método bastante utilizada para debug é o console.log
 
 */ 
 
@@ -22,7 +22,8 @@ for(let i = 5; i > 0; i--){
     b++
     a = a + c + 1                 
     c+= 2
-    console.log(a)
+    console.log('a:',a)
+    console.log('b:',b)
 }
 
 if(b == a){
