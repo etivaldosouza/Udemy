@@ -77,5 +77,9 @@ function checaNumero(num){
 }
 
 
-let numero = prompt('Digite um número')
+let num = prompt('Digite um válido')
+
+checaNumero(num)
+
+
 
