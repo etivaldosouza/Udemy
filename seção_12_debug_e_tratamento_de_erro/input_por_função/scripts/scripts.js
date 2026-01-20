@@ -21,8 +21,6 @@ console.log(checarNumero(5))
 console.log(checarNumero('Teste'))
 
 
-
-
 //======================================================//
 
 
@@ -69,4 +67,15 @@ false -> 0
 //=========================================================================//
 
 
+function checaNumero(num){
+    let numero = Number(num)
+    if(Number.isNaN(numero)){
+        console.log('informe um numero')
+    }else{
+        return numero
+    }
+}
+
+
+let numero = prompt('Digite um número')
 
