@@ -36,4 +36,4 @@ a = a * b
 
 debugger
 
-console.log('teste')
+console.lo('teste')
