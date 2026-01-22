@@ -7,3 +7,9 @@
 =>  Porém as exceptions abordam o programa, só geram o erro
 
 */
+
+let a = 1
+
+if(a != 2){
+    throw(`o valor de a não pode ser 1`)
+}
