@@ -6,6 +6,18 @@
  => catch significa pega. ele vai pegar o erro q aconteceu la no try e jogar dentro da variavel(parametro) do cacth
  => Muito util para debug
 
+
+ estrutura:
+
+ try{
+
+    //trecho de código com potencial para falhar
+
+ }catch(err){ // err(parametro)
+ 
+    //trecho de código que será executado caso falhe
+ }
+
 */
 
 // let a = 2
