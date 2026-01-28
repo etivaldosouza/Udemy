@@ -22,6 +22,10 @@ o uso do finally após o try cacth é quando eu quero fazer algo depois do try c
 */ 
 /*
 
+
+Number(document.getElementById('numero').value): faz com que se usarmos '10' etc... será reconhecido como number
+
+
 if(Number.isNaN(x):
 
 Verifica se o valor armazenado em x é NaN(ou seja ñ é um número).
