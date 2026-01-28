@@ -7,6 +7,7 @@ try{
 }catch(e){
 
     recebe o erro(excessao)
+
 }finally{
     ñ é obrigatorio e se usado será executado independente de erro ou ñ.
 }
@@ -15,7 +16,8 @@ try{
 
 
 try{
-
+    aler('CFB Cusos')    
 }catch(e){
-
+    alert(`Erro: ${e}`)
+    
 }
