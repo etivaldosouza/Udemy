@@ -3,8 +3,6 @@ function getInputValue(p) {
     return dom.value;
 }
 
-
-
 try {
     const val = getInputValue('campos');
     alert(val);

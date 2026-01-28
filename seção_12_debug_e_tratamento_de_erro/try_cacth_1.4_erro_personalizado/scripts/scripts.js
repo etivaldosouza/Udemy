@@ -1,11 +1,18 @@
-function inputar(n){
-    let don = document.querySelector('#campo')
+function verifica(){
     try{
-        if(n > 10){
-            throw new Error('Valor inválido')
-        }
+        let input = document.querySelector('#campo')
+        if()
     }catch(e){
-        alert(`Erro: ${e}`)
+
+    }
+
+    let don = document.querySelector('#campo')
+    return don
+    try{
+        let val = inputar('campo')
+        alert(val)
+    }catch(e){
+        alert(e)
     }
 }
 
