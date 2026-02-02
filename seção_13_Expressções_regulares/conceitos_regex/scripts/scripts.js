@@ -27,3 +27,10 @@
 
 let reg1 = new RegExp('test')
 let reg2 = /test/   //mais usada
+
+
+/*
+    
+o test é o padrão, ou seja, aquilo que a gente quer encontrar no texto
+
+*/ 
