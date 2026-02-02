@@ -13,5 +13,16 @@ console.log(/[123]/.test('se existe123?'))
 
 console.log(/[0-9]/.test('o numero 8 está presente aqui?'))
 
+console.log(/[0-9]/.test(90))
+
 console.log(/[etivaldo]/.test('carlospedroaugusetivaldosouzaneto'))
 
+
+
+//====================================================//
+
+
+const reg = new RegExp(/['bola]/)
+
+const txt = 'setembolanastr'
+console.log(reg.test(txt))

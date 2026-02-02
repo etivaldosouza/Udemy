@@ -10,9 +10,25 @@
 */ 
 
 
-
 console.log(/testando/.test('ttttestandoooo'))
 
 console.log(/testando/.test('asfdashhdsh'))
 
 console.log(/etivaldo/.test('joaocarlospedrobiaetivaldojose'))
+
+
+
+//============================= Maneira 2 //==========================
+
+
+const reg2 = /bolo/
+
+const txt = 'aquitemmuitobolo'
+
+
+console.log(reg2.test(txt))
+
+
+const reg1 = new RegExp('bola')
+
+console.log(reg1.test('setembola'))
