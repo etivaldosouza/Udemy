@@ -38,7 +38,7 @@ console.log(dRegex.test('124ueuhsdjh'))
 
 //================================================================//
 
-const regexD = /\D/  // equivale a /^0-9/ aceita caracteres que não são dígitos. 
+const regexD = /\D/  // equivale a /[^0-9]/ aceita caracteres que não são dígitos. 
 
 console.log(regexD.test('124534'))
 console.log(regexD.test('jdhsjhsjh'))
@@ -62,7 +62,7 @@ console.log(sRegex.test(`hgjhdhd
 
 //==============================================================================================//
 
-const regexS = /\S/  //não aceita qualquer caractere de espacos em branco
+const regexS = /\S/  //não aceita caractere de espacos em branco
 
 console.log(regexS.test('jewjwjhewjh'))
 console.log(regexS.test('143542354'))
@@ -84,7 +84,7 @@ console.log(wRegex.test('@@'))
 
 //===========================================================================================//
 
-const regexW = /\W/ //ñ aceita caracteres alfa numerico
+const regexW = /\W/ //ñ aceita caracteres alfa numerico(aceita qualquer caractere menos letras e numeros)
 
 console.log(regexW.test(123))
 console.log(regexW.test())
