@@ -26,3 +26,12 @@ const reg = new RegExp(/['bola]/)
 
 const txt = 'setembolanastr'
 console.log(reg.test(txt))
+
+
+//=====================================//
+
+const reg3 = /[3478]/
+
+console.log(reg3.test('902'))
+
+console.log(reg3.test('9023'))
