@@ -1,7 +1,7 @@
 /*
     Operador not ^
 
-=> Podemos escrever um se que aceita tudo, menos alguns caracteres com o not
+=> Podemos escrever um set que aceitam tudo, menos alguns caracteres com o not
 
 => Lembrando que combinações serão aceitas, o negado é apenas se bate com o set
 
@@ -46,7 +46,8 @@ console.log(notab.test('bi'))
 
 let notAz = /[^a-z]/ // procurar caractere diferente de A até Z
 
-console.log(notAz.test('ahgshgs'))
+console.log(notAz.test('asd'))
+
 
 
 console.log(notAz.test('ahgs  hgs')) // o caractere != que tem é o espaço
@@ -54,10 +55,20 @@ console.log(notAz.test('ahgs  hgs')) // o caractere != que tem é o espaço
 
 //=============================================================
 
-let az = /[a-z]/  // aceta todo o alfabeto 
+let az = /[a-z]/  // aceita todo o alfabeto no minimo
 
 console.log(az.test('rjrkrrk'))
 
 console.log(az.test('rj8778rkrrk'))
 
 console.log(az.test('2373378'))
+
+
+//=====================================================//
+
+
+let notNum = /["^2412278"]/ //procurar no minimo um caractere diferente desses
+
+console.log(notNum.test('teste'))
+
+console.log(notNum.test('24122948'))
