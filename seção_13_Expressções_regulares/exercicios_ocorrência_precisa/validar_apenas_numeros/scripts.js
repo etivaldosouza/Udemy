@@ -15,4 +15,8 @@
 */ 
 
 
-let num = /\d+/
+let num = /\d+$/
+
+console.log(num.test('123'))
+
+console.log(num.test('123Abcg'))
