@@ -4,6 +4,6 @@
 
 */ 
 
-let letras = /\w{4}$/
+let letras = /\w{7}$/
 
 console.log(letras.test('etivaldo'))
