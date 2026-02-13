@@ -46,7 +46,7 @@ console.log(notab.test('bi'))
 
 let notAz = /[^a-z]/ // procurar caractere diferente de A até Z
 
-console.log(notAz.test('asd'))
+console.log(notAz.test('asde'))
 
 
 
@@ -67,8 +67,36 @@ console.log(az.test('2373378'))
 //=====================================================//
 
 
-let notNum = /["^2412278"]/ //procurar no minimo um caractere diferente desses
+let notNum = /[^2412278]/ //procurar no minimo um caractere diferente desses
 
 console.log(notNum.test('teste'))
 
-console.log(notNum.test('24122948'))
+console.log(notNum.test('2412248'))
+
+
+/*
+Não confundir com ^[0-9] fora dos couchetes(significa que deve começar com numeros)
+
+
+[^0-9] => procura um caractere != de numeros
+
+^[A-Z] => significa que deve começar com letras
+
+
+
+🧠 Regra de ouro
+
+Forma	                                     Significado
+
+[abc]                                          a OU b OU c
+                                          
+[^abc]	                                qualquer coisa EXCETO a, b ou c
+
+
+^ fora dos colchetes	                      início da string
+
+
+^ dentro dos colchetes (primeiro)	              negação
+
+
+*/ 
