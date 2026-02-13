@@ -53,7 +53,7 @@ console.log(soLetras.test('123Etivaldo'))
 
 console.log(soLetras.test('Etivaldo123'))
 
-let letra = /\w+/
+
 
 //======================================================//
 
