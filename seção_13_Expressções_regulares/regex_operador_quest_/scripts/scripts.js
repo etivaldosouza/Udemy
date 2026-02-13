@@ -44,3 +44,5 @@ console.log(matricula.test('neto123'))
 console.log(matricula.test('123 '))
 
 console.log(matricula.test('neto ')) // vai da false pq ñ tem a primeira confirmação que é a presença de digitos
+
+
