@@ -28,3 +28,5 @@ console.log(reg.test('nome: Etivaldo'))
 
 console.log(reg.test('policia:Matheus')) // ñ tem o espaço
 
+console.log(reg.test('id: 2412278')) 
+
