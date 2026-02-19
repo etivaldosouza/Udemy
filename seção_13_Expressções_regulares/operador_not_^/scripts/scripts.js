@@ -49,7 +49,6 @@ let notAz = /[^a-z]/ // procurar caractere diferente de A até Z
 console.log(notAz.test('asde'))
 
 
-
 console.log(notAz.test('ahgs  hgs')) // o caractere != que tem é o espaço
 
 
@@ -75,22 +74,23 @@ console.log(notNum.test('2412248'))
 
 
 /*
-Não confundir com ^[0-9] fora dos couchetes(significa que deve começar com numeros)
+
+    Não confundir com ^[0-9] fora dos couchetes(significa que deve começar com numeros)
 
 
-[^0-9] => procura um caractere != de numeros
+    [^0-9] => procura um caractere != de numeros
 
-^[A-Z] => significa que deve começar com letras
+    ^[A-Z] => significa que deve começar com letras
 
 
 
 🧠 Regra de ouro
 
-Forma	                                     Significado
+    Forma	                                     Significado
 
-[abc]                                          a OU b OU c
+    [abc]                                          a OU b OU c
                                           
-[^abc]	                                qualquer coisa EXCETO a, b ou c
+    [^abc]	                                qualquer coisa EXCETO a, b ou c
 
 
 ^ fora dos colchetes	                      início da string
