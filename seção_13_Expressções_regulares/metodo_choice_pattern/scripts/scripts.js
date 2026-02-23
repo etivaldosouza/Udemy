@@ -30,3 +30,5 @@ console.log(reg.test('policia:Matheus')) // ñ tem o espaço
 
 console.log(reg.test('id: 2412278')) 
 
+console.log(reg.test('1300: 2412278')) 
+
