@@ -27,7 +27,6 @@ let text = 'se tem bola verificar se tem'
 
 console.log(reg2.test(text))
 
+
 //posso criar o regx no meio de um codigo:
-
-
 console.log(/quadrado/.test('circulobolaquadradopedra'))

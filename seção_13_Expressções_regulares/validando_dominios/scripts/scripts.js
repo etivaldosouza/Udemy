@@ -19,3 +19,5 @@ console.log(validarDominio.test("www.teste.comor3eiorieorieoi"))
 console.log(validarDominio.test("www.266egehw.com"))
 
 console.log(validarDominio.test('kf.com'))
+
+console.log(validarDominio.test('123maria.com'))

@@ -44,7 +44,7 @@ console.log(regexD.test('124534'))
 console.log(regexD.test('jdhsjhsjh'))
 console.log(regexD.test('    '))
 console.log(regexD.test('124ueuhsdjh'))
-console.log(regexD.test('1 2 4'))
+console.log(regexD.test('1 2 4')) // true por causa do espaço em branco
 
 
 //===========================================================================================//
