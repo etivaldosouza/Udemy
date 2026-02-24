@@ -173,4 +173,23 @@ console.log(validaData.test('32/01/2000')) // false
 
 Regex não entende intervalos numéricos grandes dentro de colchetes.
 
+dia: ^(0[1-9]|[12][0-9]|3[01])
+de 01 até 09 ou de 10 até 19 e de 20 até 29 ou de 30 até 31
+
+
+mes: (0[1-9]|1[0-2])
+01 até 09 ou de 10 até 12
+
 */
+
+// DD/MM/AAAA
+
+// /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/
+
+let dataNasc = /^(0[1-9]|[12][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d{4}$/
+
+console.log(dataNasc.test('23/11/1111'))
+
+console.log(dataNasc.test('23/11/9999'))
+
+console.log(dataNasc.test('99/99/9999'))
