@@ -18,7 +18,7 @@ console.log(frutas.test('8laranjas')) //false pq ñ respeitou o espaço
 
 //==============================================================//
 
-const reg = /\w+: (Matheus|João|Maria)/ //Padrão imposto(nome qualquer: kjsskjkj)
+const reg = /\w+: (Matheus|João|Maria)/ //Padrão imposto(qualquer caractere alfanumérico: kjsskjkj)
 
 console.log(reg.test('aluno: Maria'))
 
@@ -26,7 +26,7 @@ console.log(reg.test('policia: Matheus'))
 
 console.log(reg.test('nome: Etivaldo'))
 
-console.log(reg.test('policia:Matheus')) // ñ tem o espaço
+console.log(reg.test('policia:Matheus')) // ñ tem o espaço determinado no padrão
 
 console.log(reg.test('id: 2412278')) 
 
