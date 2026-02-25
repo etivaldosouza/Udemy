@@ -62,4 +62,9 @@ console.log(frase.split(';'))
 console.log(frase.split(','))
 
 
+//==============================================
 
+let data = '23/11/1983'
+
+let splitar = data.split('/')
+console.log(splitar)

@@ -19,18 +19,15 @@ function validarData(data){
     }
     //Separa dia, mês e ano
     const[dia,mes,ano] = data.split('/').map(Number)
-
+    
     //Cria a data no JS (mês começa do 0)
 
     const dataObj = new Date(ano, mes - 1, dia)
-
+    
     //  Verifica se a data realmente existe
 
     return (
-    dataObj.getFullYear() === ano &&
-    dataObj.getMonth() === mes - 1 &&
-    dataObj.getDate() === dia
-  );
+    dataObj.getFullYear() === ano && dataObj.getMonth() === mes - 1 && dataObj.getDate() === dia);
 }
 
 
