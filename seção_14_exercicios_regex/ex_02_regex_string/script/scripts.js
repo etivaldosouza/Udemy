@@ -6,7 +6,7 @@
 
 */ 
 
-let valida_ID = /^[A-Z]+ID$/
+let valida_ID = /^[A-Za-z]+ID$/
 
 console.log(valida_ID.test('EtivaldoID'))
 
@@ -25,10 +25,41 @@ Explicação:
 
 ^ → início da string
 
-.* → qualquer caractere (zero ou mais vezes)
+A-Za-z → qualquer letra maiuscula ou minuscula
+
++ -> uma ou mais vezes
 
 ID → precisa terminar exatamente com ID
 
 $ → fim da string
 
 */ 
+
+/*
+OBS:
+
+^[A-Z] => aceita apenas uma letra desse intervalo
+
+ex. 'A','B' ...
+
+'AB' ñ vai aceitar pq tem mais de uma letra
+
+
+
+*/ 
+
+//==========================================//
+
+let str = /^[A-Z]/
+
+console.log(str.test('etivAldo123'))
+
+console.log(str.test('Eetivldo123'))
+
+console.log(str.test('E'))
+
+console.log(str.test('123'))
+
+
+//================================================//
+
