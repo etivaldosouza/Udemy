@@ -5,7 +5,7 @@
 
 */ 
 
-let soMaiusc = /S/
+let soMaiusc = /A-Z/
 
 console.log(soMaiusc.test('Etivaldo'))
 console.log(soMaiusc.test('ETIVALDO'))
