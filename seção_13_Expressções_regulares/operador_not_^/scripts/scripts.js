@@ -44,7 +44,7 @@ console.log(notab.test('bi'))
 //====================== com intervalo ==================//
 
 
-let notAz = /[^a-z]/ // procurar caractere diferente de A até Z
+let notAz = /[^a-z]/ // procurar caractere diferente de a até z
 
 console.log(notAz.test('asde'))
 
