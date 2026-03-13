@@ -13,6 +13,13 @@ console.log(soMaiusc.test('A'))
 console.log(soMaiusc.test('Etivaldo'))
 
 
+// aceitando apenas uma maiuscula:
+
+let soUmaMaiuscula = /[A-Z]/   // siguinifica que vai aceitar apenas uma letra desse intervalo
+
+console.log(soUmaMaiuscula.test('Etivald')) 
+console.log(soUmaMaiuscula.test('ETIVALDO'))
+console.log(soUmaMaiuscula.test('T'))
 
 /*
     🔎 Explicação:

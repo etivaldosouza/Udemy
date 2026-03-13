@@ -8,7 +8,20 @@
 */ 
 
 
-let nomeMarca = /\w+: [\w|Nike|Adidas|Puma|Asics]/ //Padrão: ''nome qulquer: nome''
+let nomeDaMarca = /Marca: [rebook|topper|kappa|penalty]/
+
+console.log(nomeDaMarca.test('Marca: adidas'))
+
+console.log(nomeDaMarca.test('adidasmizunotopper'))
+
+console.log(nomeDaMarca.test('Nome: adidasmizunotopper'))
+
+console.log(nomeDaMarca.test('Marca: adidasmizunotopper'))
+
+
+
+
+let nomeMarca = /\w+: [\w|Nike|Adidas|Puma|Asics]/ //Padrão: ''nome qualquer: nome''
 
 console.log(nomeMarca.test('Baly'))
 
