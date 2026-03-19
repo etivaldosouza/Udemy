@@ -24,3 +24,4 @@ console.log('lallalal')
 p
 .then(valor => console.log(valor))
 .catch(reason => console.log('Falhou' + reason))
+

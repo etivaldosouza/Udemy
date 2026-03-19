@@ -24,4 +24,19 @@ verificarAlgo(4)
 verificarAlgo(2)
 
 
+//==========================================================================//
 
+function recebeNome(nome){
+    return new Promise((resolve,reject) => {
+        if(nome === 'Etivaldo'){
+            resolve(console.log(`o nome é ${nome}`))
+        }else{
+            reject(new Error('Falha!!'))
+        }
+    })
+}
+
+
+recebeNome('Etivaldo')
+
+recebeNome('pedro')
