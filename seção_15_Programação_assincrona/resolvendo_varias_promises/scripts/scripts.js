@@ -21,3 +21,25 @@ const p3 = new Promise((resolve,reject) => {
 })
 
 Promise.all([p1,p2,p3]).then((valor) => console.log(valor))
+
+
+
+
+let prom1 = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve(15)
+    },5000)   
+})
+
+let prom2 = Promise.resolve(12)
+
+let prom3 = new Promise((resolve,reject) => {
+    resolve(20)
+})
+
+let prom4 = 100
+console.log(prom4)
+
+Promise.all([prom1,prom2,prom3]).then(function(valor){
+    console.log(valor)
+})
