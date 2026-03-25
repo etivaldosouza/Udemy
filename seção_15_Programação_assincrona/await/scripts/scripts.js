@@ -11,7 +11,19 @@
 function somaComDelay(a,b){
     return new Promise(resolve => {
         setTimeout(function(){
-            resolve(a + b)
+            resolve(a+b)
         },3000)
     })
 }
+
+async function reSoma(a,b,c,d) {
+    let x = somaComDelay(a,b)
+    let y = c
+
+    return await x + await y
+
+}
+reSoma(5,2,3).then(x => {
+    console.log(x)
+})
+
