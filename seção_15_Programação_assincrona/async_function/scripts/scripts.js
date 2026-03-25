@@ -19,4 +19,10 @@ somar(3,4).then((valor) => {
     console.log(valor)
 })
 
-console.log('Teste')
+somar(2,1).then(function(valor){
+    console.log(valor)
+})
+
+// os codigos abaixos são executados antes da promisse
+console.log('Teste') 
+console.log('Teste_2')
