@@ -64,10 +64,8 @@ let minha_Promise = new Promise((resolve, reject) => {
 minha_Promise.then(valor =>{
     console.log(valor)
 })
-.catch(valor =>{
-    console.log(valor)
+.catch(reason =>{
+    console.log(reason)
 })
-
-console.log(minha_Promise)
 
 
