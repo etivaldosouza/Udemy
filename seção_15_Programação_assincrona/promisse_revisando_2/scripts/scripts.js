@@ -18,12 +18,14 @@
 */ 
 
 function f(g,h){
+    setTimeout(function(){
+        if(10 > 0){
+            g('P')
+        }else{          // logica da função f
+            h('Q')
+        }
+    },3000)
 
-    if(10 < 0){
-        g('P')
-    }else{          // logica da função f
-        h('Q')
-    }
 }
 
 function executarSeResolver(valor){
@@ -38,58 +40,30 @@ function executarSeRejeitar(valor){
 const minhaPromise = new Promise(f)
 
 minhaPromise.then(executarSeResolver)
+minhaPromise.catch(executarSeResolver)
 
 
-
-//==========================================================//
-
-/*
-    Forma mais usada:
-
-*/ 
-
-
-function f(resolve,reject){
-    if(10 < 0){
-        resolve('resolvida')
-    }else{
-        reject('rejeitada')
-    }
-}
-
-const minhaPromises = new Promise(f)
-
-minhaPromises.then(valor =>{
-    console.log(valor)
-})
-
-minhaPromises.catch(valor =>{
-    console.log(valor)
-})
-
-
-
-//=====================================================//
+//===================================================//
 
 /*
-maneira para não aparecer a msg: Uncaught (in promise),  no navegador
-*/ 
+    Maneira 2
 
-
+*/
 
 function f(resolve,reject){
-    if(10 < 0){
-        resolve('resolvida')
-    }else{
-        reject('rejeitada')
-    }
+    setTimeout(function(){
+        if(nome === 'Etivaldo'){
+            resolve('função resolvida')
+        }else{
+            reject('Função Rejeitada')
+        }
+        
+    },3000)    
 }
 
-const minha_Promises = new Promise(f)
 
-minha_Promises.then(valor =>{
-        console.log(valor)
-    })
-    .catch(valor =>{
-        console.log(valor)
-    })
+let minha_Promise = new Promise(f)
+
+f('Etivaldo').then(valor => {
+    console.log(valor)
+})
