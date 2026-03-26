@@ -50,22 +50,24 @@ minhaPromise.catch(executarSeResolver)
 
 */
 
-function f(resolve,reject){
-    setTimeout(function(){
+let minha_Promise = new Promise((resolve, reject) => {
+    let nome = 'Pedro'
+    setTimeout(() =>{
         if(nome === 'Etivaldo'){
-            resolve('função resolvida')
+            resolve('Função resolvida com valor '+ nome)
         }else{
-            reject(new Error('Função Rejeitada'))
+            reject('Função rejeitada com valor ' + nome)
         }
-        
-    },3000)   
-    
-}
-
-let minha_Promise = new Promise(f)
+    },3000)
+})
 
 minha_Promise.then(valor =>{
     console.log(valor)
-}).catch(valor => {
+})
+.catch(valor =>{
     console.log(valor)
 })
+
+console.log(minha_Promise)
+
+
