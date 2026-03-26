@@ -45,5 +45,28 @@ function(){ essa função anônima seria um callback
 
 relembrando: 
 
-=>  a função setTimeout é uma função asssyncrona e ela recebe dois parâmetros: um é uma função anônima e o outro é o tempo em que ela vai demorar para ser executada
+=>  a função setTimeout é uma função assyncrona e ela recebe dois parâmetros: um é uma função anônima e o outro é o tempo em que ela vai demorar para ser executada
 */ 
+
+async function somar(a,b){
+
+    return a + b
+}
+
+setTimeout(function(){
+    console.log('Eu sou uma função calback')
+},3000)
+
+somar(3,4).then(valor => {
+    console.log(valor)   // 7
+    return valor + 10    // 7+10 armazenado na memória
+}).then(valor =>{
+    console.log(valor)
+})
+
+
+
+console.log('Teste1')
+console.log('Teste2')
+
+console.log(somar(2,4))
