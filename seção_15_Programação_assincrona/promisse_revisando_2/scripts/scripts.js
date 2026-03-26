@@ -55,15 +55,17 @@ function f(resolve,reject){
         if(nome === 'Etivaldo'){
             resolve('função resolvida')
         }else{
-            reject('Função Rejeitada')
+            reject(new Error('Função Rejeitada'))
         }
         
-    },3000)    
+    },3000)   
+    
 }
-
 
 let minha_Promise = new Promise(f)
 
-f('Etivaldo').then(valor => {
+minha_Promise.then(valor =>{
+    console.log(valor)
+}).catch(valor => {
     console.log(valor)
 })
