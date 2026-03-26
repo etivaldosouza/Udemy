@@ -40,6 +40,8 @@ let prom3 = new Promise((resolve,reject) => {
 let prom4 = 100
 console.log(prom4)
 
-Promise.all([prom1,prom2,prom3]).then(function(valor){
+Promise.all([prom3,prom1,prom2]).then(function(valor){
     console.log(valor)
 })
+
+//vai executar sempre na ordem que vc determinar no array
