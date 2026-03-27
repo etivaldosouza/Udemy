@@ -26,6 +26,7 @@ console.log(criarIds.next().value)
 console.log(criarIds.next().value)
 console.log(criarIds.next().value)
 
+console.log(criarIds.next())
 
 
 //============================================================//
