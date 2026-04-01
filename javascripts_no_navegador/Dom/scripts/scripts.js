@@ -27,4 +27,27 @@ exemplo:
     o dom seria um estrutura de arvore com nós semelhante a do HTML onde através dessa
     estrutura podemos fazer alterações no HTML.
 
+
+=> Podemos mudar completamente uma pagina HTML através do DOM;
+
+=> É possível alterar: elementos, atributos,CSS;
+
+=> Além de alterar podemos adicionar e também remover;
+
+=> Além de ser possível criar eventos na página,como animações;
+
 */
+
+/*
+    A árvore do DOM
+
+=> O docuemento HTML seria a árvore completa
+
+=> A raís da arvore é o Document(Só uma raíz)
+
+=> Cada elemento da árvore chamamos de node(nó)
+
+=> Conteúdo como texto são chamados de leaf nodes(as folhas)
+
+*/
+
