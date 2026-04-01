@@ -1,18 +1,24 @@
 /*
-    Encontrando elementos: por class
+    Encontrando elementos: por query
 
-=> Utilizamos o seguinte método para encontrar elementos por class:
+=> Um método que se assemelha a grande funcionalidade do jQuery; 
 
-=> Document.getElementsByClassname('alguma-classe');
+=> Nos permitindo encontrar elementos pelo seus seletores de CSS;
 
+=> O que facilita muito nossa vida, veja:
 
 */ 
 
+console.log(document.querySelector('#container-principal h1'))
 
-console.log(document.getElementsByTagName('li'))
+console.log(document.querySelector('#segundo-container'))
 
-console.log(document.getElementsByClassName('items-azuis'))
+console.log(document.querySelector('div div p'))
 
+console.log(document.querySelector('footer h2'))
+
+
+console.log(document.querySelector('ul .items-azuis'))
 
 
 
