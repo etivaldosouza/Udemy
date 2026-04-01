@@ -3,7 +3,7 @@
 
 => Utilizamos o seguinte método para encontrar elementos pela tag.
 
-=> Document.getElementByTagName('h1');
+=> Document.getElementsByTagName('h1');
 
 
 */ 
