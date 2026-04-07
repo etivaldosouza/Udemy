@@ -6,9 +6,6 @@
 => Precisamos de um elemento para ser adicionado;
 
 
-=> O elemento que terá o outro elemento adicionado antes dele;
-
-
 => E o elemento que terá o outro elemento adicionado antes dele
 
 */ 

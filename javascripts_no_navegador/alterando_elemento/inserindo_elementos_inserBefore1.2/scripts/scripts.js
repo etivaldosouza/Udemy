@@ -8,9 +8,6 @@
 
 => O elemento que terá o outro elemento adicionado antes dele;
 
-
-=> E o elemento que terá o outro elemento adicionado antes dele
-
 */ 
 
 
@@ -18,7 +15,7 @@ let novoElemento = document.createElement('p') //elemento a ser criado
 
 let ref = document.querySelector('#titulo-principal') // elemento de referência
 
-let pai = ref.
+let pai = Document.querySelector('#container-principal')
 
-pai.insertBefore(span,elemento)
+pai.insertBefore(p,ref)
 
