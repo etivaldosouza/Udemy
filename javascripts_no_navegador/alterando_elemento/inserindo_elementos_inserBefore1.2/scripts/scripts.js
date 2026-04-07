@@ -13,9 +13,15 @@
 
 let novoElemento = document.createElement('p') //elemento a ser criado
 
+let txt = document.createTextNode('teste')
+
+novoElemento.appendChild(txt)
+
 let ref = document.querySelector('#titulo-principal') // elemento de referência
 
 let pai = document.querySelector('#container-principal')
 
 pai.insertBefore(p,ref)
+
+
 
