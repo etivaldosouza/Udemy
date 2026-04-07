@@ -15,7 +15,7 @@ let novoElemento = document.createElement('p') //elemento a ser criado
 
 let ref = document.querySelector('#titulo-principal') // elemento de referência
 
-let pai = Document.querySelector('#container-principal')
+let pai = document.querySelector('#container-principal')
 
 pai.insertBefore(p,ref)
 
