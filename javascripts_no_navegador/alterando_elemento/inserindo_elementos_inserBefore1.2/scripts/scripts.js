@@ -14,11 +14,11 @@
 */ 
 
 
-let span = document.createElement('span') //elemento a ser criado
+let novoElemento = document.createElement('p') //elemento a ser criado
 
-let elemento = document.querySelector('#titulo-principal') // elemento de referência
+let ref = document.querySelector('#titulo-principal') // elemento de referência
 
-let pai = elemento.parentNode 
+let pai = ref.
 
 pai.insertBefore(span,elemento)
 
