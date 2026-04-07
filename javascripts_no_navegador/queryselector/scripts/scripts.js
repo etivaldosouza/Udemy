@@ -21,5 +21,5 @@ console.log(document.querySelector('footer h2'))
 console.log(document.querySelector('ul .items-azuis'))
 
 
-
+console.log(document.querySelector('ul .item'))
 
