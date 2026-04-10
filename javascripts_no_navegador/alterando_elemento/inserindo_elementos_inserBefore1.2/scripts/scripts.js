@@ -21,7 +21,7 @@ let ref = document.querySelector('#titulo-principal') // elemento de referência
 
 let pai = document.querySelector('#container-principal')
 
-pai.insertBefore(p,ref)
+pai.insertBefore(novoElemento,ref)
 
 
 
