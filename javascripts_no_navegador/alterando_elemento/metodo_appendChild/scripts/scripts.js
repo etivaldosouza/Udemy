@@ -1,5 +1,5 @@
 /*
-    Alterando o DOM com appendiChild
+    Alterando o DOM com appendChild
 
 => Adiciona um nó após os elementos do elemento pai especificado.
 
