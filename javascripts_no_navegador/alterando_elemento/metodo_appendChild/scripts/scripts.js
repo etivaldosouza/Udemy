@@ -5,6 +5,8 @@
 
 => ou seja, serve para adicionar elemento como último elemento filho de um elemento pai especificado.
 
+
+<p> paragrafo criado pelo DOM </p>
 */ 
 
 // crio elemento novo
@@ -14,7 +16,8 @@ let novoElemento = document.createElement('p')
 let texto = document.createTextNode('parágrafo criado pelo DOM')
 
 // adiciono o texto criado ao novoElemento
-novoElemento.appendChild(texto)
+novoElemento.appendChild(texto)  
+
 
 // identifico o elemento de referencia
 let elementoReferencia = document.querySelector('#paragrafo-principal')
