@@ -9,7 +9,7 @@
 
 => Que significa Document Object Model;
 
-=> E por meio do JS poidemos acessar cada um destes elementos do HTML através do DOM.
+=> E por meio do JS podemos acessar cada um destes elementos do HTML através do DOM.
 
 estrutura aninhada no html:
 
@@ -24,7 +24,7 @@ exemplo:
 
 
 /*
-    o dom seria um estrutura de arvore com nós semelhante a do HTML onde através dessa
+    o dom seria um estrutura de árvore com nós semelhante a do HTML onde através dessa
     estrutura podemos fazer alterações no HTML.
 
 
