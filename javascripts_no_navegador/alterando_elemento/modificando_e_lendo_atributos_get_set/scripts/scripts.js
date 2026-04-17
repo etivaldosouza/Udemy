@@ -15,7 +15,7 @@
 // alterando o link do href
 
 
-let a = document.getElementsByTagName('href a')
+let a = document.querySelector('href a')
 
 console.log(a.getAttribute('href'))
 
