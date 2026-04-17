@@ -15,9 +15,12 @@
 // alterando o link do href
 
 
-let a = document.getElementsByTagName('footer a')
+let a = document.getElementsByTagName('href a')
 
-console.log(a)
+console.log(a.getAttribute('href'))
 
+let link = 'https://www.horadecodar.com.br'
+
+a.setAttribute('href',link)
 
 
