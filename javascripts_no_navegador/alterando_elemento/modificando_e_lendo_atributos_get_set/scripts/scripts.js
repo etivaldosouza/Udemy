@@ -15,7 +15,7 @@
 // alterando o link do href
 
 
-let a = document.querySelector('footer  a')
+let a = document.querySelector('footer > a')
 
 a.getAttribute('href')
 
