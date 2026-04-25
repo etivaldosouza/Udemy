@@ -1,24 +1,16 @@
-/*
-    Modificando e lendo atributo:
 
-=>  Podemos resgatar o valor de um atributo ou trocar com o JS.
 
-=> Por exemplo, o href de um a ou o src de um elemento img.
+let segundoP = document.querySelector('.par')
 
-=> getAttribute pega o valor
+let butao = document.querySelector('#but').addEventListener('click',function(){
+    segundoP.classList.toggle('vermelho')
+})
 
-=> setAttribute atualiza o valor
 
-*/
 
-// alterando o link do href
+//Removendo atributo:
 
-let a = document.querySelector("a");
+var lista = document.querySelector('#lista')
 
-console.log(a.getAttribute("href"));
+lista.removeAttribute('id')
 
-let link = "https://www.horadecodar.com.br";
-
-a.setAttribute("href", link)
-
-console.log(a.getAttribute('href'))
