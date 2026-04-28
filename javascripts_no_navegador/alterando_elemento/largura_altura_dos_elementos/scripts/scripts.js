@@ -21,7 +21,7 @@ let elemento = document.querySelector('#titulo-principal')
 console.log('Largura: '+ elemento.offsetWidth) // verificar a largura do elemento considerando borda
 console.log('Altura: '+ elemento.offsetHeight) // verifica a altura do elemento considerando borda
 
-console.log('Largura: '+elemento.clientWidth)
+console.log('Largura: '+elemento.clientWidth) // desconsidera borda
 console.log('Largura: '+elemento.clientHeight)
 
 
