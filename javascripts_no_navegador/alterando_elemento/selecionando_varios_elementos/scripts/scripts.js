@@ -1,7 +1,21 @@
+/*
+    Selecionar vários elementos com query
+
+=> Para selecionar diversos elementos com query, podemos utilizar querySelectorAll
+
+=> Em vez de um, podemos pegar todos os elementos semelhantes com o seletor do css.
+
+
+*/
+
+
 let varios = document.querySelectorAll('.itens-vermelho')
 
 console.log(varios)
 
+varios[0].style.color = 'red';
 
-let itens = document.querySelectorAll('itens')
+let item = document.querySelectorAll('.itens')
 
+console.log(item)
+item[0].style.color = 'blue'
