@@ -20,9 +20,3 @@ let item = document.querySelectorAll('.itens')
 console.log(item)
 item[0].style.color = 'blue'
 
-
-let elemento = document.getElementsByClassName('itens')
-
-let novaClass = 'item'
-
-elemento.setAttribute('class',novaClass)
