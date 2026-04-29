@@ -17,7 +17,7 @@ let txt = document.createTextNode('TEXTO CRIADO PELO DOM')
 
 elemento.appendChild(txt)
 
-let elementoReferencia = document.querySelector('div2 p')
+let elementoReferencia = document.querySelector('.div2 p')
 
 let pai = document.querySelector('.div2')
 
