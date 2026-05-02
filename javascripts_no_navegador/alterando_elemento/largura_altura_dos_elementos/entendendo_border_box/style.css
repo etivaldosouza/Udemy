@@ -1,0 +1,105 @@
+.b{
+    border: 3px black solid;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+.bb{
+    border: 3px black solid;
+    padding: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+/* 
+
+o .bb quando ñ tem o border-box então fica classificado como padrão que é o content-box 
+
+
+
+Conteúdo ≈ 38px(line-height) altura do conteudo => calcula-se ~1.2 * 32px = ~38px
+Padding total = 40px
+Border total = 6px
+
+38 + 40 + 6 = 84px (aprox)
+
+O DevTools mostrou 83px, que é só arredondamento interno do navegador.
+
+Resumindo simples:
+146px (largura) → width + padding + border
+83px (altura) → altura do texto (line-height) + padding + border
+
+radução direta pro seu exemplo
+🍕 CONTENT (conteúdo)
+
+É o texto "box-2"
+Altura ≈ line-height (~38px)
+
+🧈 PADDING (respiro interno)
+
+Você colocou:
+
+padding: 20px;
+
+👉 Isso adiciona:
+
+20px em cima
+20px embaixo
+
+Total: 40px
+
+🧱 BORDER (casca da caixa)
+
+Você colocou:
+
+border: 3px;
+
+👉 Isso adiciona:
+
+3px em cima
+3px embaixo
+
+Total: 6px
+
+🔢 Agora o truque que nunca mais esquece:
+
+👉 ALTURA TOTAL = pizza + respiro + casca
+
+≈ 38 (conteúdo)
++ 40 (padding)
++ 6 (border)
+= ~84px
+
+(DevTools mostrou 83px por arredondamento)
+
+💡 Agora o ponto MAIS importante (border-box)
+
+Quando você usa:
+
+box-sizing: border-box;
+
+👉 Você está dizendo:
+
+"Ei navegador, o tamanho que eu definir já inclui padding e border!"
+
+🔥 Comparação que fixa de vez:
+❌ Default (content-box) => é o padrão quando eu ñ informo border-box
+
+Você pede uma pizza de 100px
+→ vem pizza + embalagem = MAIOR que 100px 😡
+
+✅ border-box
+
+Você pede 100px
+→ tudo já cabe dentro dos 100px 😎
+
+🧠 Frase pra nunca esquecer:
+
+Content é o que você quer.
+Padding é o conforto.
+Border é a casca.
+Margin é o espaço social.
+
+*/
