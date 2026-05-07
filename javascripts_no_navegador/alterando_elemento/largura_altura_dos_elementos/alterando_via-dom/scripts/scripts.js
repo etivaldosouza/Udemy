@@ -22,6 +22,6 @@ console.log('Largura: '+ elemento.offsetWidth) // verificar a largura do element
 console.log('Altura: '+ elemento.offsetHeight) // verifica a altura do elemento considerando borda
 
 console.log('Largura: '+elemento.clientWidth) // desconsidera borda
-console.log('Largura: '+elemento.clientHeight)
+console.log('Altura: ' + elemento.clientHeight)
 
 
