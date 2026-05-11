@@ -16,7 +16,6 @@ let but = document.querySelector('button')
 but.addEventListener('mouseover',function(){
     but.style.backgroundColor = 'red'
     
-
 })
 
 but.addEventListener('click',()=>{     // aerowfunction
