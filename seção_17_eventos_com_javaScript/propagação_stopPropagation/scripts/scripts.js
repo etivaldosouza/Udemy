@@ -24,7 +24,7 @@ btn2.addEventListener('click',function(evento){
     console.log(evento)
 })
 
-p.addEventListener('click',(event)=>{
+p.addEventListener('click',()=>{
     alert('clicou no parágrafo')
     
 })
