@@ -8,7 +8,9 @@ cx1.addEventListener('click',function(event){
 })
 
 cursos.map((el)=>{
-    el.addEventListener('click',function(){
-        event.stopPropagation()
+    el.addEventListener('click',function(e){
+        alert('clicou no curso')
+        e.stopPropagation()
+        
     })
 })
