@@ -15,7 +15,7 @@ let p = document.querySelector('p')
 
 function msg(e){
     alert('clicou no botão')
-    e.stopPropagation()// evita que ao clicar no botao ative o evendo do parágrafo também
+    e.stopPropagation()// evita que ao clicar no botao ative o evento(do elemento pai do btn1 que é o p) do parágrafo também
 }
 
 btn1.addEventListener('click',msg)
