@@ -30,5 +30,15 @@ link.addEventListener('click',msg)
 
 link.addEventListener('click',function(e){
     e.preventDefault()
-    alert('Ñ VAI ABRIR A PÁGINA')
+    e.stopPropagation()
+    alert('Página em Manutenção...')
 })
+
+dv.addEventListener('click',(e)=>{
+    alert('clicou na div')
+})
+
+/*
+ no evendo do link observe que além de eu usar um preventDefault para barrar o evento padrão(default) dele que seria abrir uma página ao clicar no link eu adicionei também o metódo stopPropagation() para evitar do evento do elemento pai(div) ser acionado.
+
+*/ 
