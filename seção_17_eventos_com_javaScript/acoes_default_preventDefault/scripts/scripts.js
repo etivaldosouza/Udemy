@@ -30,7 +30,7 @@ link.addEventListener('click',msg)
 
 link.addEventListener('click',function(e){
     e.preventDefault()
-    e.stopPropagation()
+    e.stopPropagation() // evita o acionamento do evento da dv
     alert('Página em Manutenção...')
 })
 

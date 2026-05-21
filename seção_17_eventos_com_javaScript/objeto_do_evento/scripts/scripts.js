@@ -24,6 +24,6 @@ btn1.addEventListener('click',msg)
 
 //==============maneira 2: utilizando na func anônima =====================
 
-btn2.addEventListener('click',(event) => {
+btn2.addEventListener('click',function(event){
     console.log(event)   // vai mostrar os objetos do evento
 })

@@ -16,8 +16,7 @@
 
 window.addEventListener('keydown',function(e){
     if(e.key === 'a','b','c','d'){
-        console.log(`vc apertou a tecla ${e.key}`)
-        
+        console.log(`vc apertou a tecla ${e.key}`)        
     }
 })
 
