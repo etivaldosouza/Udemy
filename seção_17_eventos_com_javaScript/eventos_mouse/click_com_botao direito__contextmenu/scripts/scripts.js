@@ -9,7 +9,7 @@
 let btn = document.querySelector('#butao')
 
 btn.addEventListener('contextmenu',function msg(e){
-    e.preventDefault()  // impede que o menu(quando clica com o direito) ñ apareça(impede o evento padrão de ocorrer)
+    e.preventDefault()  // impede que o menu(quando clica com o direito) apareça(impede o evento padrão de ocorrer)
     alert('VC CLICOU COM O BOTAO DIREITO')
     console.log(e) // mostra o obejeto do evento
 })

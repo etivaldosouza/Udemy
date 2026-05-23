@@ -30,7 +30,7 @@ link.addEventListener('click',msg)
 
 link.addEventListener('click',function(e){
     e.preventDefault()
-    e.stopPropagation() // evita o acionamento do evento da dv
+    e.stopPropagation() // evita o acionamento do evento da dv ao clicar no link           
     alert('Página em Manutenção...')
 })
 
@@ -40,5 +40,7 @@ dv.addEventListener('click',(e)=>{
 
 /*
  no evendo do link observe que além de eu usar um preventDefault para barrar o evento padrão(default) dele que seria abrir uma página ao clicar no link eu adicionei também o metódo stopPropagation() para evitar do evento do elemento pai(div) ser acionado.
+
+ lembrando que a divi ele ocupa toda a largura da tela porém no espaco do link como foi usado o stoppropagation nao vai ser acionado mas qualque click fora do espaco do link na largura ate o canto direito da tela vai acionar o evento div
 
 */ 

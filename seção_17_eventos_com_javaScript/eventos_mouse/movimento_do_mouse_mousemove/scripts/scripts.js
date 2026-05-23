@@ -8,10 +8,9 @@
 */ 
 
 
-function msg(){
-    alert('vc mexeu o mouse')
-    
-    window.removeEventListener('mousemove',msg)
+function msg(e){
+    console.log('X:',e.x)
+    console.log('Y:',e.y)
 }
 
 

@@ -8,11 +8,11 @@
 */ 
 
 let but = document.querySelector('#butao')
-let alerta = document.querySelector('#alerta')
+let alerti = document.querySelector('#alerta')
 
 
 function msg(){
-    alerta.classList.remove('hidden')
+    alerti.classList.remove('hidden') // a classe hidden passa a exibir a mensagem
 }
 
 but.addEventListener('dblclick',msg) 
