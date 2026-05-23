@@ -17,6 +17,7 @@ window.addEventListener('scroll',rolar)
 
 
 /*
-pageYOffset é a distancia de cima da tela p/ baixo
+
+    pageYOffset é a distancia de cima da tela p/ baixo
 
 */ 
