@@ -1,22 +1,23 @@
 /*
-    Eventos por scroll
+    Eventos por foco
 
-=> Podemos atrelar evento ao scroll da tela também, pelo evento scroll
+=> Quando focamos em um elemento ou saímos dele, podemos também atrelar um evento a esta ação.
 
-=> Por Exemplo: podemos criar um elemento assim que o scroll atingir uma posição x;
+=> Focus para quando um elemento recebe e blur quando o elemento perde;
 
 */ 
 
-function rolar(e){
-    if(window.pageYOffset > 1000){
-        alert('Ativou!!')
-    }
+let inpt = document.querySelector('input')
+
+
+function alerta(){
+    alert('focus no input')
+    setTimeout(function(){
+        return alerta
+    },5000)
 }
+inpt.addEventListener('focus',alerta)
 
-window.addEventListener('scroll',rolar)
-
-
-/*
-pageYOffset é a distancia de cima da tela p/ baixo
-
-*/ 
+inpt.addEventListener('blur',function(){
+    alert('foco no blur')
+})
