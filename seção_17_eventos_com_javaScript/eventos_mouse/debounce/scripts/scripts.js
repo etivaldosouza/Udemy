@@ -1,24 +1,18 @@
 /*
-    Eventos de carregamento
+    Debounce
+=> Um evento que dispara multiplas vezes pode ser um problema para o computador do cliente
 
-=> Podemos atrelar um evento quando a página carrega,pelo evento load.
-
-=> E antes do usuário fechar a página pelo eventobeforeunload
-
-
-=> beforeunload é para quando o usuário está com alguma infomação salva na tela e mas ainda não salvou no banco de dados.
-*/ 
-
-/*
-
-window.addEventListener('load',function(){     // quando carrega a página
-    alert('Seja Bem vindo!!')
-})
+=> Por isso podemos fazer um debounce, que é um suavizador de evento, para não chamar o mesmo tantas vezes.
 
 */ 
 
 
+let timeout
 
-window.addEventListener('beforeunload',function(e){
-    event.returnValue = null
+window.addEventListener('mousemove',function(e){
+    clearTimeout(timeout)
+    timeout = setTimeout(function(){
+        console.log(e.x)
+    },500)
+    
 })

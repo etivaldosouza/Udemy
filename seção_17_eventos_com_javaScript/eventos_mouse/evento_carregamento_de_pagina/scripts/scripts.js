@@ -6,7 +6,8 @@
 => E antes do usuário fechar a página pelo eventobeforeunload
 
 
-=> beforeunload é para quando o usuário está com alguma infomação salva na tela e mas ainda não salvou no banco de dados.
+=> beforeunload é para quando o usuário está com alguma infomação salva na tela  mas ainda não salvou no banco de dados. tando o load como o beforeunload funciona como um aviso para o usuário quando entra ou atualiza(sai) da pagina
+
 */ 
 
 /*
@@ -17,7 +18,9 @@ window.addEventListener('load',function(){     // quando carrega a página
 
 */ 
 
-
+window.addEventListener('load',function(){     // quando carrega a página
+    alert('Seja Bem vindo!!')
+})
 
 window.addEventListener('beforeunload',function(e){
     event.returnValue = null

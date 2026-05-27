@@ -9,12 +9,13 @@
 
 let inpt = document.querySelector('input')
 
-
-function alerta(){
-    console.log('focus no input')
+function alerta(){      
+    console.log('focus no input')         
 }
+
 inpt.addEventListener('focus',alerta)
 
+
 inpt.addEventListener('blur',function(){
-    console.log('foco no blur')
+    console.log('foco no blur')  
 })
