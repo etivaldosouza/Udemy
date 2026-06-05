@@ -9,22 +9,22 @@ h1{
 
 /* botoes */
 
-
 #buttons-container button{
     border:none;
     padding: 10px 15px; /*em cima e embaixo(10), direita-esquerda(15)*/
-    margin: 0px 10px ;
-    
+    margin: 0px 10px;    
 }
+
 
 /* jogo */
 
 #container {
-    display: flex;
+    display: flex; 
     width: 300px;
     margin: 0px;
     flex-direction: row;
     flex-wrap: wrap;
+    
     /*centraliza uma div na tela*/
     position: relative;
     margin-left: auto;
@@ -96,6 +96,7 @@ h1{
 .score-box{
     margin: 0 20px;
 }
+
 #x-scoreboard{
     color: red;
     margin-right: 3px;
@@ -119,6 +120,7 @@ h1{
     margin-right: auto;
     left: 0;
     right: 0;
+    
     top: 150px;
     width: 500px;
     font-size: 50px;
