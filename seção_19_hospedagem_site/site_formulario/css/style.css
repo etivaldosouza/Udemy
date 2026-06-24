@@ -6,11 +6,11 @@
     --borda:#e5e7eb;
     --caixa: #f8fafc;
     --acao: #2563eb;
-}
+}  
 
 [data-tema = "escuro"]{
     --bg: #0b1220;
-    --texto: e5e7eb;
+    --texto: #e5e7eb;
     --borda:#1f2937;
     --caixa: #111827;
     --acao: #38bdf8;
@@ -54,7 +54,9 @@ body{
     background-color: var(--caixa);
     border-radius: .5rem;
     padding: 2rem 1rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
+    max-width: 80%;
+    
 }
 
 h1{
@@ -76,10 +78,26 @@ label{
 }
 
 input{
-    padding: .7rem.9rem;
+    padding: .7rem .9rem;
     border: 1px solid var(--borda);
     border-radius: .5rem;
     background-color: var(--bg);
     color: var(--texto);
     
+}
+
+.btn{
+    padding: .6rem .9rem;
+    border: 1px solid var(--borda);
+    background-color: var(--bg);
+    color: var(--texto);
+    border-radius: .5rem;
+    
+}
+
+.btn .primario{
+    margin-top: 1rem;
+    background-color: var(--acao);
+    color: #fff;
+
 }
