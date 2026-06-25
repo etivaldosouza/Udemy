@@ -54,6 +54,19 @@ height: 100% → altura fixa igual ao pai.
 min-height: 100vh → altura mínima igual à tela, mas pode crescer conforme o conteúdo. É a opção mais usada atualmente.
 */
 
+main{
+    flex:1;
+}
+
+/* 
+
+flex:1 
+
+ocupa o espaço sobrando 
+O main cresce para ocupar todo o espaço entre o topo e o rodapé.
+
+*/
+
 body{
     margin: 0px;
     font-family: Arial;
@@ -61,7 +74,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: var( --bg);
-    counter-reset: var( --texto);
+    color: var( --texto);
 }
    
 .topo{
