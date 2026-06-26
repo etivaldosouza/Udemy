@@ -90,7 +90,7 @@ body{
 
 .caixa {
     border: 1px solid var( --borda);
-    background-color: var( --caixa);
+    background-color:#7a4f8571;
     border-radius: .5rem;
     padding: 2rem 1rem;
     margin: 1.5rem auto;
@@ -109,7 +109,8 @@ p {
 
 form {
     display: grid;
-    gap: .5rem
+    gap: .5rem;
+    
 }
 
 label{
@@ -149,5 +150,7 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;    
-    color: #6b7280;
+    color: var( --texto);
+    
+    
 }
