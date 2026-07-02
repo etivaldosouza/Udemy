@@ -24,5 +24,5 @@ VANTAGENS DO NODE.JS:
 */ 
 
 
-let msg = 'Hellow world'
+let msg = 'Hello world'
 console.log(msg)
