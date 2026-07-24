@@ -11,17 +11,42 @@
 
 => E utilizam um framework chamado Express para isso;
 
-*/ 
+*/
 
+import express, { response } from "express";
+import { request } from "node:http";
 
-import express, { response } from 'express'
-import { request } from 'node:http'
+const app = express();
+app.use(express.json());
 
-const app = express()
+const users = [];
 
-app.get('/usuarios',(request,response) =>{
-    response.send('Ok Deu Bom!')
-})
+app.post("/usuarios", (req, res) => {
 
-app.listen(3000)
+    users.push(req.body)
 
+    res.send("ok aqui deu certo");
+
+});
+
+app.get("/usuarios", (request, response) => {
+    
+    res.json(users)
+});
+
+app.listen(3000);
+
+/*
+    Nosso Objetivo
+
+    Criar todos os usuários
+
+=> Listar todos os usuários
+
+=> Criar um usuários
+
+=> Editar um usuários
+
+=> Deletar um usuário
+
+*/
