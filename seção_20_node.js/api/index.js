@@ -17,21 +17,22 @@ import express, { response } from "express";
 import { request } from "node:http";
 
 const app = express();
+
 app.use(express.json());
 
 const users = [];
 
-app.post("/usuarios", (req, res) => {
+app.post("/usuarios", (request, response) => {
 
-    users.push(req.body)
+    users.push(request.body)
 
-    res.send("ok aqui deu certo");
+    res.status(201).json(request.body);
 
 });
 
 app.get("/usuarios", (request, response) => {
     
-    res.json(users)
+    res.status(200).json(users)
 });
 
 app.listen(3000);
