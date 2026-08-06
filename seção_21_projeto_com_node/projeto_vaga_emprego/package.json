@@ -1,0 +1,13 @@
+{
+  "name": "projeto_vaga_emprego",
+  "version": "1.0.0",
+  "description": "Este sistema é um portal para programadores encontrar vagas de trabalho",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["dev jobs", "dev oportunity"],
+  "author": "Etivaldo <etivaldosouza@hotmail.com"(,
+  "license": "MIT",
+  "type": "commonjs"
+}
