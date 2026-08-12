@@ -16,7 +16,7 @@ body{
     border-bottom: 1px solid #ccc;
 }
 
-.navbar .navbar-nav .nav-item a {
+.navbar.navbar-nav .nav-item a {
     color: #212529;
 }
 
@@ -29,7 +29,7 @@ body{
     font-weight: bold;
 }
 
-.navbar .nav-item .btn{
+.nav-item .nav-link.btn.btn-primary{
     color: #fff;
     background-color: #F03E3E;
     border: 1px solid transparent;
@@ -106,3 +106,76 @@ body{
 
 /* lista */
 
+
+#jobs-container{
+    padding: 0px 100px;
+}
+
+#job-list .list-group-item{
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    padding: 15px 80px;
+    color: #212529;
+    height: 120px;
+
+}
+
+#job-list .list-group-item p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.list-group-item.new-job{
+    border: none;
+    background-color: #fffccc;
+}
+
+#job-list-title{
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.list-group-item img{
+    width: 80px;
+    border-radius: 50%; /* deixa a img arredpondada*/
+    background-color: #FFF;
+    
+    position: absolute; /* deixa a img flutuando */
+    left: -40px;
+    top: calc(50% - 40px);
+}
+
+.list-group-item .btn.btn-primary{
+ position: absolute;
+ right: 20px;
+ top: 35px;
+ border: 1px solid transparent;
+ border-radius: 0;
+ background-color: #F03E3E;
+ color: #FFF;
+ font-weight: bold;
+  
+}
+
+.list-group-item .btn.btn-primary:hover{  
+    background-color: #FFF;
+    color: #F03E3E;
+    border-color: #F03E3E;
+/*tive que deixar a classe bem especificada para pegar a cor do texto ou poderia usar o important como acima */
+}
+
+.new-job-label{
+    position: absolute;
+    right: 250px;
+    top: 40px;
+    background-color: #FFD500;
+    color: #4D5154;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    display: none;
+}
+
+.new-job .new-job-label{
+    display: block;
+}
