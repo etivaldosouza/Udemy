@@ -179,3 +179,16 @@ body{
 .new-job .new-job-label{
     display: block;
 }
+
+
+/**/
+
+/* add page */
+
+#add-form-container{
+    margin-top: 100px;
+}
+
+#form-box{
+    padding: 0;
+}
