@@ -14,7 +14,7 @@ app.use(bodyParsers.urlencoded({ extended: false }));
 
 // handle bars
 app.set('views',path.join(__dirname,'views')) //onde vai ficar os tamplat do projeto
-app.engine('handlebars', exphbs({defaultLayout:'main'})) //arquivo principal de layout
+app.engine('handlebars', exphbs.engine({defaultLayout:'main'})) //arquivo principal de layout
 app.set('view engine', 'handlebars') // qual biblioteca vai utilizar a views
 
 
@@ -24,8 +24,9 @@ app.use(express.static(path.join(__dirname,'public'))) // qual é a pasta de arq
 
 // routes
 app.get("/", (req, res) => {
-    res.send("Está funcionando 3");
+    res.render('index');
 });
+
 
 // jobs routes
 
