@@ -1,11 +1,13 @@
-const express = require("express");
-const exphbs = require('express-handlebars')
-const app = express();
-const path = require('path')
-const db = require("./db/connection");
-const PORT = 3000;
+const express     = require("express");
+const exphbs      = require('express-handlebars')
+const app         = express();
+const path        = require('path')
+const db          = require("./db/connection");
+const PORT        = 3000;
 const bodyParsers = require('body-parser');
+const Job         = require('./models/Job')
 const { ExpressHandlebars } = require("express-handlebars");
+
 
 // body parsers
 app.use(bodyParsers.json())
@@ -24,7 +26,18 @@ app.use(express.static(path.join(__dirname,'public'))) // qual é a pasta de arq
 
 // routes
 app.get("/", (req, res) => {
-    res.render('index');
+
+    Job.findAll({order: [
+        ['createdAt','DESC']
+    ]})
+    .then(jobs => {
+
+        res.render('index',{
+            jobs
+        })
+
+    })
+
 });
 
 
@@ -49,10 +62,6 @@ db.authenticate()
 app.listen(PORT, function () {
     console.log(`O express está rodando na porta ${PORT}`);
 });
-
-// body parser
-
-
 
 
 // o nodemon serve para atualizar a aplicação sem precisar reiniciar o servidor;

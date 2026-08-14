@@ -51,7 +51,7 @@ body{
     border-bottom: 4px solid #013068;
     margin-bottom: 30px;
     background-image: url(../img/banner2.jpg);
-    background-position: center;
+    background-position: 0 100px;
     background-size: cover;
     color: #FFF;
     box-sizing: border-box;
@@ -66,8 +66,7 @@ body{
 }
 
 #main-subtitle{
-    font-size: clamp(1.1rem,2vw,1rem);   
-    color: #fffccc;
+    font-size: clamp(1.1rem,2vw,1rem);    
     padding-bottom: 80px;
     max-width: 100%;
 }
@@ -76,8 +75,9 @@ body{
 
 #search-form{
     padding: 30px 15px;
+    max-width: 800px;
+    margin: auto;
     box-sizing: border-box;
-    
 }
 
 #search-form .col-md-10, #search-form .col-md-2{
