@@ -66,7 +66,8 @@ body{
 }
 
 #main-subtitle{
-    font-size: clamp(0.9rem,2vw,1rem);
+    font-size: clamp(1.1rem,2vw,1rem);   
+    color: #fffccc;
     padding-bottom: 80px;
     max-width: 100%;
 }
@@ -197,6 +198,10 @@ body{
     margin-bottom: 50px;
 }
 
+#add-form-container h1{
+    margin-bottom: 20px;
+}
+
 #add-form-container h2{
     color: #F03E3E;
     font-weight: bold;
@@ -204,3 +209,26 @@ body{
     margin-bottom: 30px;
 }
 
+#add-form-container form label{
+    font-weight: bold;
+} 
+
+#add-form-container form input, #add-form-container form textarea{
+    border: 2px solid #ccc;
+    background-color: #f8f9fa;
+}
+
+#form-box button{
+    height: 50px;
+    width: 200px;
+    background-color: #F03E3E;
+    border: 1px solid transparent;
+    border-radius: 0;
+    margin-top: 20px;
+}
+
+#form-box button:hover{
+    background-color: #fff;
+    color: #F03E3E;
+    border-color: #F03E3E;
+}
