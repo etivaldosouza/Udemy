@@ -1,11 +1,11 @@
-const express     = require("express");
-const exphbs      = require('express-handlebars')
-const app         = express();
-const path        = require('path')
-const db          = require("./db/connection");
-const PORT        = 3000;
-const bodyParsers = require('body-parser');
-const Job         = require('./models/Job')
+const express               = require("express");
+const exphbs                = require('express-handlebars')
+const app                   = express();
+const path                  = require('path')
+const db                    = require("./db/connection");
+const PORT                  = 3000;
+const bodyParsers           = require('body-parser');
+const Job                   = require('./models/Job')
 const { ExpressHandlebars } = require("express-handlebars");
 
 
