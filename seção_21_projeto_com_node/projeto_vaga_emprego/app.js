@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "public"))); // qual é a pasta de a
 app.get("/", (req, res) => {
     let search = req.query.job;
     console.log("BUSCA:", search);
-    let query = "%"${search}%`; //PH -> PHP, Word -> Wordpress, press -> Wordpress
+    let query = "%"+search+"%"; //PH -> PHP, Word -> Wordpress, press -> Wordpress
     if (!search) {
         Job.findAll({ order: [["createdAt", "DESC"]] })
             .then((jobs) => {
