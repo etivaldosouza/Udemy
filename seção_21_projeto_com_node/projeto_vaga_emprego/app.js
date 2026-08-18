@@ -32,25 +32,25 @@ app.get("/", (req, res) => {
     let query = "%"+search+"%"; //PH -> PHP, Word -> Wordpress, press -> Wordpress
     if (!search) {
         Job.findAll({ order: [["createdAt", "DESC"]] })
-            .then((jobs) => {
-                res.render("index", {
-                    jobs,
-                    search,
-                });
-            })
+        .then((jobs) => {
+            res.render("index", {
+                jobs,
+                search,
+            });
+    })
             .catch((err) => console.log(err));
     } else {
         Job.findAll({
             where: { title: { [Op.like]: query } },
             order: [["createdAt", "DESC"]],
-        })
-            .then((jobs) => {
-                res.render("index", {
-                    jobs,
-                    search,
-                });
             })
-            .catch((err) => console.log(err));
+        .then((jobs) => {
+            res.render("index", {
+                jobs,
+                search,
+            });
+        })
+        .catch((err) => console.log(err));
     }
 });
 
