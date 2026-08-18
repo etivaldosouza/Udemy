@@ -40,7 +40,8 @@ Job.create({
    salary,
    company,
    email,
-   new_job
+   new_job,
+   watzap
 })
 .then(() => res.redirect('/'))
 .catch(err => console.log(err))
