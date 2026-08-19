@@ -30,8 +30,9 @@ router.get('/add',(req,res) => {
 // add job via post
 
 router.post('/add',(req,res) => {
-   let {title,salary,company,description,email,new_job} =  req.body
 
+   let {title,salary,company,description,email,new_job,watzap} =  req.body
+   
 // insert
 
 Job.create({
