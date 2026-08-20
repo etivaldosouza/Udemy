@@ -237,8 +237,10 @@ body{
 /* job-view */
 
 #job-view-container{
-    margin-bottom: 100px;
+    margin-top: 100px;
 }
+
+
 
 #job-view-container h1{
     margin-top: 30px;
@@ -262,16 +264,52 @@ body{
     font-size: 16px;
     margin: 20px auto;
     max-width: 800px;
+    word-wrap: break-word; /*evita espaçamento entre as palavras*/
     
 }
+.bold{
+    font-weight: bold;
+}
+
+.bold-main-color {
+    font-weight: bold;
+}
+
+.watsap-info{
+    color: #F03E3E;
+}
+#job-view-container a{
+    word-break: break-word;
+}
+
+
 
 /* celular */
 
-@media(max-width:576px){
+@media(max-width: 576px){
     #job-view-container{
     padding: 20px 15px 30px;
 }
-    #img-container img
+    #img-container img{
+        max-width: 130px;
+    }
 
+    #job-view-container h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+    #job-view-container p{
+        font-size: 15px;
+    }
+    .job-desc{
+        text-align: left;
+        line-height: 1.6;  
+        margin: 15px 0;                   
+    }
+
+    .list-group-item h2{
+        font-size: 15px;
+    }
 }
 
