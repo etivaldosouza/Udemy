@@ -25,7 +25,7 @@
                     {{#each jobs}}
                     <li class="list-group-item {{#if dataValues.new_job}} new-job {{/if}}">
                         <img src="/img/company.svg" alt="Company">
-                        <p>{{dataValues.company}}</p>
+                        <p class="company-name">{{dataValues.company}}</p>
                         <h2>{{dataValues.title}}</h2>
                         <p>R$ {{dataValues.salary}}</p>
                         <span class="new-job-label">Nova</span>
