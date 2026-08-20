@@ -310,7 +310,6 @@ body{
 
     .list-group-item h2{
         font-size: 15px;
-        
         color: #013068;
     }
     /* .list-group-item a{ */
@@ -319,14 +318,20 @@ body{
     .list-group-item .btn.btn-primary{
         position: absolute;
         right: -20px;
+        
     }    
     .company-name{
         margin: 3px 0;
         line-height:1.2;
         overflow-wrap: break-word;
+        font-weight: bold;
     }
     
-
+    #job-list .list-group-item {
+    height: auto;
+    min-height: 120px;
+    
+}
 
 }
 
