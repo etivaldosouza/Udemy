@@ -271,10 +271,6 @@ body{
     font-weight: bold;
 }
 
-.bold-main-color {
-    font-weight: bold;
-}
-
 .watsap-info{
     color: #F03E3E;
 }
@@ -282,9 +278,89 @@ body{
     word-break: break-word;
 }
 
+.main-color{
+    color: #F03E3E;
+}
+
+.back-link{
+    border: 1px solid #F03E3E;
+    padding: 5px 10px;
+    transition: .5s;
+}
+
+.back-link:hover{
+    background-color: #F03E3E;
+    color: #FFF;
+    text-decoration: none; /* tira o sublinhado */
+    
+}
+
+
 
 
 /* celular */
+
+@media(max-width: 481px){
+
+    /* navbar */
+
+    .navbarNav{
+        text-align: center ;
+    }
+
+    /* home */
+
+    #top-container {
+        padding:50px;
+        padding-top: 100px;
+    }
+    #main-title {
+        font-size: 2.2rem;
+    }
+    #main-subtitle{
+        font-size: 1.5rem;
+    }
+    #jobs-container{
+        padding: 20px;
+    }
+    .list-group-item{
+        padding: 15px 85px;
+    }
+    .list-group-item h2{
+        font-size: 15px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    .list-group-item img{ /* mexendo na imagem da lista */
+        width: 50px;
+        left: 15px;
+        top: calc(50% - 25px) 
+    }
+
+    .new-job {
+        position: relative;
+    }
+
+    .new-job .new-job-label {
+        
+        right: 15px;
+        top: 15px;
+        font-size: 12px;
+        padding: 4px 8px;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*
 
 @media(max-width: 576px){
     #job-view-container{
@@ -312,7 +388,6 @@ body{
         font-size: 15px;
         color: #013068;
     }
-    /* .list-group-item a{ */
         
         
     .list-group-item .btn.btn-primary{
@@ -334,4 +409,9 @@ body{
 }
 
 }
+
+
+
+
+*/
 
