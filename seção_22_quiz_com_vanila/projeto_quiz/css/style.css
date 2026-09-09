@@ -152,6 +152,23 @@ body{
 }
 
 
+/* RESPONSIVIDADE */
+
+@media(max-width: 450px){
+    #quizz-container{
+        width: 100%;
+        border: none;
+    }
+
+    #answers-box button{
+        width: 100%;
+    }
+}
+
+#score-container{
+    width: 90%;
+}
+
 /* 
 
 flex: 1 1 0
