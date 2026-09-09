@@ -120,6 +120,106 @@ body{
     border-color: #FFF;
 }
 
-#answer-box .btn-letter{
+#answers-box .btn-letter{
     font-size: 30px;
+    font-weight: bold;
+    background-color: #E78230;
+    border-radius: 50%;
+    line-height: 40px;
+    text-transform: uppercase;
+    flex: 1 1 0;   /* vê explicação */
+    max-width: 40px;
+    text-align: center;
+       
 }
+
+.question-answer{
+    flex: 1 1 0;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#quizz-container .wrong-answer,
+#quizz-container .wrong-answer .btn-letter {
+    background-color: #E62210;
+    color: #FFF
+}
+
+#quizz-container .correct-answer,
+#quizz-container .correct-answer .btn-letter{
+    background-color: #40b576;
+    color: #FFF;
+}
+
+
+/* 
+
+flex: 1 1 0
+
+Essa propriedade é uma abreviação de três propriedades do Flexbox:
+
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0;
+
+Quando colocamos:
+
+#answers-box button {
+    display: flex;
+}
+
+estamos dizendo:
+
+"Este botão agora vai organizar os elementos que estão dentro dele usando Flexbox."
+
+
+elemento .btn-letter está dentro de um botão que é display: flex:
+
+#answers-box button{
+    display: flex;
+    align-items: center;
+}
+
+Então o .btn-letter passa a ser um flex item.
+
+O que é "flex item"?
+
+É simplesmente:
+
+Todo elemento filho direto de um elemento que possui display: flex.
+
+no caso, a e m são flex item de button:
+
+<button> = flex container
+.btn-letter = flex item
+.question-answer = flex item
+
+
+
+flex-grow: 1 
+
+Significa:
+
+"Se houver espaço sobrando, posso crescer."
+
+Por exemplo, imagine que o botão tenha 300px e existam vários elementos dentro dele. O .btn-letter pode participar da distribuição desse espaço.
+
+flex-shrink: 1
+
+Significa:
+
+"Se faltar espaço, posso diminuir."
+
+O 1 permite que o elemento seja reduzido se necessário.
+
+flex-basis: 0
+
+É a parte mais interessante.
+
+Significa aproximadamente:
+
+"Para calcular a distribuição do espaço, considere inicialmente que meu tamanho é 0."
+
+Isso faz o Flexbox distribuir o espaço disponível de acordo com o flex-grow.
+
+*/
