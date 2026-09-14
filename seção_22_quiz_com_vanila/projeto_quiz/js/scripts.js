@@ -101,8 +101,10 @@ const questions = [
 // Substituição do quizz para a primeira pergunta
 
 function init() {
+
     // Criar a primeira pergunta
     createQuestion(0);
+
 }
 
 // Cria uma Pergunta
@@ -219,19 +221,23 @@ function showSuccessMessage() {
 
 // mostra ou esconde o score
 function hideOrShowQuizz() {
-  quizzContainer.classList.toggle("hide");
-  scoreContainer.classList.toggle("hide");
+  quizzContainer.classList.toggle("hide");  // o toggle(se tiver mostrando o quizzContainer ele remove e vice-versa)
+  scoreContainer.classList.toggle("hide"); // // se nao tiver mostrando o score ele mostra e vice versa
 }
 
 // refazer quizz
 const restartBtn = document.querySelector("#restart");
 
 restartBtn.addEventListener("click", function (){
+
   //zerar o jogo
   actualQuestion = 0
   points = 0
   hideOrShowQuizz() 
   init()
+
 });
+
+
 // Inicialização do Quizz
 init();
