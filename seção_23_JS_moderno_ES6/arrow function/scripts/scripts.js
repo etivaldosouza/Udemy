@@ -49,9 +49,10 @@ console.log(greeting('Matheus'))
 //=======================================
 
 // maneira 2
+
 const arrowSoma = (a,b) => a + b
 
-const resultado= arrowSoma(2,3)
+const resultado = arrowSoma(2,3)
 
 console.log(resultado)
 
@@ -70,5 +71,7 @@ console.log(message('bom dia'))
 const testeArrow = () => console.log('Seja Bem Vindo!!')
 
 testeArrow()
+
+
 
 
