@@ -17,12 +17,16 @@ const products = [
     {nome:'Calça Jeans', price: 50.99, category: 'Roupas'}
 ]
 
-const promo = products.map((product) => {
+const promo = products.map((product) => { // por convencao o paramêtro vai ser o nome da variavel no singular(product)
+    
     if(product.category === 'Roupas'){
-        product.onSale = true
+
+        product.onSale = true  // criando uma nova propriedade onSale com valor true
         product.price = (product.price - (product.price * 0.2)).toFixed(2)
     }
+    
     return product
+
 })
 
 

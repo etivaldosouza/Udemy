@@ -5,12 +5,16 @@
 
 => Isso nos dá um array com apenas os elementos que queremos, de forma performática
 
+=> NÃO ALTERA O ARRAY ORIGINAL.
+
 => Há vários métodos de array importante no ES6, este é um deles
 
 */ 
 
 
 const arr = [1, 2, 3, 4, 5]
+
+console.log(arr)
 
 const highNumbers = arr.filter((n) => { // n é cada elemento do array q chamo(loop(n = 1,n = 2...))
     if( n >= 3)
@@ -31,7 +35,7 @@ const users = [
 ]
 
 // como ja tem o boleano fica mais facil para retornar apenas os ususarios disponiveis(true)
-const availableUsers = users.filter((user) => user.available)  // por convenção passa a entidade de forma individual como parâmetro
+const availableUsers = users.filter((user) => user.available)  // por convenção passa a entidade(parâmetro) de forma individual(singular) como parâmetro
 
 const notAvailable = users.filter((user) => !user.available) // retorna os ñ disponiveis
 
