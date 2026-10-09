@@ -12,10 +12,12 @@ Com Objeto:
 
 const pessoa = {
     name: 'Elton',
-    age: 26
+    age: 26,
+    higth: 1.75
 }
 
 const { name } = pessoa
+
 
 console.log(name)
 
@@ -39,7 +41,7 @@ let id;
 const policial = {
    nome: 'Elton',
    matricula: 2434
-}; //o ponto e virgula aqui é indispensalvel para ñ dá erro
+};//o ponto e virgula aqui é indispensalvel para ñ dá erro
 
 ({ matricula: id } = policial)
 
@@ -56,7 +58,7 @@ const frutas = ['banana','pera','maçã']
 
 const [f1,f2] = frutas
 console.log(f1)
-console.log(f1)
+console.log(f2)
 
 //==============================
 
@@ -67,6 +69,10 @@ const carr = ['byd','onix','ka']
 const [ ,c1 ] = carr   // tô pegando a partir do segundo elemento
 
 console.log(c1)
+
+const[,,c] = carr
+
+console.log(c)
 
 //====================================
 
@@ -112,6 +118,34 @@ const frutaS = {
 liquidificador(frutaS)
 
 
+// ====================================//
+// ex: 2
+
+
+function policial ({id2}){
+    console.log(id2)
+}
+
+const pms = {
+
+    id1: {
+        numero: 2412278,
+        nome: 'Etivaldo'
+    },
+    id2: {
+        numero: 2435543,
+        nome: 'José'
+    },
+    id3: {
+        numero: 254356,
+        nome: 'Paulo'
+    }
+
+}
+
+policial(pms)
+
+
 // =======================================
 
 
@@ -126,8 +160,12 @@ liquidificador(['limão', 'laranja','abacaxi','kiui'])
 
 
 function carros([ca1,...rest]){
+
     console.log(ca1,rest)
+
     console.log(...rest)
 }
 
 carros('byd')
+
+carros('song')
