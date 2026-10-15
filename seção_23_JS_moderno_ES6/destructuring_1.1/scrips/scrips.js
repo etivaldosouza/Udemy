@@ -146,6 +146,53 @@ policial(pms);
 
 imprimePms(pms);
 
+
+
+// ===================================================================//
+
+listaCompras = {
+    prod1: {
+        nome: "Queijo",
+        valor: 50,
+        categoria: "Alimento",
+    },
+
+    prod2: {
+        nome: "Carne",
+        valor: 70,
+        categoria: "Alimento",
+    },
+
+    prod3: {
+        nome: "Sabonete",
+        valor: 10,
+        categoria: "Higiene",
+    },
+
+    prod4: {
+        nome: "Shampoo",
+        valor: 20,
+        categoria: "Higiene",
+    },
+};
+
+function prodEspecifico({ prod2 }) {
+    console.log(prod2.nome);
+}
+
+function imprimeTudo(x){
+    console.log(x)
+
+}
+
+imprimeTudo(listaCompras)
+
+prodEspecifico(listaCompras);
+
+
+
+
+
 // =======================================
 
 function liquidificador([f1, , ...rest]) {
