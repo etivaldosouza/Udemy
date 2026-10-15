@@ -45,6 +45,7 @@ const numeros = [...numerosPares,...numerosImpares]
 
 console.log(numeros)
 
+console.log(...numeros) // tira do array
 // ======================================================= //
 
 const [num1, num2, ...outrosNUmeros] = [1,2,3,4,5,6] // mesma coisa que: num1 = 1 e num2 = 2
@@ -54,7 +55,6 @@ console.log(num1,num2,...outrosNUmeros)
 
 
 // =================================================   //
-
 
 const [nome1 = 'Etivaldo'] = [1]
 
@@ -89,7 +89,8 @@ console.log(pessoa,pessoaComTelefone)
 
 const policial = {
     nome: 'Etivaldo',
-    idade: 43
+    idade: 43,
+    matricula: 2412278
 }
 
 function imprimeDados(dados)  {
@@ -104,3 +105,59 @@ function imprDado({nome,idade}){ // quando eu quero selecionar oq eu quero de in
 imprimeDados(policial)
 
 imprDado(policial)
+
+
+
+//==============================================//
+
+
+const viaturas = {
+
+    2601: {
+        area: 'Bairro de Fátima',
+        modelo: 'Triblazer'
+    },
+
+    2602: {
+        area: 'Anil',
+        modelo: 'S10'
+    },
+    2603:{
+        area: 'Vila Palmeira',
+        modelo: 'Duster'
+    },
+
+    2604:{
+        area: 'Centro',
+        modelo: 'l200'
+    }
+}
+
+const {area} =  viaturas [2601] 
+
+console.log(area)
+
+
+function printDados(dados){
+    console.log(dados)
+}
+
+function algunsDados({area,modelo}){
+    console.log(area,modelo)
+}
+
+
+printDados(viaturas)
+
+algunsDados(viaturas[2603])
+
+/*
+
+
+
+💡 O que você precisa memorizar: 
+
+=> o número dentro de viaturas[ ] define qual viatura você está acessando, e { area } extrai somente essa propriedade.
+
+
+*/ 
