@@ -1,8 +1,6 @@
 /*
 
 
-
-
 */
 
 class Product {
@@ -29,7 +27,7 @@ console.log(tenis);
 
 class productWithAtributes extends Product {
     constructor(name, price, colors) {
-        super(name, price); // super: para puxar da classe pai as propriedades em comum da classe atual
+        super(name, price); // super: para puxar da classe pai as propriedades em comum da classe(aproveitar a classe pai) atual
         this.colors = colors; // propriedade nova que ñ tem na classe herdada
     }
 
@@ -55,8 +53,6 @@ console.log(hat.name);
 hat.showColors();
 
 // ===============================================//
-
-
 
 listaCompras = {
     prod1: {
@@ -88,36 +84,55 @@ function prodEspecifico({ prod2 }) {
     console.log(prod2.nome);
 }
 
-
 prodEspecifico(listaCompras);
-
-
-
 
 // Utilizando classe:
 
 class Produtos {
-    constructor(nome,valor,categoria) {
-        this.nome = nome
-        this.valor = valor
-        this.categoria = categoria
+    constructor(nome, valor, categoria) {
+        this.nome = nome;
+        this.valor = valor;
+        this.categoria = categoria;
     }
 
-    descontoProduto(desc){
-        return this.valor * ((100 - desc) / 100 ) 
+    descontoProduto(desc) {
+        return this.valor * ((100 - desc) / 100);
     }
 }
 
 const listaCompras = {
-    prod1: new Produtos('Queijo',50,'Alimento'),
-    prod2: new Produtos('Shampoo',20, 'Higiene'),
-    prod3: new Produtos('Carne',80, 'Alimento'),
-    prod4: new Produtos('Refrigerante',10, 'Bebida'),
+    prod1: new Produtos("Queijo", 50, "Alimento"),
+    prod2: new Produtos("Shampoo", 20, "Higiene"),
+    prod3: new Produtos("Carne", 80, "Alimento"),
+    prod4: new Produtos("Refrigerante", 10, "Bebida"),
+};
+
+console.log(listaCompras);
+
+console.log(listaCompras.prod1.nome);
+
+console.log(listaCompras.prod1.descontoProduto(50));
+
+
+
+//====================================================//
+
+class Pm {
+    constructor(nome, graduacao, matricula) {
+        ((this.nome = nome),
+            (this.graduacao = graduacao),
+            (this.matricula = matricula));
+    }
+
+    imprimeDadosPm() {
+        console.log(this.nome, this.graduacao, this.matricula);
+    }
 }
 
+pm1 = new Pm("Etivaldo", "CB", "2412278");
+pm2 = new Pm("Pedro", "SD", "231487");
 
-console.log(listaCompras)
 
-console.log(listaCompras.prod1.nome)
+pm1.imprimeDadosPm();
 
-console.log(listaCompras.prod1.descontoProduto(50))
+console.log(pm1.nome)
