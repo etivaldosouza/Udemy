@@ -48,3 +48,36 @@ body{
     padding: 0.2em;
     overflow-wrap: break-word;
 }
+
+#buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 fracoes de colunas*/
+    gap: 3px;
+}
+
+#buttons-container button{
+    border: 1px solid transparent; /* para que apareçã no houver*/
+    border-radius: 0;
+    height: 4em;
+    background-color: #dbdbdb;
+    cursor: pointer;
+
+}
+
+#buttons-container .number{
+    background-color: #f3f3f3;
+}
+
+#buttons-container button:hover{
+    background-color: #bababa;
+    border-color: #999;
+}
+
+#buttons-container #equal-btn{   
+    grid-column: span 2; /*permite ocupar 2 espaços de fração*/
+    background-color: #75a5cb;
+}
+
+#buttons-container #equal-btn:hover{   
+    background-color: #3991d8;
+}
