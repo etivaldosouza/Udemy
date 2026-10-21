@@ -1,35 +1,212 @@
-// 1ºPasso: 
-const previousOperationText = document.querySelector('#previous-operation')
-const currentOperationText = document.querySelector('#current-operation')
-const button = document.querySelectorAll('#buttons-container button')
-
+// 1ºPasso:
+const previousOperationText = document.querySelector("#previous-operation");
+const currentOperationText = document.querySelector("#current-operation");
+const button = document.querySelectorAll("#buttons-container button");
 
 //3ºPasso
 class calculator {
-    constructor(previousOperationText,currentOperationText){
-        this.previousOperationText = previousOperationText
-        this.currentOperationText  = currentOperationText
+    constructor(previousOperationText, currentOperationText) {
+        this.previousOperationText = previousOperationText;
+        this.currentOperationText = currentOperationText;
+        this.currentOperation = "0";
+        this.currentOperationText.innerText = '0'
+
+        this.calculoFinalizado = false
+    }
+    // add digit to calculator screen
+    addDigit(digit) {
+        // check if current operation already has a dot(só vai aceitar 1 ponto)
+        if (
+            digit === "." &&
+            this.currentOperationText.innerText.includes(".")
+        ) {
+            return;
+        }
+        // Se o visor contém apenas zero, substitui pelo dígito
+        if (this.currentOperationText.innerText === "0" && digit != ".") {
+            this.currentOperationText.innerText = digit;
+        } else {
+            this.currentOperationText.innerText += digit;
+        }
+        this.currentOperation = this.currentOperationText.innerText;
+    }
+    // Process all calculator operations
+
+    processOperation(operation) {
+        // Limpar tudo
+        if (operation === "C") {
+            this.processClearOperation();
+            return;
+        }
+
+        // Limpar o valor atual
+        if (operation === "CE") {
+            this.processClearCurrentOperation();
+            return;
+        }
+
+        // Apagar o último dígito
+        if (operation === "DEL") {
+            this.processDellOperator();
+            return;
+        }
+
+        // Calcular o resultado
+        if (operation === "=") {
+            this.processEqualOperator();
+            return;
+        }
+
+        // Verificar se é um operador matemático
+        const operators = ["+", "-", "x", "÷"];
+
+        if (!operators.includes(operation)) {
+            return;
+        }
+
+        const current = this.currentOperationText.innerText;
+
+        // Se já existe uma operação aguardando o segundo número
+        if (current === "" && this.previousOperationText.innerText !== "") {
+            this.changeOperation(operation);
+            return;
+        }
+
+        // Registrar o primeiro número e o operador
+        if (this.previousOperationText.innerText === "") {
+            this.previousOperationText.innerText = `${current} ${operation}`;
+            this.currentOperationText.innerText = "";
+        }
     }
 
+    // Change values of the calculator screen
+    updateScreen(
+        operationValue = null,
+        operation = null,
+        current = null,
+        previous = null,
+    ) {
+        console.log(operationValue, operation, current, previous);
+        if (operationValue === null) {
+            this.currentOperationText.innerText = "";
+            this.currentOperationText.innerText += this.currentOperation;
+        } else {
+            //check if value is zero, if it is just add current value
+            if (previous === 0) {
+                operationValue = current;
+            }
+            // add current value to previous
+            this.previousOperationText.innerText = `${operationValue} ${operation}`;
+            this.currentOperationText.innerText = "";
+        }
+    }
+
+    //  change match operation
+    changeOperation(operation) {
+        const mathOperations = ["x", "÷", "+", "-"];
+        if (!mathOperations.includes(operation)) {
+            return;
+        }
+
+        this.previousOperationText.innerText =
+            this.previousOperationText.innerText.slice(0, -1) + operation;
+    }
+
+    // delete the last digit
+    processDellOperator() {
+        this.currentOperationText.innerText =
+            this.currentOperationText.innerText.slice(0, -1);
+    }
+
+    // clear current operation
+
+
+    processClearCurrentOperation() {
+
+        if (this.calculoFinalizado) {
+            // Após o resultado, limpar tudo
+            this.currentOperationText.innerText = '0'
+            this.previousOperationText.innerText = ''
+            this.currentOperation = '0'
+            this.calculoFinalizado = false
+        } else {
+            // Antes do resultado, manter o comportamento atual
+            this.currentOperationText.innerText = '0'
+            this.currentOperation = '0'
+        }
+
+    }
+
+
+    // clear all operations
+    processClearOperation() {
+        this.currentOperationText.innerText = '0';
+        this.previousOperationText.innerText = "";
+        this.currentOperation = '0'
+    }
+    // process an operation
+
+    processEqualOperator() {
+        const previous = this.previousOperationText.innerText;
+        const currentText = this.currentOperationText.innerText;
+
+        // Verificar se temos uma operação e o segundo número
+        if (previous === "" || currentText === "") {
+            return;
+        }
+
+        const parts = previous.split(" ");
+        const firstValue = Number(parts[0]);
+        const operation = parts[1];
+        const secondValue = Number(currentText);
+
+        let result
+
+        switch (operation) {
+            case "+":
+                result = firstValue + secondValue;
+                break;
+            case "-":
+                result = firstValue - secondValue;
+                break;
+            case "x":
+                result = firstValue * secondValue;
+                break;
+            case "÷":
+                result = firstValue / secondValue;
+                break;
+            default:
+                return;
+        }
+
+        // Exibir a operação completa na linha superior
+        this.previousOperationText.innerText = `${firstValue} ${operation} ${secondValue} =`;
+
+        // Exibir o resultado na linha inferior
+        this.currentOperationText.innerText = String(result)
+
+        this.currentOperation = String(result)
+
+        this.calculoFinalizado = true
+        
+    }
 }
 
+const calc = new calculator(previousOperationText, currentOperationText);
 //2ºPasso:
 
-button.forEach((btn) => {   
-    btn.addEventListener('click',function(e){
-        const value = e.target.innerText
+button.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+        const value = e.target.innerText;
 
-        if(+value >= 0 || value === '.' ){  /*o sinal de + converte o conteúdo de value para um número, quando possível.*/
-        console.log(value)
-        }else{
-            console.log('Operação:', value)
-        }       
-    
-    })   
-})
-
-
-
+        if (+value >= 0 || value === ".") {
+            /*o sinal de + converte oconteúdo de value para um número, quando possível.*/
+            calc.addDigit(value);
+        } else {
+            calc.processOperation(value);
+        }
+    });
+});
 
 /*
 
