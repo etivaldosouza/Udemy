@@ -1,9 +1,14 @@
 // criando um servidor http:
 
 /*
+
+    Esse módulo fornece funcionalidades para trabalhar com o protocolo HTTP, utilizado na comunicação entre navegadores e servidores web.
+
+    Por exemplo, ele permite criar um servidor que receba requisições e envie respostas.
+
+
     obs: no terminal para eu conectar meu servidor eu uso o comando node app.js
     para encerrar o servidor eu uso o comando ctrl c
-
 
 */ 
 
