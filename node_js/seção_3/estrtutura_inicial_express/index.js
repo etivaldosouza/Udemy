@@ -29,7 +29,24 @@ const express = require('express')  // importando o express
 const app = express()   // carrega todo o framework(biblioteca) p/ a variavel app ) ou seja, inicializa o express
 
 
-app.listen(4000,function(erro){ // inicia o servidor com uma porta e uma função que é executada sempre q o servidor é iniciado
+// indicando rotas:
+
+app.get('/',function(req,res){ 
+    res.send('Seja Bem vindo ao Nosso Site')
+})
+
+app.get('/blog',function(req,res){
+    res.send('Bem vindo ao meu blog')
+})
+
+app.get('/canal/youtube',function(req,res){
+    res.send('Bem vindo ao nosso canal no Youtube!!')
+})
+
+
+// inicia o servidor com uma porta e uma função que é executada sempre q o servidor é iniciado
+
+app.listen(4000,function(erro){ 
     if(erro){
         console.log('Ocorreu um Erro!')
     }else{
@@ -40,7 +57,12 @@ app.listen(4000,function(erro){ // inicia o servidor com uma porta e uma funçã
 
 /*
 
-aqui ao abrir o navegador aparecerá uma msg de 'Cannot GET /'
+se não for indicado as rotas, ao abrir o navegador aparecerá uma msg de 'Cannot GET /'
 pois não foi indicado as rotas. por issoa msg acima
+
+a rota tem q ser criada antes de chamar o servidor e ela tem duas coisas:
+
+1. qual a url que ela aponta
+2. o que ela faz
 
 */
