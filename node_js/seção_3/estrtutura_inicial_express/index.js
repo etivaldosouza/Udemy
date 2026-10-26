@@ -1,7 +1,7 @@
 /*
     Express
 
-=> É uma superbiblioteca que ajuda a fazer ima determinada tarefa. Ajuda 
+=> É uma superbiblioteca que ajuda a fazer uma determinada tarefa. Ajuda 
 a fazer uma aplicação no node.js
 
 npm(node package maneger) : gerenciador de pacotes do node
@@ -29,22 +29,7 @@ const express = require('express')  // importando o express
 const app = express()   // carrega todo o framework(biblioteca) p/ a variavel app ) ou seja, inicializa o express
 
 
-// cria rotas(aponta para um determinado caminho):
-
-app.get('/',function(req,res){
-    res.send('Bem Vindo ao guia do programador!!')    
-})
-
-app.get('/blog',function(req,res){
-    res.send('Bem vindo ao meu blog')
-})
-
-app.get('/youtube',function(req,res){
-    res.send('bem vindo ao meu canal')
-})
-
-
-app.listen(4000,function(erro){ // inicia o servidor com uma função que é executada sempre q o servidor é iniciado
+app.listen(4000,function(erro){ // inicia o servidor com uma porta e uma função que é executada sempre q o servidor é iniciado
     if(erro){
         console.log('Ocorreu um Erro!')
     }else{
@@ -53,3 +38,9 @@ app.listen(4000,function(erro){ // inicia o servidor com uma função que é exe
 })
 
 
+/*
+
+aqui ao abrir o navegador aparecerá uma msg de 'Cannot GET /'
+pois não foi indicado as rotas. por issoa msg acima
+
+*/
