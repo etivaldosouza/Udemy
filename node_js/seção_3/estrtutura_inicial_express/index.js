@@ -18,9 +18,12 @@ passos para criar o projeto:
 
 4) cria o arquio index.js(nomenclatura convencional), caso ele ñ tenha sido criado no passo anterior
 
-5) inicia o servidor(app.listen),indicar a porta, e criar uma função q será executada ao iniciar o servidor e recebe parâmetro para identificar algum erro ao iniciar o servidor.
+5) Cria as rotas(get,post, delet etc)
 
-6) 
+6) inicia o servidor(app.listen),indicar a porta, e criar uma função q será executada ao iniciar o servidor e recebe parâmetro para identificar algum erro ao iniciar o servidor.
+
+
+Obs: ñ esquecer da instal do nodemon -g que faz com que nao precise ficar reiniciando o servidor toda vez q o codigo é alterado -> npm install nodemon -g
 
 */ 
 
@@ -32,15 +35,19 @@ const app = express()   // carrega todo o framework(biblioteca) p/ a variavel ap
 // indicando rotas:
 
 app.get('/',function(req,res){ 
-    res.send('Seja Bem vindo ao Nosso Site')
+    res.send('<h1>Seja Bem vindo ao Nosso Site</h1>')
 })
 
 app.get('/blog',function(req,res){
-    res.send('Bem vindo ao meu blog')
+    res.send('Bem vindo ao meu blog: www.guiadoprogramador.com.br')
 })
 
 app.get('/canal/youtube',function(req,res){
     res.send('Bem vindo ao nosso canal no Youtube!!')
+})
+
+app.get('/olá',function(req,res){
+    res.send('Olá Mundo!')
 })
 
 
@@ -53,6 +60,14 @@ app.listen(4000,function(erro){
         console.log('Servidor iniciado com sucesso')
     }
 })
+
+/*
+    parâmetros:
+    
+-> Forma de passar valores dinâmicos a sua rota
+
+*/
+ 
 
 
 /*
