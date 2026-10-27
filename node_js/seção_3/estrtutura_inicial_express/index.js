@@ -25,6 +25,10 @@ passos para criar o projeto:
 
 Obs: ñ esquecer da instal do nodemon -g que faz com que nao precise ficar reiniciando o servidor toda vez q o codigo é alterado -> npm install nodemon -g
 
+lembrando que:
+
+REQ -> DADOS ENVIADOS PELO USUÁRIO
+RES -> RESPOSTA QUE VAI SER ENVIADA AO USUÁRIO 
 */ 
 
 const express = require('express')  // importando o express
@@ -46,10 +50,46 @@ app.get('/canal/youtube',function(req,res){
     res.send('Bem vindo ao nosso canal no Youtube!!')
 })
 
-app.get('/olá',function(req,res){
-    res.send('Olá Mundo!')
+
+/*
+    parâmetros:
+    
+-> Forma de passar valores dinâmicos a sua rota
+-> a rota abaixo passa a ser /ola/qualquer coisa que o usuario digitar
+
+*/
+
+
+
+// ex_1
+app.get('/ola/:nome',function(req,res){
+    res.send(req.params.nome)
 })
 
+// ex_2
+app.get('/teste/:principal',function(req,res){
+    var princ = req.params.principal
+        res.send(`<h1> Teste de Parâmetro ${princ} </h1>`)
+})
+
+// ex_3
+app.get('/agora/:nome/:empresa',function(req,res){
+    var nome = req.params.nome
+    var empresa = req.params.empresa
+    res.send(`<h1> Olá Mundo ${nome} ${empresa} </h1>`)
+})
+
+// deixando o parâmetro não obrigatorio:
+
+//na versoes anteriores do express se usava ?
+
+app.get('/leitura', function(req,res){
+    res.send('<h1>Seja Bem vindo ao Nosso Site<h1>')
+})
+app.get('/leitura/:artigo', function(req,res){
+    var artigo = req.params.artigo
+    res.send(`Seja Bem vindo Ao melhor ${artigo}`)
+})
 
 // inicia o servidor com uma porta e uma função que é executada sempre q o servidor é iniciado
 
@@ -61,12 +101,7 @@ app.listen(4000,function(erro){
     }
 })
 
-/*
-    parâmetros:
-    
--> Forma de passar valores dinâmicos a sua rota
 
-*/
  
 
 
@@ -81,3 +116,5 @@ a rota tem q ser criada antes de chamar o servidor e ela tem duas coisas:
 2. o que ela faz
 
 */
+
+ 
