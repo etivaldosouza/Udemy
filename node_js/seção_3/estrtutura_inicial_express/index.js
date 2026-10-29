@@ -91,8 +91,20 @@ app.get('/leitura/:artigo', function(req,res){
     res.send(`Seja Bem vindo Ao melhor ${artigo}`)
 })
 
-// inicia o servidor com uma porta e uma função que é executada sempre q o servidor é iniciado
+// Query Params
 
+app.get('/simula/teste',function(req,res){
+
+    var parametro = req.query['parametro']
+    
+    if(parametro){
+        res.send(`seja bem vindo ${parametro}`)
+    }else{
+        res.send('Olá')
+    }
+})
+
+// inicia o servidor com uma porta e uma função que é executada sempre q o servidor é iniciado
 app.listen(4000,function(erro){ 
     if(erro){
         console.log('Ocorreu um Erro!')
@@ -103,7 +115,6 @@ app.listen(4000,function(erro){
 
 
  
-
 
 /*
 
