@@ -1,0 +1,68 @@
+-- CRIANDO BANCO DE DADOS:
+
+CREATE DATABASE sistemaDeCadastro;
+
+-- MOSTRANDO BANCO DE DADOS EXISTENTES NO MYSQL:
+
+SHOW DATABASES;
+
+-- ABRINDO UM BANCO DE DADOS:
+
+USE sistemaDeCadastro;
+
+
+-- CRIANDO TABELA:
+
+CREATE TABLE usuários(
+    nome VARCHAR(50),
+    email VARCHAR(100),
+    idade INT
+);
+
+-- MOSTRANDO AS TABELAS EXISTENTES DO BANCO DE DADOS:
+
+SHOW TABLES;
+
+-- MOSTRANDO A ESTRUTURA DA TABELA:
+
+DESCRIBE usuarios; ou:
+desc usuarios;
+
+
+-- INSERINDO DADOS EM UMA TABELA:
+
+INSERT into usuarios(nome,email,idade)
+
+VALUES
+
+('Victor Lima','email@teste.com',8),
+('Etivaldo Souza','etivaldosouza@hotmail.com',43);
+
+
+-- LISTANDO TODOS OS DADOS DE UMA TABLELA:
+
+SELECT * FROM usuarios;
+
+-- OPERADOR LIKE (%)
+
+ P% -> LISTA DADOS QUE COMEÇAM COM A LETRA P SEGUIDA OU NÃO DE CARACTERE
+
+ %P% -> LISTA DADOS QUE CONTEM A LETRA P NO MEIO DE ALGUM nome
+
+ %P -> CONTEM P NO FINAL DO NOME
+ 
+ 
+--  APAGANDO TABELA TODA
+
+DELETE FROM usuarios
+
+
+-- APAGANDO REGISTRO DE UMA TABELA
+
+DELETE FROM usuarios WHERE nome = 'victor'
+
+
+-- ALTERANDO REGISTRO NA TABELA:
+
+UPDATE usuarios set nome = 'Bolsonaro' where nome = 'etivaldo souza'
+
