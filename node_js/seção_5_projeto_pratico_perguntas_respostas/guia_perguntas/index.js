@@ -22,7 +22,8 @@ app.get('/',function(req,res){
         lang: lang,
         empresa: 'Guia do Programador',
         inscrito: 8000
-    }) // o render já identifica o arquivo direto na pasta views sem precisar colocar o caminho completo(views/index) se ele estiver solto na pasta view(caso do index.ejs), porém se o arquivo tiver dentro de uma pasta(caso do home.ejs) ai tem que especificar o caminho
+    }); 
+    // o render já identifica o arquivo direto na pasta views sem precisar colocar o caminho completo(views/index) se ele estiver solto na pasta view(caso do index.ejs), porém se o arquivo tiver dentro de uma pasta(caso do home.ejs) ai tem que especificar o caminho
 })
 
 //4. rodar minha aplicação:
