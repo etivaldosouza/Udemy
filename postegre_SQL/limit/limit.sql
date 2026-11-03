@@ -16,6 +16,13 @@ SELECT payment_date from payment ORDER BY payment_date desc limit 3 ( OS 3 ULTIM
 
 SELECT customer_id, payment_date from payment order by payment_date limit 10
 
+--> DESAFIO 2:
+
+--> UM CLIENTE QUER ALUGAR UM FILME BEM CURTO PARA ASSISTIR NO HORÁRIO DE ALMOÇO DO TRABALHO. SUGIRA OS 5 FILMES MAIS CURTOS:
+
+
+SELECT title, LENGTH FROM film WHERE length > 50 ORDER BY LENGTH LIMIT 5;
+
 
 --> SE O CLIENTE ANTERIOR TEM 50 MINUTOS DE HORARIO DE ALMOÇO, QUANTAS OPÇÕES DE FILMES ELE TEM?
 
