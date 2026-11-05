@@ -48,15 +48,15 @@ app.get("/home", (req, res) => {
     }); // renderiza(exibe a pagina home)
 });
 
-// pag03- estrutura condicional
+// pag03- estrutura repetição
 app.get("/pag03", function(req, res) {
     var produtos = [
-        { nome: "Doritos", preco: 3.14 },
+        { nome: "Doritos",   preco: 3.14 },
         { nome: "Coca-Cola", preco: 5 },
-        { nome: "Leite", preco: 1.45 },
-        {nome: "Carne", preço: 15},
-        {nome: "Redbull", preco: 6 },
-        {nome: "Nescau", preco: 4}
+        { nome: "Leite",     preco: 1.45 },
+        { nome: "Carne",     preço: 15},
+        { nome: "Redbull",   preco: 6 },
+        { nome: "Nescau",    preco: 4}
     ];
     res.render("principal/pag03", {
         produtos: produtos
