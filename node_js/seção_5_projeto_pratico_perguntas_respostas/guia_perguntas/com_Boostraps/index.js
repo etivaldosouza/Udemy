@@ -14,12 +14,5 @@ app.get('/',function(req,res){
     
 })
 
-// com parametros e com estrutura condicional e de repeticao 
-app.get("/",(req, res) => {
-n
-    res.render("index")
-})
-
-
 
 app.listen(8080,()=>{console.log("App rodando na porta 8080!")});
