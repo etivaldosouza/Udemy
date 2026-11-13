@@ -8,4 +8,30 @@ body{
 .lab2{
     margin: 10px 0px 10px;
 }
+.navbar-brand img {
+    width: 5vh;
+    height: auto;
+}
 
+#formulario-pergunta{
+    margin: 5vh auto 0; /* mesmo q 5% da altura da tela */
+    width: 90%;
+    max-width: 600px;
+    
+}
+
+
+/*
+2. Entendendo cada propriedade:
+
+margin: 5vh auto 0; 
+
+- 5vh: distância do topo da tela.
+- auto: centraliza horizontalmente o elemento.
+- 0: margem inferior.
+- max-width: 600px;
+- Define uma largura máxima de 600 pixels.
+- Mesmo em monitores grandes, o card não ultrapassará essa largura.
+- width: 90%;
+- Faz o card ocupar 90% da largura disponível em telas menores, evitando que ultrapasse os limites da tela.
+*/
