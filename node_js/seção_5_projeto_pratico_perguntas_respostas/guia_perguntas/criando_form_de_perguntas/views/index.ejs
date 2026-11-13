@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Guia perguntas</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-</head>
+<%-include('partials/header.ejs'); %>
 <body>
+    <%- include('partials/navbar.ejs');%>
     <div class="container mt-5">
     <h1 class="text-primary">Bootstrap funcionando!</h1>
 
@@ -25,11 +17,10 @@
 Você não precisa adicionar jQuery nem importar Popper separadamente.
 Configuração recomendada
 Para o seu Bootstrap 5.3.8, basta:
-1. bootstrap.min.css  (<!--<link rel="stylesheet" href="/css/bootstrap.min.css">  -->)
+1. bootstrap.min.css  <!--<link rel="stylesheet" href="/css/bootstrap.min.css">  -->
 2. bootstrap.bundle.min.js <!-- (<script src="/js/bootstrap.bundle.min.js"></script>)  -->
 </p>
-    
-<script src="/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+<%- include('partials/footer.ejs');%>
+
 

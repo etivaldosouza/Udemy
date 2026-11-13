@@ -9,6 +9,7 @@
   "author": "Victor Lima",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^2.4.0",
     "bootstrap": "^5.3.8",
     "ejs": "^2.7.1",
     "express": "^4.17.1"

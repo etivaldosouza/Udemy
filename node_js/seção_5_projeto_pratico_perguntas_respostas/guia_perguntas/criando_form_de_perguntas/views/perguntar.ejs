@@ -1,40 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Guia perguntas</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include('partials/header.ejs'); %>
 <body>
-
-    <nav class="navbar navbar-light bg-primary">
-        <a class="navbar-brand" href="/">
-            <img src="/img/display.png" alt="logo display">
-        </a>        
-    </nav>
+    <%-include('partials/navbar.ejs')  %>
     <div class="container">
         <div class="card" id="formulario-pergunta">
             <div class="card-header">
                 <h3>Realizar pergunta</h3>
             </div>
             <div class="card-body">
-                <form action="">
+                <form method="post" action="/salvarpergunta">
                     <label for="" class="lab1">Título</label>
-                    <input type="text" placeholder="Título" class="form-control">
+                    <input type="text" placeholder="Título" class="form-control" name="titulo"> <!--name identifica eles no backend-->
                     <label for="" class="lab2">Descrição</label>
-                    <textarea name="" id="" placeholder="Descreva sua pergunta aqui" class="form-control"></textarea>
-                    <br>
+                    <textarea name="descricao" id="" placeholder="Descreva sua pergunta aqui" class="form-control"></textarea>
+                    <br> 
                     <button type="submit" class=" btn btn-primary">Perguntar</button>
                 </form>
-                    <!-- Existem várias variações de butoes no bootstrap:
+                    <!-- Existem várias variações de butões no bootstrap:
                     btn-primary(azul), btn-danger(vermelha),btn-warning(amarela),btn-success(verde)-->
             </div>
         </div>               
     </div>    
-<script src="/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+<%- include('partials/footer.ejs'); %>
 
+<!--
+
+classes do bootstrap:
+
+- navbar(cria a barra navbar(barra de menus))
+- navbar-light (define a cor dos textos da navbar)
+- bg-primary (cor de fundo  da navbar)
+- <a classe = "navbar-brand"(alinha o conteudo a esquerda da navbar ) />
+
+-->
