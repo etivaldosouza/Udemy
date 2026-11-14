@@ -20,6 +20,19 @@ Para o seu Bootstrap 5.3.8, basta:
 1. bootstrap.min.css  <!--<link rel="stylesheet" href="/css/bootstrap.min.css">  -->
 2. bootstrap.bundle.min.js <!-- (<script src="/js/bootstrap.bundle.min.js"></script>)  -->
 </p>
+
+<div class="container">
+    <ol>       
+        <% perguntas.forEach(pergunta => { %>       
+            <li></li>
+            <p>Título:<%= pergunta.titulo%></p>
+            <p>Descrição:<%= pergunta.descricao %></p><br>
+        
+        <%}) %>;
+    </ol>
+    
+</div>
+
 </body>
 <%- include('partials/footer.ejs');%>
 
