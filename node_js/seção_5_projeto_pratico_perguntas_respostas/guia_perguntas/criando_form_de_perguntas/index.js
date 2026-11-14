@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const bodyparser = require('body-parser');
 const bodyParser = require("body-parser");
 
 // Estou dizendo para o Express usar o EJS como View engine
